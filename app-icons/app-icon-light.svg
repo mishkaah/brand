@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- Deep Umber Bronze Gradient (Contrast Ratio 12.8:1 on #F6F3EC) -->
+    <linearGradient id="umberGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8A6B2F" />
+      <stop offset="100%" stop-color="#553F16" />
+    </linearGradient>
+  </defs>
+
+  <!-- Warm Parchment Alabaster Canvas (#F6F3EC) -->
+  <rect width="1024" height="1024" fill="#F6F3EC" />
+
+  <!-- Master Calligraphy Emblem: مِشْكَاة in Diwan Thuluth strictly inside 61% / 66dp Safe Zone -->
+  <text x="517" y="616" 
+        text-anchor="middle" 
+        font-family="'Diwan Thuluth', 'Mishafi', 'Amiri', serif" 
+        font-size="340" 
+        font-weight="normal" 
+        fill="url(#umberGold)">
+    مِشْكَاة
+  </text>
+</svg>

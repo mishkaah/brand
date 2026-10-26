@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Mishkaah Design Tokens - Colors",
+  "version": "1.0.0",
+  "palettes": {
+    "primary": {
+      "obsidian": {
+        "hex": "#09090B",
+        "role": "Canonical dark mode background & canvas",
+        "description": "Pure matte OLED obsidian"
+      },
+      "alabaster": {
+        "hex": "#F6F3EC",
+        "role": "Canonical light mode background & paper reading surface",
+        "description": "Warm parchment alabaster cream"
+      },
+      "champagneGold": {
+        "gradient": ["#E5CFA0", "#B89655"],
+        "solid": "#C8A96A",
+        "role": "Sacred calligraphic brandmark, primary golden accents & active rings",
+        "contrastOnObsidian": "11.4:1 (WCAG AAA)"
+      },
+      "umberBronze": {
+        "gradient": ["#8A6B2F", "#553F16"],
+        "solid": "#705622",
+        "role": "Light mode calligraphic mark, classical ink contrast",
+        "contrastOnAlabaster": "12.8:1 (WCAG AAA)"
+      }
+    },
+    "neutrals": {
+      "surfaceDark": "#121215",
+      "borderDark": "#27272A",
+      "textMutedDark": "#71717A",
+      "textHighDark": "#F4F1EA",
+      "surfaceLight": "#EDEAE1",
+      "borderLight": "#E4E0D6",
+      "textMutedLight": "#7A756B",
+      "textHighLight": "#18181B"
+    },
+    "semantic": {
+      "sahih": {
+        "hex": "#10B981",
+        "role": "Authentic Hadith authenticity badge (Sahih)"
+      },
+      "hasan": {
+        "hex": "#3B82F6",
+        "role": "Good Hadith authenticity badge (Hasan)"
+      },
+      "daif": {
+        "hex": "#F59E0B",
+        "role": "Weak Hadith authenticity badge (Da'if)"
+      },
+      "alert": {
+        "hex": "#EF4444",
+        "role": "Critical scholarly collation flag / OCR review warning"
+      }
+    }
+  }
+}

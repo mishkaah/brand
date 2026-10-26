@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <!-- Champagne Gold Gradient -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5CFA0" />
+      <stop offset="100%" stop-color="#B89655" />
+    </linearGradient>
+
+    <!-- Deep Bronze Gradient -->
+    <linearGradient id="bronze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8A6B2F" />
+      <stop offset="100%" stop-color="#553F16" />
+    </linearGradient>
+
+    <!-- iOS 18 Tinted Slate Background -->
+    <linearGradient id="tintedBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2633" />
+      <stop offset="100%" stop-color="#10151E" />
+    </linearGradient>
+
+    <!-- iOS Squircle Masks (220x220, rx=50) -->
+    <clipPath id="squircle1"><rect x="140" y="320" width="220" height="220" rx="50" ry="50" /></clipPath>
+    <clipPath id="squircle2"><rect x="480" y="320" width="220" height="220" rx="50" ry="50" /></clipPath>
+    <clipPath id="squircle3"><rect x="820" y="320" width="220" height="220" rx="50" ry="50" /></clipPath>
+
+    <!-- Android Circle Mask (220x220, r=110 at cx=1270, cy=430) -->
+    <clipPath id="androidCircle"><circle cx="1270" cy="430" r="110" /></clipPath>
+  </defs>
+
+  <!-- Deep Obsidian Background (#09090B) -->
+  <rect width="1600" height="900" fill="#09090B" />
+
+  <!-- ======================================================== -->
+  <!-- HEADER SECTION                                           -->
+  <!-- ======================================================== -->
+  <g text-anchor="middle">
+    <!-- Arabic Calligraphic Brandmark -->
+    <text x="800" y="115" 
+          font-family="'Diwan Thuluth', 'Mishafi', 'Amiri', serif" 
+          font-size="64" 
+          fill="url(#gold)">
+      مِشْكَاة
+    </text>
+
+    <!-- Hairline Divider -->
+    <line x1="740" y1="140" x2="860" y2="140" stroke="#C8A96A" stroke-width="1" stroke-opacity="0.4" />
+
+    <!-- Latin Title -->
+    <text x="806" y="172" 
+          font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+          font-size="14" 
+          font-weight="600" 
+          letter-spacing="6" 
+          fill="#F4F1EA">
+      MOBILE APP ICON SUITE
+    </text>
+
+    <!-- Subtitle Description -->
+    <text x="800" y="200" 
+          font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+          font-size="12" 
+          font-weight="400" 
+          letter-spacing="1.5" 
+          fill="#8C7A5B">
+      iOS 18+ HIG (Dark, Light, Tinted) • Android 13–15+ Material You Adaptive System
+    </text>
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- 4 SHOWCASE ICONS                                         -->
+  <!-- ======================================================== -->
+
+  <!-- 1. iOS 18 Dark Mode (x=140, y=320, 220x220) -->
+  <g>
+    <rect x="140" y="320" width="220" height="220" rx="50" ry="50" fill="#09090B" stroke="#27272A" stroke-width="1" />
+    <g clip-path="url(#squircle1)">
+      <rect x="140" y="320" width="220" height="220" fill="#09090B" />
+      <g transform="translate(140, 320) scale(0.21484375)">
+        <text x="517" y="616" text-anchor="middle" font-family="'Diwan Thuluth', 'Mishafi', 'Amiri', serif" font-size="340" fill="url(#gold)">مِشْكَاة</text>
+      </g>
+    </g>
+    <!-- Label -->
+    <text x="250" y="580" text-anchor="middle" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#F4F1EA">iOS 18 Dark</text>
+    <text x="250" y="604" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="400" fill="#71717A">Matte Obsidian</text>
+    <text x="250" y="622" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="400" fill="#C8A96A">Champagne Gold (11.4:1)</text>
+  </g>
+
+  <!-- 2. iOS 18 Light Mode (x=480, y=320, 220x220) -->
+  <g>
+    <rect x="480" y="320" width="220" height="220" rx="50" ry="50" fill="#F6F3EC" stroke="#E4E0D6" stroke-width="1" />
+    <g clip-path="url(#squircle2)">
+      <rect x="480" y="320" width="220" height="220" fill="#F6F3EC" />
+      <g transform="translate(480, 320) scale(0.21484375)">
+        <text x="517" y="616" text-anchor="middle" font-family="'Diwan Thuluth', 'Mishafi', 'Amiri', serif" font-size="340" fill="url(#bronze)">مِشْكَاة</text>
+      </g>
+    </g>
+    <!-- Label -->
+    <text x="590" y="580" text-anchor="middle" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#F4F1EA">iOS 18 Light</text>
+    <text x="590" y="604" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="400" fill="#71717A">Parchment Alabaster</text>
+    <text x="590" y="622" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="400" fill="#C8A96A">Deep Umber Bronze (12.8:1)</text>
+  </g>
+
+  <!-- 3. iOS 18 Tinted Mode (x=820, y=320, 220x220) -->
+  <g>
+    <rect x="820" y="320" width="220" height="220" rx="50" ry="50" fill="url(#tintedBg)" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.4" />
+    <g clip-path="url(#squircle3)">
+      <rect x="820" y="320" width="220" height="220" fill="url(#tintedBg)" />
+      <g transform="translate(820, 320) scale(0.21484375)">
+        <text x="517" y="616" text-anchor="middle" font-family="'Diwan Thuluth', 'Mishafi', 'Amiri', serif" font-size="340" fill="#70A8FF">مِشْكَاة</text>
+      </g>
+    </g>
+    <!-- Label -->
+    <text x="930" y="580" text-anchor="middle" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#F4F1EA">iOS 18 Tinted</text>
+    <text x="930" y="604" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="400" fill="#71717A">Dynamic System Tint</text>
+    <text x="930" y="622" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="400" fill="#C8A96A">Monochrome Silhouette</text>
+  </g>
+
+  <!-- 4. Android Adaptive Circle (cx=1270, cy=430, r=110) -->
+  <g>
+    <circle cx="1270" cy="430" r="110" fill="#09090B" stroke="#27272A" stroke-width="1" />
+    <g clip-path="url(#androidCircle)">
+      <rect x="1160" y="320" width="220" height="220" fill="#09090B" />
+      <!-- Safe Zone Guide circle (66dp / 108dp = 61% = r=67px) -->
+      <circle cx="1270" cy="430" r="67" fill="none" stroke="#C8A96A" stroke-width="1.2" stroke-dasharray="4 4" stroke-opacity="0.45" />
+      <g transform="translate(1160, 320) scale(0.21484375)">
+        <text x="517" y="616" text-anchor="middle" font-family="'Diwan Thuluth', 'Mishafi', 'Amiri', serif" font-size="340" fill="url(#gold)">مِشْكَاة</text>
+      </g>
+    </g>
+    <!-- Label -->
+    <text x="1270" y="580" text-anchor="middle" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#F4F1EA">Android Adaptive</text>
+    <text x="1270" y="604" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="400" fill="#71717A">108dp Grid Canvas</text>
+    <text x="1270" y="622" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="400" fill="#C8A96A">66dp Safe Zone Verified</text>
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- FOOTER SPECIFICATIONS & VERIFICATION BAR                 -->
+  <!-- ======================================================== -->
+  <g text-anchor="middle">
+    <!-- Fine Hairline Divider -->
+    <line x1="200" y1="710" x2="1400" y2="710" stroke="#27272A" stroke-width="1" />
+
+    <!-- Badges / Bullet points -->
+    <g transform="translate(800, 755)">
+      <text x="0" y="0" 
+            font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+            font-size="12" 
+            font-weight="500" 
+            letter-spacing="0.5" 
+            fill="#A1A1AA">
+        <tspan fill="#C8A96A">✦ Android Safe Zone (61% / 66dp):</tspan> Zero Mask Clipping  •  
+        <tspan fill="#C8A96A">✦ iOS 18 Contrast:</tspan> 11.4:1 Dark / 12.8:1 Light  •  
+        <tspan fill="#C8A96A">✦ Vector Rigor:</tspan> Master Diwan Thuluth Calligraphy
+      </text>
+      <text x="0" y="30" 
+            font-family="'JetBrains Mono', 'SF Mono', monospace" 
+            font-size="11" 
+            font-weight="400" 
+            letter-spacing="1" 
+            fill="#52525B">
+        mishkaah/design/branding/app-icons/ • Production Bundle
+      </text>
+    </g>
+  </g>
+</svg>

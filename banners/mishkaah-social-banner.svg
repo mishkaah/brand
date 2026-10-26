@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <!-- Refined 2-Stop Champagne Gold Gradient -->
+    <linearGradient id="champagneGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5CFA0" />
+      <stop offset="100%" stop-color="#B89655" />
+    </linearGradient>
+  </defs>
+
+  <!-- Pure Matte Obsidian Canvas (#09090B) -->
+  <rect width="1280" height="640" fill="#09090B" />
+
+  <!-- ======================================================== -->
+  <!-- SERENE CENTERED MINIMAL COMPOSITION (x=640)              -->
+  <!-- ======================================================== -->
+  <g text-anchor="middle">
+    <!-- 1. Primary Calligraphic Centerpiece: مِشْكَاة -->
+    <text x="640" y="275" 
+          font-family="'Diwan Thuluth', 'Mishafi', 'Amiri', serif" 
+          font-size="136" 
+          font-weight="normal" 
+          fill="url(#champagneGold)">
+      مِشْكَاة
+    </text>
+
+    <!-- 2. Minimal Hairline Divider (80px wide) -->
+    <line x1="600" y1="325" x2="680" y2="325" 
+          stroke="#C8A96A" 
+          stroke-width="1" 
+          stroke-opacity="0.45" />
+
+    <!-- 3. Regal Latin Title: MISHKAAH (x=648 optically compensates for trailing letter-spacing 16px) -->
+    <text x="648" y="375" 
+          font-family="'Cormorant Garamond', 'Cinzel', 'Optima', 'Didot', 'Times New Roman', serif" 
+          font-size="26" 
+          font-weight="400" 
+          letter-spacing="16" 
+          fill="#F4F1EA">
+      MISHKAAH
+    </text>
+
+    <!-- 4. Understated Subtitle: THE CANONICAL OPEN ISLAMIC CORPUS (x=642.5 for trailing letter-spacing 5px) -->
+    <text x="642.5" y="412" 
+          font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+          font-size="11" 
+          font-weight="400" 
+          letter-spacing="5" 
+          fill="#8C7A5B">
+      THE CANONICAL OPEN ISLAMIC CORPUS
+    </text>
+  </g>
+</svg>

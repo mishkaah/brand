@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- Refined 2-Stop Champagne Gold Gradient -->
+    <linearGradient id="champagneGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5CFA0" />
+      <stop offset="100%" stop-color="#B89655" />
+    </linearGradient>
+  </defs>
+
+  <!-- Pure Matte Obsidian Canvas (#09090B) -->
+  <rect width="1024" height="1024" fill="#09090B" />
+
+  <!-- Single Whisper-Thin Hairline Orbit (r=360, 152px margin) -->
+  <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.28" />
+
+  <!-- Master Classical Initial: م (Meem) in Diwan Thuluth optically centered -->
+  <text x="495" y="528" 
+        text-anchor="middle" 
+        font-family="'Diwan Thuluth', 'Mishafi', 'Amiri', serif" 
+        font-size="680" 
+        font-weight="normal" 
+        fill="url(#champagneGold)">
+    م
+  </text>
+</svg>

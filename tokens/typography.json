@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Mishkaah Design Tokens - Typography",
+  "version": "1.0.0",
+  "stacks": {
+    "brandmark": {
+      "fontFamily": ["Diwan Thuluth", "Mishafi", "Amiri", "serif"],
+      "role": "Sovereign brand calligraphic seal and initial monogram emblem",
+      "features": ["Authentic classical Diwan Thuluth ligature stacking", "Full vocalization support"]
+    },
+    "quranScripture": {
+      "fontFamily": ["KFGQPC Uthmanic Script HAFS", "Amiri Quran", "Traditional Arabic", "serif"],
+      "role": "Sacred Quranic scripture rendering (King Fahd Complex standard)",
+      "features": ["Tajweed glyphs", "Waqf marks", "Sajda markers"]
+    },
+    "classicalProse": {
+      "fontFamily": ["Amiri", "Amiri Quran", "Traditional Arabic", "serif"],
+      "role": "Hadith matns, classical Tafseer commentary, Mutun and scholarly biographies"
+    },
+    "modernArabicUI": {
+      "ios": ["SF Arabic", "system-ui", "sans-serif"],
+      "android": ["Noto Sans Arabic", "Roboto", "sans-serif"],
+      "web": ["SF Arabic", "Noto Sans Arabic", "system-ui", "sans-serif"],
+      "role": "Navigation bars, action buttons, search bars, modals and settings"
+    },
+    "latinAndNumerals": {
+      "ios": ["SF Pro Rounded", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+      "android": ["Inter", "Roboto", "sans-serif"],
+      "web": ["Inter", "-apple-system", "sans-serif"],
+      "role": "Metadata labels, verse numbers, URN identifiers and status metrics"
+    },
+    "monospaceCode": {
+      "fontFamily": ["JetBrains Mono", "SF Mono", "Menlo", "monospace"],
+      "role": "JSON record inspector, AST validator logs, URN addresses and CI badges"
+    }
+  }
+}
