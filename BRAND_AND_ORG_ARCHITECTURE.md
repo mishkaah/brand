@@ -37,7 +37,7 @@ flowchart TD
    - The sweeping sword stroke of the *Kaf* (ك) arches gracefully above the word, embracing the crowned teeth of the *Sheen* (ش), the grounded aperture of the *Meem* (م), and the regal ascenders of the *Alef* (ا) and *Ta Marbuta* (ة).
    - Authentic scholarly *harakat* (kasrah, fathah) provide organic orthographic detail and centuries of manuscript heritage.
 2. **The Whisper-Thin Hairline Orbit**:
-   - A single subtle hairline ring ($r = 360\text{px}$, stroke `#C8A96A`, opacity `0.28`, stroke-width `1.5px`) frames the calligraphy on a $1024\times1024$ canvas.
+   - A single subtle hairline ring (`r = 360px`, stroke `#C8A96A`, opacity `0.28`, stroke-width `1.5px`) frames the calligraphy on a `1024×1024` canvas.
 3. **Quiet, Museum-Grade Restraint**:
    - Zero generic clip-art icons or artificial wireframe lines.
    - Zero badge clutter or decorative noise.
@@ -110,7 +110,7 @@ All icons reside in [`./app-icons/`](./app-icons/):
 3. **`app-icon-tinted.svg` / `.png`** (iOS 18+ Tinted Mode & Android Dynamic Color):
    - Flat single-channel monochrome silhouette (`#FFFFFF`) on transparent canvas.
 4. **`android-adaptive-foreground.svg` / `.png`**:
-   - `1024×1024` transparent canvas with mark strictly confined within $R = 244.7\text{px} \ll 312\text{px}$ (66dp safe zone). Guaranteed zero clipping across circular, squircle, or teardrop Android launcher masks.
+   - `1024×1024` transparent canvas with mark strictly confined within `R = 244.7px < 312px` (66dp safe zone). Guaranteed zero clipping across circular, squircle, or teardrop Android launcher masks.
 5. **`android-adaptive-background-dark.svg`** (`#09090B`) & **`android-adaptive-background-light.svg`** (`#F6F3EC`).
 6. **`app-icon-showcase-grid.svg` / `.png`** (1600×900 / 3200×1800 retina):
    - Executive presentation board displaying iOS 18 Dark, iOS 18 Light, iOS 18 Tinted, and Android Adaptive side-by-side with safe-zone guides and contrast metrics.
