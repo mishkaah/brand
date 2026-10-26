@@ -31,7 +31,7 @@ The classical Arabic calligraphy (`مِشْكَاة`) rendered in *Diwan Thuluth
 
 <div align="center">
 
-| Dark Sovereign Mark | Transparent Gold Mark | Monogram Emblem (Meem) |
+| Dark Calligraphic Mark | Transparent Gold Mark | Monogram Emblem (Meem) |
 | :---: | :---: | :---: |
 | <img src="./logos/mishkaah-mark-dark.png" width="220" alt="Dark Mark" /> | <img src="./logos/mishkaah-mark-gold-transparent.png" width="220" alt="Transparent Gold Mark" /> | <img src="./logos/mishkaah-monogram-dark.png" width="220" alt="Monogram Dark" /> |
 | [`Vector SVG`](./logos/mishkaah-mark-dark.svg) • [`PNG`](./logos/mishkaah-mark-dark.png) | [`Vector SVG`](./logos/mishkaah-mark-gold-transparent.svg) • [`PNG`](./logos/mishkaah-mark-gold-transparent.png) | [`Vector SVG`](./logos/mishkaah-monogram-dark.svg) • [`PNG`](./logos/mishkaah-monogram-dark.png) |
@@ -74,10 +74,10 @@ To ensure the highest aesthetic quality and community consensus, Mishkaah evalua
 | :---: | :--- | :--- | :--- |
 | **1** | **Full Name — Diwan Thuluth** | Classical Arabic calligraphy with diacritics and subtle orbit ring | Master Thuluth script, 11.4:1 dark / 12.8:1 light contrast |
 | **2** | **Full Name — Diwan Kufi** | Architectural Kufic script with structured geometric balance | Monumental Kufic script with English subtext |
-| **3** | **Initial Monogram — Thuluth Meem** | Minimalist luxury seal focusing on the initial letter *Meem* | Classical sweeping Thuluth initial *Meem* |
+| **3** | **Initial Monogram — Thuluth Meem** | Minimalist calligraphic monogram focusing on the initial letter *Meem* | Classical sweeping Thuluth initial *Meem* |
 | **4** | **Initial Monogram — Kufi Meem** | Bold monumental Kufic initial mark inside circular gold ring | Bold geometric Kufic initial *Meem* |
 | **5** | **Dual-Arch Latin 'M' Monogram** | Pointed Islamic arches forming an East-West architectural bridge | Geometric dual-arch Latin M monogram |
-| **6** | **Architectural Niche & Lantern** | Ayah An-Nur 24:35 literal metaphor (*Mishkat*) with crystal lamp | Sacred architectural niche with glowing crystal lantern |
+| **6** | **Architectural Niche & Lantern** | Ayah An-Nur 24:35 literal metaphor (*Mishkat*) with crystal lamp | Traditional architectural niche with glowing crystal lantern |
 
 ---
 
