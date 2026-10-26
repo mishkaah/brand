@@ -26,7 +26,7 @@ The official identity of Mishkaah centers upon the **Sovereign Calligraphic Seal
 
 ```mermaid
 flowchart TD
-    Verse["<b>Ayat al-Nur (النور: ٣٥)</b><br/>Spiritual Source of Illumination"] --> Seal["<b>The Sovereign Calligraphic Seal</b><br/>مِشْكَاة in Diwan Thuluth"]
+    Verse["<b>Ayat al-Nur (النور: ٣٥)</b><br/>Spiritual Source of Illumination"] --> Seal["<b>The Calligraphic Mark</b><br/>مِشْكَاة in Diwan Thuluth"]
     Ring["<b>Whisper-Thin Orbit (r=360)</b><br/>Hairline framing & celestial focus"] --> Seal
     Obsidian["<b>Matte Obsidian (#09090B)</b><br/>Quiet, noble negative space (80%+)"] --> Seal
 ```

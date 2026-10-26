@@ -5,7 +5,7 @@
 ![Mishkaah Header Banner](./banners/mishkaah-social-banner.png)
 
 ### **مِشْكَاة | MISHKAAH**
-**The Open Islamic Corpus & Research Platform**
+**Open, Structured Islamic Data & Reader Apps**
 
 [![Organization](https://img.shields.io/badge/GitHub-mishkaah-C8A96A?style=flat-square&logo=github)](https://github.com/mishkaah)
 [![Brand Architecture](https://img.shields.io/badge/Architecture-v2.2.0-09090B?style=flat-square&logo=bookstack)](./BRAND_AND_ORG_ARCHITECTURE.md)
@@ -17,20 +17,18 @@
 
 ## 📖 Overview
 
-The **`mishkaah/brand`** repository is the central authority for all visual identity assets, logos, typography specifications, and mobile application icons across the **Mishkaah (مِشْكَاة)** ecosystem.
-
-Rooted in **Ayat al-Nur (Surah Al-Nur 24:35)** and built on the principle of **Geometric Silence** (minimalism, restraint, zero decorative clutter), the brand marries classical Arabic calligraphy in *Diwan Thuluth* with contemporary iOS 18+ and Android Material You design standards.
+The **`mishkaah/brand`** repository hosts visual identity assets, logos, typography specifications, and mobile application icons for the **Mishkaah (مِشْكَاة)** project.
 
 ---
 
-## 🎨 Master Brand Assets
+## 🎨 Brand Assets
 
-### 1. The Sovereign Calligraphic Seal & Monogram
-The authentic *Diwan Thuluth* calligraphy (`مِشْكَاة`) cast upon matte obsidian `#09090B` and framed with a single whisper-thin hairline orbit ($r=360\text{px}$):
+### 1. The Calligraphic Mark & Monogram
+The classical Arabic calligraphy (`مِشْكَاة`) on matte dark `#09090B` background:
 
-| Sovereign Mark (Dark) | Transparent Gold Mark | Monogram Emblem (Meem) |
+| Dark Mark | Transparent Gold Mark | Monogram Emblem (Meem) |
 | :---: | :---: | :---: |
-| <img src="./logos/mishkaah-mark-dark.png" width="220" alt="Sovereign Mark Dark" /> | <img src="./logos/mishkaah-mark-gold-transparent.png" width="220" alt="Transparent Gold Mark" /> | <img src="./logos/mishkaah-monogram-dark.png" width="220" alt="Monogram Dark" /> |
+| <img src="./logos/mishkaah-mark-dark.png" width="220" alt="Dark Mark" /> | <img src="./logos/mishkaah-mark-gold-transparent.png" width="220" alt="Transparent Gold Mark" /> | <img src="./logos/mishkaah-monogram-dark.png" width="220" alt="Monogram Dark" /> |
 | [`Vector SVG`](./logos/mishkaah-mark-dark.svg) • [`PNG`](./logos/mishkaah-mark-dark.png) | [`Vector SVG`](./logos/mishkaah-mark-gold-transparent.svg) • [`PNG`](./logos/mishkaah-mark-gold-transparent.png) | [`Vector SVG`](./logos/mishkaah-monogram-dark.svg) • [`PNG`](./logos/mishkaah-monogram-dark.png) |
 
 ---

@@ -39,14 +39,14 @@
       MISHKAAH
     </text>
 
-    <!-- 4. Understated Subtitle: THE CANONICAL OPEN ISLAMIC CORPUS (x=642.5 for trailing letter-spacing 5px) -->
+    <!-- 4. Subtitle: OPEN ISLAMIC DATA & READER APPS -->
     <text x="642.5" y="412" 
           font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
           font-size="11" 
           font-weight="400" 
           letter-spacing="5" 
           fill="#8C7A5B">
-      THE CANONICAL OPEN ISLAMIC CORPUS
+      OPEN ISLAMIC DATA &amp; READER APPS
     </text>
   </g>
 </svg>
