@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Mishkaah Design Tokens - Motion",
+  "version": "1.0.0",
+  "easings": {
+    "sacredReveal": {
+      "cubicBezier": [0.22, 1, 0.36, 1],
+      "css": "cubic-bezier(0.22, 1, 0.36, 1)",
+      "description": "Ceremonial, reverent deceleration curve for sacred stroke drawing and calligraphic reveal"
+    },
+    "gentleEmerge": {
+      "cubicBezier": [0.16, 1, 0.3, 1],
+      "css": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "description": "Smooth ambient awakening and subtle scale emergence"
+    },
+    "tashkeelFloat": {
+      "cubicBezier": [0.34, 1.56, 0.64, 1],
+      "css": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      "description": "Subtle organic vertical settle for diacritical marks"
+    },
+    "timelessSettle": {
+      "cubicBezier": [0.25, 0.1, 0.25, 1],
+      "css": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+      "description": "Final harmonic rest and shimmer settle"
+    }
+  },
+  "durations": {
+    "orbitDraw": "0.9s",
+    "rasmTrace": "1.4s",
+    "tashkeelStep": "0.12s",
+    "shimmerSweep": "0.9s",
+    "masterSequence": "3.2s",
+    "monogramLoop": "2.0s"
+  },
+  "phases": {
+    "phase1_auraAndOrbit": {
+      "start": "0.0s",
+      "end": "0.9s",
+      "elements": ["ambientGlow", "hairlineOrbit"]
+    },
+    "phase2_rasmTrace": {
+      "start": "0.4s",
+      "end": "1.8s",
+      "elements": ["rasmStrokes", "goldGradientFill"]
+    },
+    "phase3_tashkeelSequence": {
+      "start": "1.5s",
+      "end": "2.5s",
+      "elements": ["kasra", "sheenDots", "sukun", "fatha", "taMarbutaDots"]
+    },
+    "phase4_timelessStillness": {
+      "start": "2.3s",
+      "end": "3.2s",
+      "elements": ["goldenSheen", "equilibrium"]
+    }
+  },
+  "accessibility": {
+    "prefersReducedMotion": {
+      "rule": "Instantly render static finished state at 100% opacity with zero translation, zero stroke-dashoffset animation, and zero scaling.",
+      "css": "@media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }"
+    }
+  }
+}

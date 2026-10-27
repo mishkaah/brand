@@ -1,55 +1,79 @@
 <div align="center">
 
-![شعار مشكاة](./banners/mishkaah-social-banner.png)
+![شعار مشكاة](./banners/github-hero-dark.svg)
 
 [English](./README.md) · **العربية**
 
-</div>
+# منظومة الهوية والتصميم لمشروع مِشْكَاة
 
-# أصول الهوية البصرية لمشكاة
+### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
+### **Verified Islamic Heritage. Connected Knowledge.**
 
-يحتوي هذا المستودع على عناصر الهوية البصرية، والشعارات المتجهة (Vector)، وحزم أيقونات الهواتف، ورموز التصميم لمشروع مشكاة.
-
----
-
-### الشعارات الخطية
-
-الشعار الأساسي هو اسم **مِشْكَاة** مكتوباً بخط الثلث الديواني الأصيل:
-
-<div align="center">
-
-| النمط الداكن | النمط الذهبي الشفاف | مونوغرام حرف الميم |
-| :---: | :---: | :---: |
-| <img src="./logos/mishkaah-mark-dark.png" width="220" alt="الشعار الداكن" /> | <img src="./logos/mishkaah-mark-gold-transparent.png" width="220" alt="الشعار الذهبي الشفاف" /> | <img src="./logos/mishkaah-monogram-dark.png" width="220" alt="مونوغرام الميم" /> |
-| [SVG](./logos/mishkaah-mark-dark.svg) · [PNG](./logos/mishkaah-mark-dark.png) | [SVG](./logos/mishkaah-mark-gold-transparent.svg) · [PNG](./logos/mishkaah-mark-gold-transparent.png) | [SVG](./logos/mishkaah-monogram-dark.svg) · [PNG](./logos/mishkaah-monogram-dark.png) |
+[![حالة الهوية](https://img.shields.io/badge/الهوية-الإصدار%202.2-C8A96A?style=flat-square)](./docs/brand-guidelines.ar.md)
+[![رموز التصميم](https://img.shields.io/badge/رموز%20التصميم-CSS%20%7C%20TS%20%7C%20Dart-09090B?style=flat-square)](./tokens/README.ar.md)
+[![الرخصة](https://img.shields.io/badge/الرخصة-CC%20BY--SA%204.0-F6F3EC?style=flat-square&logoColor=09090B)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 </div>
 
 ---
 
-### أيقونات تطبيقات الهواتف
+## عن المستودع
 
-أيقونات مصممة خصيصاً لنظام iOS 18 (الداكن والفاتح والمصبوغ) ونظام Android التكيفي:
+يحتوي مستودع **`mishkaah/brand`** على عناصر الهوية البصرية الرسمية، والشعارات الخطية المتجهة (Vector)، وأيقونات تطبيقات الهواتف الذكية، ولافتات المستودعات الرقمية، والرسوم المتحركة التفاعلية، ورموز التصميم، وأدلة الهوية الشاملة لكافة أركان منظومة **مِشْكَاة**.
 
-<div align="center">
+تستمد الهوية إلهامها ومعناها من آية النور (*سورة النور: ٣٥*). ويجسد الرمز البصري مشكاةً معماريةً تحتضن التراث العلمي الإسلامي الأصيل من خلال لوحة خطية عربية متقنة بخط الثلث الديواني:
 
-<img src="./app-icons/app-icon-showcase-grid.png" width="800" alt="لوحة عرض أيقونات التطبيق" />
-
-</div>
-
-- **iOS 18 النمط الداكن**: [`./app-icons/app-icon-dark.svg`](./app-icons/app-icon-dark.svg) · [PNG](./app-icons/app-icon-dark.png)
-- **iOS 18 النمط الفاتح**: [`./app-icons/app-icon-light.svg`](./app-icons/app-icon-light.svg) · [PNG](./app-icons/app-icon-light.png)
-- **iOS 18 النمط المصبوغ**: [`./app-icons/app-icon-tinted.svg`](./app-icons/app-icon-tinted.svg) · [PNG](./app-icons/app-icon-tinted.png)
-- **Android الأيقونة التكيفية**: [`./app-icons/android-adaptive-foreground.svg`](./app-icons/android-adaptive-foreground.svg)
+- **الشعار الخطي الأساسي**: اسم **مِشْكَاة** كاملاً ومشكولاً بخط الثلث الديواني الأصيل. ويُستخدم في كافة الواجهات الرسمية والترويسات والوثائق المعتمدة.
+- **المونوغرام الفرعي**: حرف **الميم** الأولي (مـ) بخط الثلث الديواني، مصمم خصيصاً للمساحات الدقيقة (٤٨ بكسل أو أقل) وأيقونات المواقع (Favicons) والصور الرمزية الدائرية.
 
 ---
 
-### الألوان الأساسية
+## خريطة المستودع ومعرض الأصول
 
-- **الداكن المطفي** (`#09090B`): خلفية هادئة للقراءة الليلية.
-- **الذهب التراثي** (`#E5CFA0` ← `#B89655`): لون الخط واللمسات الجمالية.
-- **بياض الورق** (`#F6F3EC`): محاكاة لورق المخطوطات في القراءة النهارية.
+| المجلد | النطاق والمحتويات | الصيغ المتاحة | الدليل التفصيلي |
+| :--- | :--- | :--- | :--- |
+| [**`logos/`**](./logos/README.ar.md) | الشعارات الخطية الأساسية، والتراكيب الأفقية، ومونوغرام حرف الميم | `.svg`, `.png`, `.webp` | [دليل الشعارات](./logos/README.ar.md) |
+| [**`app-icons/`**](./app-icons/README.ar.md) | أيقونات iOS 18+ (الداكن والفاتح والمصبوغ)، ونظام Android التكيفي، وأيقونات المواقع | `.svg`, `.png`, `.ico` | [دليل الأيقونات](./app-icons/README.ar.md) |
+| [**`banners/`**](./banners/README.ar.md) | بطاقات المشاركة الاجتماعية (1280×640)، ولافتة المنظمة (1600×500)، ولافتات أركان المستودعات الأربعة (1280×420) | `.svg`, `.png` | [دليل اللافتات](./banners/README.ar.md) |
+| [**`animations/`**](./animations/README.ar.md) | الرسوم المتحركة البصرية: ملفات SVG التفاعلية، وحزم Lottie JSON، ومقاطع الفيديو 60 إطاراً (16:9, 9:16, 1:1) | `.svg`, `.lottie.json`, `.mp4`, `.webm` | [دليل الرسوم المتحركة](./animations/README.ar.md) |
+| [**`tokens/`**](./tokens/README.ar.md) | لوحات الألوان، وموازين الخطوط، ومنحنيات الحركة، وحزم CSS وTypeScript وDart المجمعة | `.json`, `.css`, `.ts`, `.dart` | [دليل رموز التصميم](./tokens/README.ar.md) |
+| [**`docs/`**](./docs/README.ar.md) | الأدلة الإرشادية التفصيلية: دليل الهوية الشامل، وفنون الخط، ونظام الألوان، ومعايير الحركة | `.md`, `.pdf` | [وثائق الهوية](./docs/README.ar.md) |
+| [**`scripts/`**](./scripts/README.ar.md) | سكربتات البناء والتحويل الآلي لاستخراج مسارات Bezier عبر CoreText في macOS | `.ts` | [دليل السكربتات](./scripts/README.ar.md) |
 
-ملفات التصميم بصيغة JSON للتطبيقات:
-- [الألوان (`tokens/colors.json`)](./tokens/colors.json)
-- [الخطوط (`tokens/typography.json`)](./tokens/typography.json)
+### كتيّبات الهوية البصرية ومواد العرض
+- **كتاب الهوية البصرية المطبوع (PDF)**: [`docs/presentations/mishkaah-brand-book.pdf`](./docs/presentations/mishkaah-brand-book.pdf)
+- **لوحة الملخص التنفيذي للهوية**: [`docs/presentations/brand-identity-sheet.png`](./docs/presentations/brand-identity-sheet.png)
+
+---
+
+## الروابط العامة الثابتة للأصول الرقمية
+
+تعتمد كافة مستودعات منظومة مِشْكَاة ([`core`](https://github.com/mishkaah/core), [`corpus`](https://github.com/mishkaah/corpus), [`sdk`](https://github.com/mishkaah/sdk), [`app`](https://github.com/mishkaah/app), [`.github`](https://github.com/mishkaah/.github)) بالإضافة إلى المواقع والتطبيقات الخارجية على روابط GitHub المباشرة الثابتة التالية. يضمن هذا الترتيب تحديث كافة الأصول في كل المواضع تلقائياً فور تحسين أي ملف في هذا المستودع.
+
+| وصف الأصل البصري | النمط / الصيغة | الرابط الثابت المباشر (Raw GitHub URL) |
+| :--- | :--- | :--- |
+| **الشعار الأساسي (داكن)** | رسم متجه SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/mark-dark.svg` |
+| **الشعار الأساسي (ذهبي شفاف)** | رسم متجه SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/mark-gold-transparent.svg` |
+| **الشعار الأساسي (فاتح)** | رسم متجه SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/mark-light.svg` |
+| **مونوغرام الميم (داكن)** | رسم متجه SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/monogram-dark.svg` |
+| **مونوغرام الميم (ذهبي شفاف)** | رسم متجه SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/monogram-gold-transparent.svg` |
+| **التركيب الأفقي (داكن)** | رسم متجه SVG (1600×400) | `https://github.com/mishkaah/brand/raw/main/logos/lockup-horizontal-dark.svg` |
+| **التركيب الأفقي (فاتح)** | رسم متجه SVG (1600×400) | `https://github.com/mishkaah/brand/raw/main/logos/lockup-horizontal-light.svg` |
+| **لافتة المنظمة الرئيسية** | رسم متجه SVG (1600×500) | `https://github.com/mishkaah/brand/raw/main/banners/github-hero-dark.svg` |
+| **بطاقة المشاركة الاجتماعية** | رسم متجه SVG (1280×640) | `https://github.com/mishkaah/brand/raw/main/banners/social-og-dark.svg` |
+| **لافتة مستودع المُدَوَّنة (Corpus)** | رسم متجه SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-corpus.svg` |
+| **لافتة مستودع النَّوَاة (Core)** | رسم متجه SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-core.svg` |
+| **لافتة مستودع الحَقِيبَة (SDK)** | رسم متجه SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-sdk.svg` |
+| **لافتة مستودع التَّطْبِيقَات (App)** | رسم متجه SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-app.svg` |
+| **أيقونة التطبيق (iOS الداكن)** | صورة عالية الدقة PNG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/app-icons/ios-dark.png` |
+| **أيقونة التطبيق (Android التكيفية)** | رسم متجه أمامي متكيف SVG | `https://github.com/mishkaah/brand/raw/main/app-icons/android-adaptive-foreground.svg` |
+| **شعار الظهور المتحرك** | رسم متجه متحرك SVG | `https://github.com/mishkaah/brand/raw/main/animations/svg/mishkaah-reveal-dark.svg` |
+| **حزمة الرسوم للهواتف (Lottie)** | ملف Lottie JSON للهواتف | `https://github.com/mishkaah/brand/raw/main/animations/lottie/mishkaah-reveal-dark.lottie.json` |
+
+---
+
+## الثوابت البصرية الأساسية
+
+1. **هندسة متجهة نقية ومستقلة**: تحتوي كافة ملفات SVG على مسارات منحنيات Bezier تكعيبية مغلقة ومستخرجة برمجياً عبر CoreText. لا تحتوي الملفات على وسوم `<text>` نهائياً، مما يلغي أي اعتماد على تثبيت الخطوط.
+2. **تباين بصري متفوق (معيار WCAG AAA)**: يحقق التباين بين الأسود المطفي (`#09090B`) والذهب التراثي (`#E5CFA0` ← `#B89655`) نسبة **11.4:1**، بينما يحقق النمط الفاتح (`#F6F3EC`) مع البرونز نسبة **12.8:1**.
+3. **سكينة بصرية وأصالة علمية**: صُممت الهوية بوقار ومهابة علمية تعتمد على المساحات الهادئة والانضباط الرياضي بعيداً عن التكلف والزخرفة الزائدة.

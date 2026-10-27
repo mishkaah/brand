@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mishkaah Animation & Brand Vector Studio</title>
+  <link rel="stylesheet" href="../../tokens/dist/tokens.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #09090B;
+      color: #F4F1EA;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 500;
+      color: #C8A96A;
+      margin-bottom: 8px;
+    }
+    p.sub {
+      font-size: 14px;
+      color: #71717A;
+      letter-spacing: 2px;
+    }
+    .studio-container {
+      max-width: 1200px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 32px;
+    }
+    .card {
+      background: #121215;
+      border: 1px solid #27272A;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: border-color 0.2s ease;
+    }
+    .card:hover {
+      border-color: #C8A96A;
+    }
+    .preview-box {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      background: #09090B;
+      border: 1px solid #1C1C20;
+    }
+    .preview-box.light {
+      background: #F6F3EC;
+    }
+    .preview-box img, .preview-box object {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #F4F1EA;
+      margin-bottom: 4px;
+      align-self: flex-start;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: #71717A;
+      align-self: flex-start;
+      margin-bottom: 16px;
+    }
+    .controls {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+    .btn {
+      flex: 1;
+      padding: 8px 16px;
+      background: #27272A;
+      color: #F4F1EA;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #C8A96A;
+      color: #09090B;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>مُخْتَبَرُ مِشْكَاة لِلْحَرَكَةِ وَالْهُوِيَّةِ الْبَصَرِيَّة</h1>
+    <p class="sub">MISHKAAH MOTION &amp; VECTOR STUDIO</p>
+  </header>
+
+  <div class="studio-container">
+    <!-- Card 1: Reveal Animation Dark -->
+    <div class="card">
+      <div class="preview-box">
+        <img src="../svg/mishkaah-reveal-dark.svg" alt="Mishkaah Reveal Dark" />
+      </div>
+      <div class="card-title">Choreography 1: Calligraphic Stroke Reveal (Dark)</div>
+      <div class="card-desc">0.0s Orbit Draw -> 0.4s Rasm Trace -> 1.5s Staggered Tashkeel -> 2.3s Timeless Sheen</div>
+      <div class="controls">
+        <a class="btn" href="../svg/mishkaah-reveal-dark.svg" target="_blank">Open Vector SVG</a>
+      </div>
+    </div>
+
+    <!-- Card 2: Reveal Animation Light -->
+    <div class="card">
+      <div class="preview-box light">
+        <img src="../svg/mishkaah-reveal-light.svg" alt="Mishkaah Reveal Light" />
+      </div>
+      <div class="card-title">Choreography 1: Calligraphic Stroke Reveal (Light)</div>
+      <div class="card-desc">Warm Parchment Alabaster canvas with deep umber bronze manuscript ink</div>
+      <div class="controls">
+        <a class="btn" href="../svg/mishkaah-reveal-light.svg" target="_blank">Open Vector SVG</a>
+      </div>
+    </div>
+
+    <!-- Card 3: Emerge Animation Dark -->
+    <div class="card">
+      <div class="preview-box">
+        <img src="../svg/mishkaah-emerge-dark.svg" alt="Mishkaah Emerge Dark" />
+      </div>
+      <div class="card-title">Choreography 2: Serene Emergence (Dark)</div>
+      <div class="card-desc">Minimalist ambient glow + gentle scale emergence (0.95 -> 1.0)</div>
+      <div class="controls">
+        <a class="btn" href="../svg/mishkaah-emerge-dark.svg" target="_blank">Open Vector SVG</a>
+      </div>
+    </div>
+
+    <!-- Card 4: Monogram Reveal -->
+    <div class="card">
+      <div class="preview-box">
+        <img src="../svg/mishkaah-monogram-reveal-dark.svg" alt="Monogram Reveal" />
+      </div>
+      <div class="card-title">Monogram: Meem Stroke Reveal</div>
+      <div class="card-desc">Diwan Thuluth Meem initial mark for app loaders and compact seals</div>
+      <div class="controls">
+        <a class="btn" href="../svg/mishkaah-monogram-reveal-dark.svg" target="_blank">Open Vector SVG</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

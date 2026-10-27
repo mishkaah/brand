@@ -1,0 +1,34 @@
+name: Verify Brand Integrity
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    name: Brand Assets & Documentation Verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun Runtime
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Compile Design Tokens
+        run: bun run scripts/build-tokens.ts
+
+      - name: Run Brand Integrity Suite
+        run: bun run scripts/verify-brand-integrity.ts
+
+      - name: Verify Clean Working Tree
+        run: |
+          if [ -n "$(git status --porcelain tokens/dist)" ]; then
+            echo "❌ Error: tokens/dist is out of date. Run 'bun run scripts/build-tokens.ts' and commit the changes."
+            git diff tokens/dist
+            exit 1
+          fi
