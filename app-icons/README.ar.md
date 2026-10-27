@@ -42,9 +42,9 @@
 
 | النمط | المنصة المستهدفة | أبعاد مساحة العمل | الملفات الرئيسية | الوصف والخصائص |
 | :--- | :--- | :--- | :--- | :--- |
-| **نمط iOS الداكن** | iOS 18+, iPadOS, macOS | 1024×1024 | [`app-icon-dark.png`](./app-icon-dark.png)، [`app-icon-dark.svg`](./app-icon-dark.svg) | خلفية داكنة سبجية `#09090B` مع الشعار الخطي الكامل المفرغ بذهب شامبين |
-| **نمط iOS الفاتح** | iOS 18+, iPadOS, macOS | 1024×1024 | [`app-icon-light.png`](./app-icon-light.png)، [`app-icon-light.svg`](./app-icon-light.svg) | خلفية ورقية عاجية مرمرية `#F6F3EC` مع الشعار الخطي الكامل ببرونز كلاسيكي |
-| **نمط iOS الملوّن** | واجهات iOS 18 المخصصة | 1024×1024 | [`app-icon-tinted.png`](./app-icon-tinted.png)، [`app-icon-tinted.svg`](./app-icon-tinted.svg) | قناع أحادي اللون يعتمد على كثافة الإضاءة ليتوافق تلقائياً مع خيارات الألوان التي يحددها المستخدم |
+| **نمط iOS الداكن** | iOS 18+, iPadOS, macOS | 1024×1024 | [`ios-dark.png`](./ios-dark.png)، [`ios-dark.svg`](./ios-dark.svg) | خلفية داكنة سبجية `#09090B` مع الشعار الخطي الكامل المفرغ بذهب شامبين |
+| **نمط iOS الفاتح** | iOS 18+, iPadOS, macOS | 1024×1024 | [`ios-light.png`](./ios-light.png)، [`ios-light.svg`](./ios-light.svg) | خلفية ورقية عاجية مرمرية `#F6F3EC` مع الشعار الخطي الكامل ببرونز كلاسيكي |
+| **نمط iOS الملوّن** | واجهات iOS 18 المخصصة | 1024×1024 | [`ios-tinted.png`](./ios-tinted.png)، [`ios-tinted.svg`](./ios-tinted.svg) | قناع أحادي اللون يعتمد على كثافة الإضاءة ليتوافق تلقائياً مع خيارات الألوان التي يحددها المستخدم |
 | **طبقة واجهة أندرويد (Foreground)** | Android 13+ التكيفي | 1024×1024 | [`android-adaptive-foreground.svg`](./android-adaptive-foreground.svg)، [`android-adaptive-foreground.png`](./android-adaptive-foreground.png) | طبقة متجهة شفافة تحتوي على الشعار الخطي الكامل بالذهب في المركز تماماً |
 | **خلفية أندرويد (الداكنة)** | طبقة خلفية أندرويد | 1024×1024 | [`android-adaptive-background-dark.svg`](./android-adaptive-background-dark.svg) | طبقة لونية مصمتة باللون الأسود السبجي المطفي `#09090B` |
 | **خلفية أندرويد (الفاتحة)** | طبقة خلفية أندرويد | 1024×1024 | [`android-adaptive-background-light.svg`](./android-adaptive-background-light.svg) | طبقة لونية مصمتة باللون العاجي المرمري الهادئ `#F6F3EC` |
@@ -56,9 +56,9 @@
 
 ### تكوين نظام iOS (عبر حزم أصول Xcode)
 في مشاريع أنظمة تشغيل آبل الحديثة:
-- يُعين الملف `app-icon-dark.png` كخيار رئيسي للنمط الداكن داخل `AppIcon.appiconset`.
-- يُعين الملف `app-icon-light.png` كخيار للنمط الفاتح.
-- يُعين الملف `app-icon-tinted.png` للتعامل مع خيارات التلوين في iOS 18.
+- يُعين الملف `ios-dark.png` كخيار رئيسي للنمط الداكن داخل `AppIcon.appiconset`.
+- يُعين الملف `ios-light.png` كخيار للنمط الفاتح.
+- يُعين الملف `ios-tinted.png` للتعامل مع خيارات التلوين في iOS 18.
 
 ### تكوين نظام أندرويد (`res/mipmap-anydpi-v26/ic_launcher.xml`)
 ```xml

@@ -42,9 +42,9 @@ Launcher icons operate under distinct physical constraints compared to document 
 
 | Variant | Target Platform | Canvas Size | Key Assets | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **iOS Dark Mode** | iOS 18+, iPadOS, macOS | 1024×1024 | [`app-icon-dark.png`](./app-icon-dark.png), [`app-icon-dark.svg`](./app-icon-dark.svg) | Matte obsidian `#09090B` canvas with full sovereign Champagne Gold calligraphic mark |
-| **iOS Light Mode** | iOS 18+, iPadOS, macOS | 1024×1024 | [`app-icon-light.png`](./app-icon-light.png), [`app-icon-light.svg`](./app-icon-light.svg) | Warm alabaster `#F6F3EC` parchment canvas with full sovereign Umber Bronze calligraphic mark |
-| **iOS Tinted Mode** | iOS 18+ Customized Home | 1024×1024 | [`app-icon-tinted.png`](./app-icon-tinted.png), [`app-icon-tinted.svg`](./app-icon-tinted.svg) | Monochrome luminance-mapped alpha mask adapting to user tint selections |
+| **iOS Dark Mode** | iOS 18+, iPadOS, macOS | 1024×1024 | [`ios-dark.png`](./ios-dark.png), [`ios-dark.svg`](./ios-dark.svg) | Matte obsidian `#09090B` canvas with full sovereign Champagne Gold calligraphic mark |
+| **iOS Light Mode** | iOS 18+, iPadOS, macOS | 1024×1024 | [`ios-light.png`](./ios-light.png), [`ios-light.svg`](./ios-light.svg) | Warm alabaster `#F6F3EC` parchment canvas with full sovereign Umber Bronze calligraphic mark |
+| **iOS Tinted Mode** | iOS 18+ Customized Home | 1024×1024 | [`ios-tinted.png`](./ios-tinted.png), [`ios-tinted.svg`](./ios-tinted.svg) | Monochrome luminance-mapped alpha mask adapting to user tint selections |
 | **Android Foreground** | Android 13+ Adaptive | 1024×1024 | [`android-adaptive-foreground.svg`](./android-adaptive-foreground.svg), [`android-adaptive-foreground.png`](./android-adaptive-foreground.png) | Transparent vector layer containing the centered Champagne Gold sovereign calligraphic mark |
 | **Android Background (Dark)** | Android Adaptive Layer | 1024×1024 | [`android-adaptive-background-dark.svg`](./android-adaptive-background-dark.svg) | Solid matte obsidian `#09090B` background layer |
 | **Android Background (Light)** | Android Adaptive Layer | 1024×1024 | [`android-adaptive-background-light.svg`](./android-adaptive-background-light.svg) | Solid warm alabaster `#F6F3EC` background layer |
@@ -56,9 +56,9 @@ Launcher icons operate under distinct physical constraints compared to document 
 
 ### iOS Deployment (`Info.plist` & Asset Catalogs)
 For modern iOS projects utilizing Xcode asset catalogs:
-- Provide `app-icon-dark.png` as the primary Dark variant in `AppIcon.appiconset`.
-- Provide `app-icon-light.png` as the Light variant.
-- Provide `app-icon-tinted.png` for iOS 18 tinted appearance rendering.
+- Provide `ios-dark.png` as the primary Dark variant in `AppIcon.appiconset`.
+- Provide `ios-light.png` as the Light variant.
+- Provide `ios-tinted.png` for iOS 18 tinted appearance rendering.
 
 ### Android Deployment (`res/mipmap-anydpi-v26/ic_launcher.xml`)
 ```xml

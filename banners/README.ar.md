@@ -21,7 +21,7 @@
 
 <div align="center">
 
-![لافتة مشكاة الاجتماعية](./mishkaah-social-banner.png)
+![بطاقة المشاركة الاجتماعية](./social-og-dark.png)
 
 </div>
 
@@ -63,7 +63,6 @@
 | **لافتة مستودع النَّوَاة (Core)** | 1600×500 | [`.svg`](./repo-banner-core.svg)، [`.png`](./repo-banner-core.png) | [`mishkaah/core`](https://github.com/mishkaah/core) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
 | **لافتة مستودع الحَقِيبَة (SDK)** | 1600×500 | [`.svg`](./repo-banner-sdk.svg)، [`.png`](./repo-banner-sdk.png) | [`mishkaah/sdk`](https://github.com/mishkaah/sdk) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
 | **لافتة مستودع التَّطْبِيقَات (App)** | 1600×500 | [`.svg`](./repo-banner-app.svg)، [`.png`](./repo-banner-app.png) | [`mishkaah/app`](https://github.com/mishkaah/app) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
-| **اللافتة الاجتماعية الشاملة** | 1280×640 | [`.svg`](./mishkaah-social-banner.svg)، [`.png`](./mishkaah-social-banner.png) | الحزم الصحفية والمقالات الخارجية والمشاريع التابعة | الشعار الكامل مع اسم المنظومة باللغتين |
 
 ---
 

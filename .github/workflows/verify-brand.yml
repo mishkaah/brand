@@ -20,7 +20,7 @@ jobs:
           bun-version: latest
 
       - name: Compile Design Tokens
-        run: bun run scripts/build-tokens.ts
+        run: bun run scripts/generate-tokens-dist.ts
 
       - name: Run Brand Integrity Suite
         run: bun run scripts/verify-brand-integrity.ts
@@ -28,7 +28,7 @@ jobs:
       - name: Verify Clean Working Tree
         run: |
           if [ -n "$(git status --porcelain tokens/dist)" ]; then
-            echo "❌ Error: tokens/dist is out of date. Run 'bun run scripts/build-tokens.ts' and commit the changes."
+            echo "❌ Error: tokens/dist is out of date. Run 'bun run scripts/generate-tokens-dist.ts' and commit the changes."
             git diff tokens/dist
             exit 1
           fi

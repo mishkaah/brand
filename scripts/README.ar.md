@@ -26,7 +26,7 @@
 | مسار الأداة | المهمة والمسؤولية الأساسية | أمر التشغيل |
 | :--- | :--- | :--- |
 | [`extract-calligraphy-paths.swift`](./extract-calligraphy-paths.swift) | استخراج منحنيات بيزييه التكعيبية لحروف خط *ديوان الثلث* مباشرة من محرك CoreText في macOS، وحفظ المسارات في `tokens/calligraphy-paths.json`. | `swift scripts/extract-calligraphy-paths.swift` |
-| [`build-tokens.ts`](./build-tokens.ts) / [`generate-tokens-dist.ts`](./generate-tokens-dist.ts) | تجميع ملفات JSON المحايدة للمتغيرات التصميمية في حزم برمجية جاهزة للإنتاج (`tokens.css`, `tokens.ts`, `mishkaah_tokens.dart`). | `bun run scripts/build-tokens.ts` |
+| [`generate-tokens-dist.ts`](./generate-tokens-dist.ts) | تجميع ملفات JSON المحايدة للمتغيرات التصميمية في حزم برمجية جاهزة للإنتاج (`tokens.css`, `tokens.ts`, `mishkaah_tokens.dart`). | `bun run scripts/generate-tokens-dist.ts` |
 | [`generate-vectors-and-tokens.ts`](./generate-vectors-and-tokens.ts) | توليد كافة شعارات SVG المتجهة، والرسوم المتحركة، وحزم Lottie للهواتف، ومشغلات المعاينة التفاعلية. | `bun run scripts/generate-vectors-and-tokens.ts` |
 | [`render-rasters-and-videos.ts`](./render-rasters-and-videos.ts) | تصيير الصور النقطية فائقة الدقة (PNG وWebP) عبر متصفح Chromium، وتجميع مقاطع الفيديو بمعدل 60 إطاراً في الثانية عبر FFmpeg، وتوليد كتيب الهوية بصيغة PDF. | `bun run scripts/render-rasters-and-videos.ts` |
 | [`verify-brand-integrity.ts`](./verify-brand-integrity.ts) | أداة التدقيق الصارم لسلامة ملفات JSON، والتحقق من نقاء مسارات الرسوم المتجهة، ومطابقة التوثيق المزدوج، وصحة كافة الروابط والصور، وخلو النصوص من وسوم الرياضيات الممنوعة. | `bun run scripts/verify-brand-integrity.ts` |

@@ -21,7 +21,7 @@ The **`banners/`** directory contains visual banners, OpenGraph social preview c
 
 <div align="center">
 
-![Mishkaah Social Banner](./mishkaah-social-banner.png)
+![Mishkaah Social OpenGraph Card](./social-og-dark.png)
 
 </div>
 
@@ -63,7 +63,6 @@ Each pillar within the Mishkaah architecture features a dedicated banner with it
 | **Repository Banner: Core** | 1600×500 | [`.svg`](./repo-banner-core.svg), [`.png`](./repo-banner-core.png) | [`mishkaah/core`](https://github.com/mishkaah/core) | *Preserved Text. Trusted Knowledge.* |
 | **Repository Banner: SDK** | 1600×500 | [`.svg`](./repo-banner-sdk.svg), [`.png`](./repo-banner-sdk.png) | [`mishkaah/sdk`](https://github.com/mishkaah/sdk) | *Preserved Text. Trusted Knowledge.* |
 | **Repository Banner: App** | 1600×500 | [`.svg`](./repo-banner-app.svg), [`.png`](./repo-banner-app.png) | [`mishkaah/app`](https://github.com/mishkaah/app) | *Preserved Text. Trusted Knowledge.* |
-| **Universal Social Banner** | 1280×640 | [`.svg`](./mishkaah-social-banner.svg), [`.png`](./mishkaah-social-banner.png) | Default fallback banner for media kits and external articles | Master mark with full ecosystem typography |
 
 ---
 

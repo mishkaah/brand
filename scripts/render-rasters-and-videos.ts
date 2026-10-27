@@ -131,31 +131,6 @@ async function renderStaticRasters(browser: Browser, brandRoot: string): Promise
       height: 1000,
       transparent: false,
     },
-    // Backward-compatible logos
-    {
-      svgPath: join(brandRoot, "logos", "mishkaah-mark-dark.svg"),
-      pngPath: join(brandRoot, "logos", "mishkaah-mark-dark.png"),
-      webpPath: join(brandRoot, "logos", "mishkaah-mark-dark.webp"),
-      width: 1024,
-      height: 1024,
-      transparent: false,
-    },
-    {
-      svgPath: join(brandRoot, "logos", "mishkaah-mark-gold-transparent.svg"),
-      pngPath: join(brandRoot, "logos", "mishkaah-mark-gold-transparent.png"),
-      webpPath: join(brandRoot, "logos", "mishkaah-mark-gold-transparent.webp"),
-      width: 1024,
-      height: 1024,
-      transparent: true,
-    },
-    {
-      svgPath: join(brandRoot, "logos", "mishkaah-monogram-dark.svg"),
-      pngPath: join(brandRoot, "logos", "mishkaah-monogram-dark.png"),
-      webpPath: join(brandRoot, "logos", "mishkaah-monogram-dark.webp"),
-      width: 1024,
-      height: 1024,
-      transparent: false,
-    },
 
     // App Icons (1024x1024, Favicon 512x512, Showcase 1600x900)
     {
@@ -230,31 +205,6 @@ async function renderStaticRasters(browser: Browser, brandRoot: string): Promise
       height: 512,
       transparent: false,
     },
-    // Backward-compatible app icons
-    {
-      svgPath: join(brandRoot, "app-icons", "app-icon-dark.svg"),
-      pngPath: join(brandRoot, "app-icons", "app-icon-dark.png"),
-      webpPath: join(brandRoot, "app-icons", "app-icon-dark.webp"),
-      width: 1024,
-      height: 1024,
-      transparent: false,
-    },
-    {
-      svgPath: join(brandRoot, "app-icons", "app-icon-light.svg"),
-      pngPath: join(brandRoot, "app-icons", "app-icon-light.png"),
-      webpPath: join(brandRoot, "app-icons", "app-icon-light.webp"),
-      width: 1024,
-      height: 1024,
-      transparent: false,
-    },
-    {
-      svgPath: join(brandRoot, "app-icons", "app-icon-tinted.svg"),
-      pngPath: join(brandRoot, "app-icons", "app-icon-tinted.png"),
-      webpPath: join(brandRoot, "app-icons", "app-icon-tinted.webp"),
-      width: 1024,
-      height: 1024,
-      transparent: true,
-    },
 
     // Banners
     {
@@ -319,14 +269,6 @@ async function renderStaticRasters(browser: Browser, brandRoot: string): Promise
       webpPath: join(brandRoot, "banners", "repo-banner-sdk.webp"),
       width: 1600,
       height: 500,
-      transparent: false,
-    },
-    {
-      svgPath: join(brandRoot, "banners", "mishkaah-social-banner.svg"),
-      pngPath: join(brandRoot, "banners", "mishkaah-social-banner.png"),
-      webpPath: join(brandRoot, "banners", "mishkaah-social-banner.webp"),
-      width: 1280,
-      height: 640,
       transparent: false,
     },
   ];
@@ -540,7 +482,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
   <div class="slide">
     <div class="slide-header">
       <h2>مِشْكَاة · دَلِيلُ الْهُوِيَّةِ الْبَصَرِيَّة</h2>
-      <span class="tag">MISHKAAH BRAND IDENTITY SYSTEM · v2.2.0</span>
+      <span class="tag" dir="ltr">MISHKAAH BRAND IDENTITY SYSTEM · v2.2.0</span>
     </div>
     <div class="slide-body">
       <div class="cover-content">
@@ -559,25 +501,25 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
           </defs>
         </svg>
         <div style="margin-top: 30px;">
-          <svg viewBox="0 0 350 35" width="280">
+          <svg viewBox="0 0 ${calligraphyRaw.latinWordmark.bounds.width} ${calligraphyRaw.latinWordmark.bounds.height}" width="380">
             <path d="${latinD}" fill="#F4F1EA" />
           </svg>
         </div>
         <div style="margin-top: 20px;">
-          <svg viewBox="0 0 240 40" width="300">
+          <svg viewBox="0 0 ${calligraphyRaw.masterSloganAr.bounds.width} ${calligraphyRaw.masterSloganAr.bounds.height}" width="340">
             <path d="${sloganArD}" fill="#C8A96A" />
           </svg>
         </div>
         <div style="margin-top: 10px;">
-          <svg viewBox="0 0 550 15" width="440">
-            <path d="${sloganEnD}" fill="#71717A" />
+          <svg viewBox="0 0 ${calligraphyRaw.masterSloganEn.bounds.width} ${calligraphyRaw.masterSloganEn.bounds.height}" width="460">
+            <path d="${sloganEnD}" fill="#8C7A5B" />
           </svg>
         </div>
       </div>
     </div>
     <div class="slide-footer">
       <span>الدَّوْلَةُ الْعِلْمِيَّةُ لِلْمُدَوَّنَةِ الإِسْلَامِيَّة</span>
-      <span>OFFICIAL BRAND SPECIFICATION BOOK · SLIDE 1 / 8</span>
+      <span dir="ltr">OFFICIAL BRAND SPECIFICATION BOOK · SLIDE 1 / 8</span>
     </div>
   </div>
 
@@ -585,7 +527,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
   <div class="slide">
     <div class="slide-header">
       <h2>فَلْسَفَةُ الْهُوِيَّةِ وَالْمُرْتَكَزُ الرُّوحِيّ</h2>
-      <span class="tag">01 · BRAND PHILOSOPHY &amp; SPIRITUAL ANCHOR</span>
+      <span class="tag" dir="ltr">01 · BRAND PHILOSOPHY &amp; SPIRITUAL ANCHOR</span>
     </div>
     <div class="slide-body">
       <div class="grid-2col">
@@ -609,7 +551,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
     </div>
     <div class="slide-footer">
       <span>مِشْكَاة: صَرْحٌ عِلْمِيٌّ مُحَقَّق</span>
-      <span>SLIDE 2 / 8</span>
+      <span dir="ltr">SLIDE 2 / 8</span>
     </div>
   </div>
 
@@ -617,7 +559,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
   <div class="slide">
     <div class="slide-header">
       <h2>تَشْرِيحُ الشِّعَارِ الْخَطِّيِّ السِّيَادِيّ</h2>
-      <span class="tag">02 · PRIMARY CALLIGRAPHIC MARK ANATOMY</span>
+      <span class="tag" dir="ltr">02 · PRIMARY CALLIGRAPHIC MARK ANATOMY</span>
     </div>
     <div class="slide-body">
       <div class="grid-2col">
@@ -645,7 +587,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
     </div>
     <div class="slide-footer">
       <span>خَطُّ الثُّلُثِ الدِّيوَانِيِّ الْمُحَقَّق</span>
-      <span>SLIDE 3 / 8</span>
+      <span dir="ltr">SLIDE 3 / 8</span>
     </div>
   </div>
 
@@ -653,7 +595,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
   <div class="slide">
     <div class="slide-header">
       <h2>مُونُوغْرَامُ الْمِيمِ وَالتَّرْكِيبُ الأُفُقِيّ</h2>
-      <span class="tag">03 · MONOGRAM (MEEM) &amp; HORIZONTAL LOCKUPS</span>
+      <span class="tag" dir="ltr">03 · MONOGRAM (MEEM) &amp; HORIZONTAL LOCKUPS</span>
     </div>
     <div class="slide-body">
       <div class="grid-2col">
@@ -679,15 +621,15 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
                   <stop offset="100%" stop-color="#553F16" />
                 </linearGradient>
               </defs>
-              <g transform="translate(${280 - 512 * 0.52}, ${240 - 512 * 0.52}) scale(0.52)">
+              <g transform="translate(${285 - 512 * 0.62}, ${240 - 512 * 0.62}) scale(0.62)">
                 <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="2.5" stroke-opacity="0.30" />
                 ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#goldGrad)")}
               </g>
-              <line x1="560" y1="90" x2="560" y2="390" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.35" />
-              <g transform="translate(630, 110)">
+              <line x1="565" y1="85" x2="565" y2="395" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.35" />
+              <g transform="translate(655, 140)">
                 <g transform="translate(0, 0)"><path d="${latinD}" fill="#F4F1EA" /></g>
-                <g transform="translate(0, 100)"><path d="${sloganArD}" fill="#C8A96A" /></g>
-                <g transform="translate(0, 205)"><path d="${sloganEnD}" fill="#8C7A5B" /></g>
+                <g transform="translate(0, 76)"><path d="${sloganArD}" fill="#C8A96A" /></g>
+                <g transform="translate(0, 186)"><path d="${sloganEnD}" fill="#8C7A5B" /></g>
               </g>
             </svg>
           </div>
@@ -697,7 +639,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
     </div>
     <div class="slide-footer">
       <span>تَكَامُلُ الْعَنَاصِرِ الْبَصَرِيَّة</span>
-      <span>SLIDE 4 / 8</span>
+      <span dir="ltr">SLIDE 4 / 8</span>
     </div>
   </div>
 
@@ -705,35 +647,35 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
   <div class="slide">
     <div class="slide-header">
       <h2>مَنْظُومَةُ الشِّعَارَاتِ وَالأَرْكَانِ الأَرْبَعَة</h2>
-      <span class="tag">04 · BILINGUAL SLOGANS ACROSS THE 4 PILLARS</span>
+      <span class="tag" dir="ltr">04 · BILINGUAL SLOGANS ACROSS THE 4 PILLARS</span>
     </div>
     <div class="slide-body">
       <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 24px; width:100%;">
         <div class="card">
           <h3>١. الشِّعَارُ السِّيَادِيُّ الأُمّ</h3>
           <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون»</p>
-          <p style="letter-spacing:1px; color:#C8A96A;">Preserved Text. Trusted Knowledge.</p>
+          <p dir="ltr" style="letter-spacing:1px; color:#C8A96A; text-align:right;">Preserved Text. Trusted Knowledge.</p>
         </div>
         <div class="card">
           <h3>٢. رُكْنُ الْمُدَوَّنَة (Corpus)</h3>
           <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون»</p>
-          <p style="letter-spacing:1px; color:#C8A96A;">Preserved Text. Trusted Knowledge.</p>
+          <p dir="ltr" style="letter-spacing:1px; color:#C8A96A; text-align:right;">Preserved Text. Trusted Knowledge.</p>
         </div>
         <div class="card">
           <h3>٣. رُكْنُ التَّطْبِيق (Reader App)</h3>
           <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون»</p>
-          <p style="letter-spacing:1px; color:#C8A96A;">Preserved Text. Trusted Knowledge.</p>
+          <p dir="ltr" style="letter-spacing:1px; color:#C8A96A; text-align:right;">Preserved Text. Trusted Knowledge.</p>
         </div>
         <div class="card">
           <h3>٤. رُكْنُ النَّوَاة وَالْحَقِيبَة (Core &amp; SDK)</h3>
           <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون»</p>
-          <p style="letter-spacing:1px; color:#C8A96A;">Preserved Text. Trusted Knowledge.</p>
+          <p dir="ltr" style="letter-spacing:1px; color:#C8A96A; text-align:right;">Preserved Text. Trusted Knowledge.</p>
         </div>
       </div>
     </div>
     <div class="slide-footer">
       <span>بَلَاغَةُ الْعِبَارَةِ وَوُضُوحُ الْمَقْصِد</span>
-      <span>SLIDE 5 / 8</span>
+      <span dir="ltr">SLIDE 5 / 8</span>
     </div>
   </div>
 
@@ -741,7 +683,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
   <div class="slide">
     <div class="slide-header">
       <h2>الثُّنَائِيَّةُ اللَّوْنِيَّةُ وَشَارَاتُ التَّوْثِيقِ الْحَدِيثِيّ</h2>
-      <span class="tag">05 · CHROMATIC DUALITY &amp; HADITH AUTHENTICITY TOKENS</span>
+      <span class="tag" dir="ltr">05 · CHROMATIC DUALITY &amp; HADITH AUTHENTICITY TOKENS</span>
     </div>
     <div class="slide-body">
       <div class="grid-2col">
@@ -749,45 +691,45 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
           <h3>أَلْوَانُ الأَرْضِيَّةِ وَالْخَطّ</h3>
           <div class="swatch">
             <div class="swatch-box" style="background:#09090B;"></div>
-            <div><b>الأسود المطفي (Matte Obsidian)</b><br><span style="color:#71717A;">#09090B · الخلفية الداكنة الافتراضية</span></div>
+            <div><b>الأسود المطفي (Matte Obsidian)</b><br><span style="color:#71717A;"><span dir="ltr">#09090B</span> · الخلفية الداكنة الافتراضية</span></div>
           </div>
           <div class="swatch">
             <div class="swatch-box" style="background:#F6F3EC; border-color:#DDD;"></div>
-            <div><b>بياض الورق (Warm Alabaster)</b><br><span style="color:#71717A;">#F6F3EC · أرضية القراءة النهارية</span></div>
+            <div><b>بياض الورق (Warm Alabaster)</b><br><span style="color:#71717A;"><span dir="ltr">#F6F3EC</span> · أرضية القراءة النهارية</span></div>
           </div>
           <div class="swatch">
             <div class="swatch-box" style="background:linear-gradient(135deg, #E5CFA0, #B89655);"></div>
-            <div><b>الذهب التراثي (Champagne Gold)</b><br><span style="color:#C8A96A;">تباين 11.4:1 على الأسود (WCAG AAA)</span></div>
+            <div><b>الذهب التراثي (Champagne Gold)</b><br><span style="color:#C8A96A;">تباين <span dir="ltr">11.4:1</span> على الأسود (WCAG AAA)</span></div>
           </div>
           <div class="swatch">
             <div class="swatch-box" style="background:linear-gradient(135deg, #8A6B2F, #553F16);"></div>
-            <div><b>الحبر التراثي (Umber Bronze)</b><br><span style="color:#C8A96A;">تباين 12.8:1 على الورق (WCAG AAA)</span></div>
+            <div><b>الحبر التراثي (Umber Bronze)</b><br><span style="color:#C8A96A;">تباين <span dir="ltr">12.8:1</span> على الورق (WCAG AAA)</span></div>
           </div>
         </div>
         <div class="card">
           <h3>شَارَاتُ دَرَجَاتِ الْحَدِيثِ الشَّرِيف</h3>
           <div class="swatch">
             <div class="swatch-box" style="background:#10B981;"></div>
-            <div><b style="color:#10B981;">صَحِيح (Sahih)</b><br><span style="color:#71717A;">#10B981 · شارة الحديث الصحيح المتصل</span></div>
+            <div><b style="color:#10B981;">صَحِيح (Sahih)</b><br><span style="color:#71717A;"><span dir="ltr">#10B981</span> · شارة الحديث الصحيح المتصل</span></div>
           </div>
           <div class="swatch">
             <div class="swatch-box" style="background:#3B82F6;"></div>
-            <div><b style="color:#3B82F6;">حَسَن (Hasan)</b><br><span style="color:#71717A;">#3B82F6 · شارة الحديث الحسن المقبول</span></div>
+            <div><b style="color:#3B82F6;">حَسَن (Hasan)</b><br><span style="color:#71717A;"><span dir="ltr">#3B82F6</span> · شارة الحديث الحسن المقبول</span></div>
           </div>
           <div class="swatch">
             <div class="swatch-box" style="background:#F59E0B;"></div>
-            <div><b style="color:#F59E0B;">ضَعِيف (Da'if)</b><br><span style="color:#71717A;">#F59E0B · شارة الحديث الضعيف المنبه عليه</span></div>
+            <div><b style="color:#F59E0B;">ضَعِيف (Da'if)</b><br><span style="color:#71717A;"><span dir="ltr">#F59E0B</span> · شارة الحديث الضعيف المنبه عليه</span></div>
           </div>
           <div class="swatch">
             <div class="swatch-box" style="background:#EF4444;"></div>
-            <div><b style="color:#EF4444;">تَنْبِيه / تَحْقِيق (Alert)</b><br><span style="color:#71717A;">#EF4444 · استدراك علمي أو فحص يدوي</span></div>
+            <div><b style="color:#EF4444;">تَنْبِيه / تَحْقِيق (Alert)</b><br><span style="color:#71717A;"><span dir="ltr">#EF4444</span> · استدراك علمي أو فحص يدوي</span></div>
           </div>
         </div>
       </div>
     </div>
     <div class="slide-footer">
       <span>مُعَايِيرُ وُصُولٍ عَالِيَة (WCAG AAA)</span>
-      <span>SLIDE 6 / 8</span>
+      <span dir="ltr">SLIDE 6 / 8</span>
     </div>
   </div>
 
@@ -795,39 +737,45 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
   <div class="slide">
     <div class="slide-header">
       <h2>مَنْظُومَةُ الْخُطُوطِ السِّتَّةِ الْمُعْتَمَدَة</h2>
-      <span class="tag">06 · 6-TIER TYPOGRAPHY ARCHITECTURE</span>
+      <span class="tag" dir="ltr">06 · 6-TIER TYPOGRAPHY ARCHITECTURE</span>
     </div>
     <div class="slide-body">
       <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 20px; width:100%;">
         <div class="card" style="padding:24px;">
           <h3>١. خَطُّ الشِّعَارِ السِّيَادِيّ</h3>
-          <p><b>Diwan Thuluth:</b> خط الثلث الديواني العريق لعلامة مشكاة والمونوغرام.</p>
+          <div dir="ltr" style="text-align:right; color:#C8A96A; font-family:'Inter',sans-serif; font-weight:600; font-size:15px; margin-bottom:4px;">Diwan Thuluth</div>
+          <p>خط الثلث الديواني العريق لعلامة مشكاة والمونوغرام.</p>
         </div>
         <div class="card" style="padding:24px;">
           <h3>٢. خَطُّ الْمُصْحَفِ الشَّرِيف</h3>
-          <p><b>KFGQPC Uthmanic Script HAFS:</b> خط مجمع الملك فهد لطباعة المصحف الشريف.</p>
+          <div dir="ltr" style="text-align:right; color:#C8A96A; font-family:'Inter',sans-serif; font-weight:600; font-size:15px; margin-bottom:4px;">KFGQPC Uthmanic Script HAFS</div>
+          <p>خط مجمع الملك فهد لطباعة المصحف الشريف.</p>
         </div>
         <div class="card" style="padding:24px;">
           <h3>٣. خَطُّ النُّصُوصِ التُّرَاثِيَّة</h3>
-          <p><b>Amiri / Traditional Arabic:</b> للأحاديث، وكتب التفسير، وشروح المتون العلمية.</p>
+          <div dir="ltr" style="text-align:right; color:#C8A96A; font-family:'Inter',sans-serif; font-weight:600; font-size:15px; margin-bottom:4px;">Amiri / Traditional Arabic</div>
+          <p>للأحاديث، وكتب التفسير، وشروح المتون العلمية.</p>
         </div>
         <div class="card" style="padding:24px;">
           <h3>٤. خَطُّ وَاجِهَاتِ التَّطْبِيق</h3>
-          <p><b>SF Arabic / Noto Sans Arabic:</b> للعناوين والأزرار والبحث والقوائم التفاعلية.</p>
+          <div dir="ltr" style="text-align:right; color:#C8A96A; font-family:'Inter',sans-serif; font-weight:600; font-size:15px; margin-bottom:4px;">SF Arabic / Noto Sans Arabic</div>
+          <p>للعناوين والأزرار والبحث والقوائم التفاعلية.</p>
         </div>
         <div class="card" style="padding:24px;">
           <h3>٥. خَطُّ اللَّاتِينِيَّةِ وَالأَرْقَام</h3>
-          <p><b>SF Pro Rounded / Inter:</b> للأرقام، والتصنيفات، والترجمات الإنجليزية.</p>
+          <div dir="ltr" style="text-align:right; color:#C8A96A; font-family:'Inter',sans-serif; font-weight:600; font-size:15px; margin-bottom:4px;">Times New Roman / Inter</div>
+          <p>للأرقام، والتصنيفات، والترجمات الإنجليزية.</p>
         </div>
         <div class="card" style="padding:24px;">
           <h3>٦. خَطُّ الْبَرْمَجَةِ وَالْمُعَرِّفَات</h3>
-          <p><b>JetBrains Mono / SF Mono:</b> لمعرفات URN وسجلات JSON البرمجية.</p>
+          <div dir="ltr" style="text-align:right; color:#C8A96A; font-family:'Inter',sans-serif; font-weight:600; font-size:15px; margin-bottom:4px;">JetBrains Mono / SF Mono</div>
+          <p>لمعرفات URN وسجلات JSON البرمجية.</p>
         </div>
       </div>
     </div>
     <div class="slide-footer">
       <span>تَسَلْسُلٌ طِبَاعِيٌّ مُنْضَبِط</span>
-      <span>SLIDE 7 / 8</span>
+      <span dir="ltr">SLIDE 7 / 8</span>
     </div>
   </div>
 
@@ -835,7 +783,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
   <div class="slide">
     <div class="slide-header">
       <h2>أَيْقُونَةُ التَّطْبِيقِ وَالْحَرَكَةُ الرُّوحِيَّة</h2>
-      <span class="tag">07 · MOBILE APP ICON SYSTEM &amp; MOTION CHOREOGRAPHY</span>
+      <span class="tag" dir="ltr">07 · MOBILE APP ICON SYSTEM &amp; MOTION CHOREOGRAPHY</span>
     </div>
     <div class="slide-body">
       <div class="grid-2col">
@@ -843,17 +791,23 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
           <div style="display:flex; gap:20px; align-items:center;">
             <div style="width:100px; height:100px; border-radius:22px; background:#09090B; border:1px solid #27272A; display:flex; align-items:center; justify-content:center;">
               <svg viewBox="0 0 1024 1024" width="80" height="80">
-                ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#goldGrad)")}
+                <g transform="translate(51.2, 51.2) scale(0.90)">
+                  ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#goldGrad)")}
+                </g>
               </svg>
             </div>
             <div style="width:100px; height:100px; border-radius:22px; background:#F6F3EC; border:1px solid #DDD; display:flex; align-items:center; justify-content:center;">
               <svg viewBox="0 0 1024 1024" width="80" height="80">
-                ${renderMarkGroup(calligraphyRaw.primaryMark, "#705622")}
+                <g transform="translate(51.2, 51.2) scale(0.90)">
+                  ${renderMarkGroup(calligraphyRaw.primaryMark, "#705622")}
+                </g>
               </svg>
             </div>
             <div style="width:100px; height:100px; border-radius:50%; background:#09090B; border:1px dashed #C8A96A; display:flex; align-items:center; justify-content:center;">
               <svg viewBox="0 0 1024 1024" width="80" height="80">
-                ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#goldGrad)")}
+                <g transform="translate(51.2, 51.2) scale(0.90)">
+                  ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#goldGrad)")}
+                </g>
               </svg>
             </div>
           </div>
@@ -873,7 +827,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
     </div>
     <div class="slide-footer">
       <span>مِشْكَاة: نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون</span>
-      <span>SLIDE 8 / 8</span>
+      <span dir="ltr">SLIDE 8 / 8</span>
     </div>
   </div>
 
@@ -976,15 +930,15 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
       <p style="font-size:16px; color:#A1A1AA; margin-top:6px;">نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون</p>
     </div>
     <div style="text-align:left;">
-      <div class="header-sub">MISHKAAH EXECUTIVE BRAND IDENTITY BOARD</div>
-      <div style="font-size:13px; color:#C8A96A; margin-top:6px;">ARCHITECTURAL INTEGRITY · WCAG AAA VERIFIED</div>
+      <div class="header-sub" dir="ltr">MISHKAAH EXECUTIVE BRAND IDENTITY BOARD</div>
+      <div style="font-size:13px; color:#C8A96A; margin-top:6px;" dir="ltr">ARCHITECTURAL INTEGRITY · WCAG AAA VERIFIED</div>
     </div>
   </header>
 
   <div class="bento-grid">
     <!-- Cell 1: Sovereign Primary Mark (Dark) -->
     <div class="bento-cell" style="align-items:center; justify-content:center; text-align:center;">
-      <div class="cell-title" style="align-self:flex-start;">الشِّعَارُ السِّيَادِيُّ الدَّاكِن (Primary Mark Dark)</div>
+      <div class="cell-title" style="align-self:flex-start;">الشِّعَارُ السِّيَادِيُّ الدَّاكِن <span dir="ltr">(Primary Mark Dark)</span></div>
       <svg viewBox="0 0 1024 1024" width="460" height="460">
         <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="2" stroke-opacity="0.30" />
         ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#bentoGold)")}
@@ -999,23 +953,23 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
           </linearGradient>
         </defs>
       </svg>
-      <div style="margin-top:16px; font-size:14px; color:#71717A;">Diwan Thuluth Calligraphy · Hairline Celestial Orbit (r=360) · Contrast 11.4:1</div>
+      <div style="margin-top:16px; font-size:14px; color:#71717A;" dir="ltr">Diwan Thuluth Calligraphy · Hairline Celestial Orbit (r=360) · Contrast 11.4:1</div>
     </div>
 
     <!-- Cell 2: Primary Mark Light & Monograms -->
     <div class="bento-cell light" style="align-items:center; justify-content:center; text-align:center;">
-      <div class="cell-title" style="align-self:flex-start;">الشِّعَارُ الْفَاتِح (Warm Parchment Reading Surface)</div>
+      <div class="cell-title" style="align-self:flex-start;">الشِّعَارُ الْفَاتِح <span dir="ltr">(Warm Parchment Reading Surface)</span></div>
       <svg viewBox="0 0 1024 1024" width="440" height="440">
         <circle cx="512" cy="512" r="360" fill="none" stroke="#705622" stroke-width="2" stroke-opacity="0.35" />
         ${renderMarkGroup(calligraphyRaw.primaryMark, "#705622")}
       </svg>
-      <div style="margin-top:16px; font-size:14px; color:#52525B;">Parchment Alabaster #F6F3EC · Umber Bronze Ink #705622 · Contrast 12.8:1</div>
+      <div style="margin-top:16px; font-size:14px; color:#52525B;" dir="ltr">Parchment Alabaster #F6F3EC · Umber Bronze Ink #705622 · Contrast 12.8:1</div>
     </div>
 
     <!-- Cell 3: Monogram Meem & App Icons -->
     <div class="bento-cell" style="justify-content:space-between;">
       <div>
-        <div class="cell-title">مُونُوغْرَامُ الْمِيم (Monogram)</div>
+        <div class="cell-title">مُونُوغْرَامُ الْمِيم <span dir="ltr">(Monogram)</span></div>
         <div style="display:flex; justify-content:center; margin:16px 0;">
           <svg viewBox="0 0 1024 1024" width="220" height="220">
             <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="2" stroke-opacity="0.30" />
@@ -1024,25 +978,25 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
         </div>
       </div>
       <div>
-        <div class="cell-title">حُزْمَةُ أَيْقُونَةِ التَّطْبِيق (App Icons)</div>
+        <div class="cell-title">حُزْمَةُ أَيْقُونَةِ التَّطْبِيق <span dir="ltr">(App Icons)</span></div>
         <div style="display:flex; gap:16px; justify-content:center;">
           <div style="width:72px; height:72px; border-radius:16px; background:#09090B; border:1px solid #27272A; display:flex; align-items:center; justify-content:center;">
-            <svg viewBox="0 0 1024 1024" width="56" height="56">${renderMarkGroup(calligraphyRaw.primaryMark, "url(#bentoGold)")}</svg>
+            <svg viewBox="0 0 1024 1024" width="56" height="56"><g transform="translate(51.2, 51.2) scale(0.90)">${renderMarkGroup(calligraphyRaw.primaryMark, "url(#bentoGold)")}</g></svg>
           </div>
           <div style="width:72px; height:72px; border-radius:16px; background:#F6F3EC; border:1px solid #E4E0D6; display:flex; align-items:center; justify-content:center;">
-            <svg viewBox="0 0 1024 1024" width="56" height="56">${renderMarkGroup(calligraphyRaw.primaryMark, "#705622")}</svg>
+            <svg viewBox="0 0 1024 1024" width="56" height="56"><g transform="translate(51.2, 51.2) scale(0.90)">${renderMarkGroup(calligraphyRaw.primaryMark, "#705622")}</g></svg>
           </div>
           <div style="width:72px; height:72px; border-radius:50%; background:#09090B; border:1px dashed #C8A96A; display:flex; align-items:center; justify-content:center;">
-            <svg viewBox="0 0 1024 1024" width="56" height="56">${renderMarkGroup(calligraphyRaw.primaryMark, "url(#bentoGold)")}</svg>
+            <svg viewBox="0 0 1024 1024" width="56" height="56"><g transform="translate(51.2, 51.2) scale(0.90)">${renderMarkGroup(calligraphyRaw.primaryMark, "url(#bentoGold)")}</g></svg>
           </div>
         </div>
-        <div style="text-align:center; margin-top:8px; font-size:11px; color:#71717A;">iOS 18 Dark · iOS 18 Light · Android 66dp Safe Zone</div>
+        <div style="text-align:center; margin-top:8px; font-size:11px; color:#71717A;" dir="ltr">iOS 18 Dark · iOS 18 Light · Android 66dp Safe Zone</div>
       </div>
     </div>
 
     <!-- Cell 4: Horizontal Lockups (Span 2 Cols) -->
     <div class="bento-cell" style="grid-column: span 2; justify-content:center;">
-      <div class="cell-title">التَّرْكِيبُ الأُفُقِيُّ الْمُوَحَّد (Horizontal Sovereign Lockups)</div>
+      <div class="cell-title">التَّرْكِيبُ الأُفُقِيُّ الْمُوَحَّد <span dir="ltr">(Horizontal Sovereign Lockups)</span></div>
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; align-items:center;">
         <div style="background:#09090B; border:1px solid #27272A; border-radius:16px; padding:24px;">
           <svg viewBox="0 0 1600 480" width="100%">
@@ -1056,29 +1010,29 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
                 <stop offset="100%" stop-color="#553F16" />
               </linearGradient>
             </defs>
-            <g transform="translate(${280 - 512 * 0.52}, ${240 - 512 * 0.52}) scale(0.52)">
+            <g transform="translate(${285 - 512 * 0.62}, ${240 - 512 * 0.62}) scale(0.62)">
               <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="2.5" stroke-opacity="0.30" />
               ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#bentoGold)")}
             </g>
-            <line x1="560" y1="90" x2="560" y2="390" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.35" />
-            <g transform="translate(630, 110)">
+            <line x1="565" y1="85" x2="565" y2="395" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.35" />
+            <g transform="translate(655, 140)">
               <g transform="translate(0, 0)"><path d="${latinD}" fill="#F4F1EA" /></g>
-              <g transform="translate(0, 100)"><path d="${sloganArD}" fill="#C8A96A" /></g>
-              <g transform="translate(0, 205)"><path d="${sloganEnD}" fill="#8C7A5B" /></g>
+              <g transform="translate(0, 76)"><path d="${sloganArD}" fill="#C8A96A" /></g>
+              <g transform="translate(0, 186)"><path d="${sloganEnD}" fill="#8C7A5B" /></g>
             </g>
           </svg>
         </div>
         <div style="background:#F6F3EC; border:1px solid #E4E0D6; border-radius:16px; padding:24px;">
           <svg viewBox="0 0 1600 480" width="100%">
-            <g transform="translate(${280 - 512 * 0.52}, ${240 - 512 * 0.52}) scale(0.52)">
+            <g transform="translate(${285 - 512 * 0.62}, ${240 - 512 * 0.62}) scale(0.62)">
               <circle cx="512" cy="512" r="360" fill="none" stroke="#705622" stroke-width="2.5" stroke-opacity="0.35" />
               ${renderMarkGroup(calligraphyRaw.primaryMark, "#705622")}
             </g>
-            <line x1="560" y1="90" x2="560" y2="390" stroke="#705622" stroke-width="1.5" stroke-opacity="0.35" />
-            <g transform="translate(630, 110)">
+            <line x1="565" y1="85" x2="565" y2="395" stroke="#705622" stroke-width="1.5" stroke-opacity="0.35" />
+            <g transform="translate(655, 140)">
               <g transform="translate(0, 0)"><path d="${latinD}" fill="#18181B" /></g>
-              <g transform="translate(0, 100)"><path d="${sloganArD}" fill="#705622" /></g>
-              <g transform="translate(0, 205)"><path d="${sloganEnD}" fill="#7A756B" /></g>
+              <g transform="translate(0, 76)"><path d="${sloganArD}" fill="#705622" /></g>
+              <g transform="translate(0, 186)"><path d="${sloganEnD}" fill="#7A756B" /></g>
             </g>
           </svg>
         </div>
@@ -1087,7 +1041,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
 
     <!-- Cell 5: Colors & Hadith Tokens -->
     <div class="bento-cell" style="justify-content:space-around;">
-      <div class="cell-title">مَنْظُومَةُ الأَلْوَانِ وَشَارَاتُ التَّوْثِيق</div>
+      <div class="cell-title">مَنْظُومَةُ الأَلْوَانِ وَشَارَاتُ التَّوْثِيق <span dir="ltr">(Palette &amp; Hadith Badges)</span></div>
       <div style="display:flex; gap:12px;" dir="ltr">
         <div style="flex:1; height:60px; border-radius:12px; background:#09090B; border:1px solid #27272A; display:flex; align-items:center; justify-content:center; font-size:11px; color:#A1A1AA;" dir="ltr">#09090B</div>
         <div style="flex:1; height:60px; border-radius:12px; background:#F6F3EC; display:flex; align-items:center; justify-content:center; font-size:11px; color:#18181B;" dir="ltr">#F6F3EC</div>
@@ -1104,8 +1058,8 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
   </div>
 
   <footer>
-    <div>MISHKAAH · OPEN ISLAMIC CORPUS &amp; SACRED READER APPS</div>
-    <div>100% OUTLINED VECTOR BEZIERS · 0 ANY / 0 UNKNOWN TYPESCRIPT ENGINE</div>
+    <div dir="ltr">MISHKAAH · OPEN ISLAMIC CORPUS &amp; SACRED READER APPS</div>
+    <div dir="ltr">100% OUTLINED VECTOR BEZIERS · 0 ANY / 0 UNKNOWN TYPESCRIPT ENGINE</div>
   </footer>
 </body>
 </html>`;
@@ -1228,14 +1182,14 @@ ${markContours.map((p) => `      <path d="${p.d}" />`).join("\n")}
     <!-- Vertical Hairline Divider -->
     <line id="divider" x1="900" y1="240" x2="900" y2="840" stroke="${strokeCol}" stroke-width="1.5" stroke-opacity="0" />
     <!-- Right Typography Block -->
-    <g transform="translate(990, 420)">
+    <g transform="translate(990, 440)">
       <g id="title-g" opacity="0">
         <path d="${latinD}" fill="${titleFill}" />
       </g>
-      <g id="slogan-ar-g" transform="translate(0, 100)" opacity="0">
+      <g id="slogan-ar-g" transform="translate(0, 76)" opacity="0">
         <path d="${sloganArD}" fill="${sloganArFill}" />
       </g>
-      <g id="slogan-en-g" transform="translate(0, 195)" opacity="0">
+      <g id="slogan-en-g" transform="translate(0, 186)" opacity="0">
         <path d="${sloganEnD}" fill="${sloganEnFill}" />
       </g>
     </g>
@@ -1573,23 +1527,6 @@ ${markContours.map((p) => `        <path d="${p.d}" />`).join("\n")}
     sloganEnD,
     sloganEnBounds,
   });
-
-  // Copy rendered videos to alias files
-  console.log("  Writing video aliases (real files, zero symlinks)...");
-  const aliasCopies = [
-    { src: "mishkaah-intro-16x9-dark.mp4", dest: "mishkaah-reveal-16x9.mp4" },
-    { src: "mishkaah-intro-16x9-dark.webm", dest: "mishkaah-reveal-16x9.webm" },
-    { src: "mishkaah-splash-9x16-dark.mp4", dest: "mishkaah-reveal-9x16.mp4" },
-    { src: "mishkaah-reveal-1x1-dark.mp4", dest: "mishkaah-reveal-1x1.mp4" },
-  ];
-  for (const ac of aliasCopies) {
-    const srcPath = join(videoDir, ac.src);
-    const destPath = join(videoDir, ac.dest);
-    if (existsSync(srcPath)) {
-      copyFileSync(srcPath, destPath);
-      console.log(`    ✓ Copied alias ${ac.dest}`);
-    }
-  }
 
   // Verification frame captures
   console.log("📸 Capturing Verification Frames and Screenshots...");
