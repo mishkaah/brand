@@ -59,10 +59,10 @@ Each pillar within the Mishkaah architecture features a dedicated banner with it
 | :--- | :--- | :--- | :--- | :--- |
 | **Organization Hero Banner** | 1600×500 | [`.svg`](./github-hero-dark.svg), [`.png`](./github-hero-dark.png) | GitHub Org Profile ([`mishkaah`](https://github.com/mishkaah)) | Centered master calligraphic mark, celestial orbit, master bilingual slogan |
 | **Social OpenGraph Card** | 1280×640 | [`.svg`](./social-og-dark.svg), [`.png`](./social-og-dark.png) | Twitter/X cards, LinkedIn previews, Discord/Slack unfurls | 2:1 aspect ratio, matte obsidian canvas, high-contrast gold typography |
-| **Repository Banner: Corpus** | 1280×420 | [`.svg`](./repo-banner-corpus.svg), [`.png`](./repo-banner-corpus.png) | [`mishkaah/corpus`](https://github.com/mishkaah/corpus) | *Preserved Text. Trusted Knowledge.* |
-| **Repository Banner: Core** | 1280×420 | [`.svg`](./repo-banner-core.svg), [`.png`](./repo-banner-core.png) | [`mishkaah/core`](https://github.com/mishkaah/core) | *Preserved Text. Trusted Knowledge.* |
-| **Repository Banner: SDK** | 1280×420 | [`.svg`](./repo-banner-sdk.svg), [`.png`](./repo-banner-sdk.png) | [`mishkaah/sdk`](https://github.com/mishkaah/sdk) | *Preserved Text. Trusted Knowledge.* |
-| **Repository Banner: App** | 1280×420 | [`.svg`](./repo-banner-app.svg), [`.png`](./repo-banner-app.png) | [`mishkaah/app`](https://github.com/mishkaah/app) | *Preserved Text. Trusted Knowledge.* |
+| **Repository Banner: Corpus** | 1600×500 | [`.svg`](./repo-banner-corpus.svg), [`.png`](./repo-banner-corpus.png) | [`mishkaah/corpus`](https://github.com/mishkaah/corpus) | *Preserved Text. Trusted Knowledge.* |
+| **Repository Banner: Core** | 1600×500 | [`.svg`](./repo-banner-core.svg), [`.png`](./repo-banner-core.png) | [`mishkaah/core`](https://github.com/mishkaah/core) | *Preserved Text. Trusted Knowledge.* |
+| **Repository Banner: SDK** | 1600×500 | [`.svg`](./repo-banner-sdk.svg), [`.png`](./repo-banner-sdk.png) | [`mishkaah/sdk`](https://github.com/mishkaah/sdk) | *Preserved Text. Trusted Knowledge.* |
+| **Repository Banner: App** | 1600×500 | [`.svg`](./repo-banner-app.svg), [`.png`](./repo-banner-app.png) | [`mishkaah/app`](https://github.com/mishkaah/app) | *Preserved Text. Trusted Knowledge.* |
 | **Universal Social Banner** | 1280×640 | [`.svg`](./mishkaah-social-banner.svg), [`.png`](./mishkaah-social-banner.png) | Default fallback banner for media kits and external articles | Master mark with full ecosystem typography |
 
 ---
@@ -72,7 +72,7 @@ Each pillar within the Mishkaah architecture features a dedicated banner with it
 1. **Aspect Ratios**:
    - Organization Profile Header: `16:5` (`1600×500`)
    - Social OpenGraph Cards: `2:1` (`1280×640`)
-   - Repository Readme Headers: `32:10.5` (`1280×420`)
+   - Repository Readme Headers: `16:5` (`1600×500`)
 2. **Typography Hierarchy**:
    - Brandmark: Classical *Diwan Thuluth* calligraphy.
    - Arabic Pillar Slogan: *Amiri* / *SF Arabic* at optical weight `500`.

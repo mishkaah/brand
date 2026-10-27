@@ -280,7 +280,7 @@ function generateHorizontalLockupSVG(
   const dividerStroke = isDark ? "#C8A96A" : "#705622";
   const titleFill = isDark ? "#F4F1EA" : "#18181B";
   const sloganArFill = isDark ? "#C8A96A" : "#705622";
-  const sloganEnFill = isDark ? "#A1A1AA" : "#7A756B";
+  const sloganEnFill = isDark ? "#8C7A5B" : "#7A756B";
 
   // Canvas 1600x480
   // Left: Mark and Orbit in 1024x1024 space scaled by 0.52, centered at X=280, Y=240
@@ -302,19 +302,19 @@ ${SVG_GRADIENTS}
   <line x1="560" y1="90" x2="560" y2="390" stroke="${dividerStroke}" stroke-width="1.5" stroke-opacity="0.35" />
 
   <!-- Right Typography Block (100% Outlined Bezier Paths) -->
-  <g transform="translate(630, 115)">
+  <g transform="translate(630, 110)">
     <!-- 1. MISHKAAH Latin Wordmark -->
     <g transform="translate(0, 0)">
       <path d="${calligraphy.latinWordmark.fullPath}" fill="${titleFill}" />
     </g>
 
     <!-- 2. Master Slogan Arabic: نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون -->
-    <g transform="translate(0, 85)">
+    <g transform="translate(0, 100)">
       <path d="${calligraphy.masterSloganAr.fullPath}" fill="${sloganArFill}" />
     </g>
 
     <!-- 3. Master Slogan English: PRESERVED TEXT · TRUSTED KNOWLEDGE -->
-    <g transform="translate(0, 175)">
+    <g transform="translate(0, 205)">
       <path d="${calligraphy.masterSloganEn.fullPath}" fill="${sloganEnFill}" />
     </g>
   </g>
@@ -486,12 +486,12 @@ ${SVG_GRADIENTS}
     </g>
 
     <!-- Master Arabic Slogan -->
-    <g transform="translate(0, 95)">
+    <g transform="translate(0, 100)">
       <path d="${calligraphy.masterSloganAr.fullPath}" fill="${sloganArFill}" />
     </g>
 
     <!-- Master English Slogan -->
-    <g transform="translate(0, 190)">
+    <g transform="translate(0, 205)">
       <path d="${calligraphy.masterSloganEn.fullPath}" fill="${sloganEnFill}" />
     </g>
   </g>
@@ -504,52 +504,44 @@ function generateRepoBannerSVG(
   pillarKey: "corpus" | "app" | "core" | "sdk",
 ): string {
   const pillar = calligraphy.pillars[pillarKey];
-  // 1280x420 Repository Header Banner
+  // 1600x500 Unified Repository Header Banner (matches github-hero-dark 100%)
   const bg = "#09090B";
   const markFill = "url(#champagneGold)";
   const dividerStroke = "#C8A96A";
 
-  const markScale = 0.45;
-  const markTX = 220 - 512 * markScale;
-  const markTY = 210 - 512 * markScale;
+  const markScale = 0.54;
+  const markTX = 300 - 512 * markScale;
+  const markTY = 250 - 512 * markScale;
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" width="1600" height="500">
 ${SVG_GRADIENTS}
-  <rect width="1280" height="420" fill="${bg}" />
-  <circle cx="220" cy="210" r="240" fill="url(#obsidianAura)" />
+  <rect width="1600" height="500" fill="${bg}" />
+  <circle cx="300" cy="250" r="300" fill="url(#obsidianAura)" />
 
-  <!-- Left Calligraphic Seal with Subtle Orbit -->
+  <!-- Left Calligraphic Seal with Hairline Orbit -->
   <g transform="translate(${markTX.toFixed(2)}, ${markTY.toFixed(2)}) scale(${markScale})">
-    <circle cx="512" cy="512" r="360" fill="none" stroke="${dividerStroke}" stroke-width="2.8" stroke-opacity="0.28" />
+    <circle cx="512" cy="512" r="360" fill="none" stroke="${dividerStroke}" stroke-width="2.5" stroke-opacity="0.30" />
     ${renderMarkGroup(calligraphy, markFill)}
   </g>
 
   <!-- Vertical Hairline Divider -->
-  <line x1="440" y1="60" x2="440" y2="360" stroke="${dividerStroke}" stroke-width="1.2" stroke-opacity="0.35" />
+  <line x1="590" y1="80" x2="590" y2="420" stroke="${dividerStroke}" stroke-width="1.5" stroke-opacity="0.35" />
 
-  <!-- Right Pillar Information Block -->
-  <g transform="translate(500, 68)">
-    <!-- Pillar Arabic Title -->
+  <!-- Right Typography and Slogan Block (Identical 3-line layout) -->
+  <g transform="translate(660, 120)">
+    <!-- Pillar Title in TimesNewRomanPSMT (#F4F1EA) -->
     <g transform="translate(0, 0)">
-      <path d="${pillar.titleAr.fullPath}" fill="#F4F1EA" />
+      <path d="${pillar.titleEn.fullPath}" fill="#F4F1EA" />
     </g>
 
-    <!-- Pillar English Title -->
-    <g transform="translate(0, 68)">
-      <path d="${pillar.titleEn.fullPath}" fill="#C8A96A" />
+    <!-- Master Arabic Slogan in Damascus (#C8A96A) -->
+    <g transform="translate(0, 100)">
+      <path d="${calligraphy.masterSloganAr.fullPath}" fill="#C8A96A" />
     </g>
 
-    <!-- Hairline Separator -->
-    <line x1="0" y1="112" x2="280" y2="112" stroke="${dividerStroke}" stroke-width="1" stroke-opacity="0.30" />
-
-    <!-- Pillar Arabic Slogan -->
-    <g transform="translate(0, 136)">
-      <path d="${pillar.sloganAr.fullPath}" fill="#E5CFA0" />
-    </g>
-
-    <!-- Pillar English Slogan -->
-    <g transform="translate(0, 198)">
-      <path d="${pillar.sloganEn.fullPath}" fill="#8C7A5B" />
+    <!-- Master English Slogan in HelveticaNeue-Medium (#8C7A5B) -->
+    <g transform="translate(0, 205)">
+      <path d="${calligraphy.masterSloganEn.fullPath}" fill="#8C7A5B" />
     </g>
   </g>
 </svg>
@@ -774,12 +766,12 @@ ${SVG_GRADIENTS}
         <path d="${calligraphy.latinWordmark.fullPath}" fill="#F4F1EA" />
       </g>
     </g>
-    <g transform="translate(0, 95)">
+    <g transform="translate(0, 100)">
       <g class="hero-slogan-ar">
         <path d="${calligraphy.masterSloganAr.fullPath}" fill="#C8A96A" />
       </g>
     </g>
-    <g transform="translate(0, 190)">
+    <g transform="translate(0, 205)">
       <g class="hero-slogan-en">
         <path d="${calligraphy.masterSloganEn.fullPath}" fill="#8C7A5B" />
       </g>
@@ -1482,10 +1474,10 @@ ${SVG_GRADIENTS}
         ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
       </g>
       <line x1="560" y1="90" x2="560" y2="390" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.35" />
-      <g transform="translate(630, 115)">
+      <g transform="translate(630, 110)">
         <g transform="translate(0, 0)"><path d="${calligraphy.latinWordmark.fullPath}" fill="#F4F1EA" /></g>
-        <g transform="translate(0, 85)"><path d="${calligraphy.masterSloganAr.fullPath}" fill="#C8A96A" /></g>
-        <g transform="translate(0, 175)"><path d="${calligraphy.masterSloganEn.fullPath}" fill="#A1A1AA" /></g>
+        <g transform="translate(0, 100)"><path d="${calligraphy.masterSloganAr.fullPath}" fill="#C8A96A" /></g>
+        <g transform="translate(0, 205)"><path d="${calligraphy.masterSloganEn.fullPath}" fill="#8C7A5B" /></g>
       </g>
     </g>
     <rect x="0" y="280" width="680" height="50" rx="16" fill="#18181C" />
@@ -1503,10 +1495,10 @@ ${SVG_GRADIENTS}
         ${renderMarkGroup(calligraphy, "url(#umberBronze)")}
       </g>
       <line x1="560" y1="90" x2="560" y2="390" stroke="#705622" stroke-width="1.5" stroke-opacity="0.35" />
-      <g transform="translate(630, 115)">
+      <g transform="translate(630, 110)">
         <g transform="translate(0, 0)"><path d="${calligraphy.latinWordmark.fullPath}" fill="#18181B" /></g>
-        <g transform="translate(0, 85)"><path d="${calligraphy.masterSloganAr.fullPath}" fill="#705622" /></g>
-        <g transform="translate(0, 175)"><path d="${calligraphy.masterSloganEn.fullPath}" fill="#7A756B" /></g>
+        <g transform="translate(0, 100)"><path d="${calligraphy.masterSloganAr.fullPath}" fill="#705622" /></g>
+        <g transform="translate(0, 205)"><path d="${calligraphy.masterSloganEn.fullPath}" fill="#7A756B" /></g>
       </g>
     </g>
     <rect x="0" y="280" width="680" height="50" rx="16" fill="#DFDAD0" />

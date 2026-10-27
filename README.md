@@ -1,6 +1,6 @@
 <div align="center">
 
-![Mishkaah Banner](./banners/github-hero-dark.svg)
+![Mishkaah](https://raw.githubusercontent.com/mishkaah/brand/main/animations/svg/mishkaah-hero-banner-animated.svg)
 
 **English** · [العربية](./README.ar.md)
 
@@ -34,7 +34,7 @@ The identity draws inspiration from the Verse of Light (*Ayat al-Nur*, Surah Al-
 | :--- | :--- | :--- | :--- |
 | [**`logos/`**](./logos/README.md) | Primary Calligraphic Marks, Horizontal Lockups, and *Meem* Monograms | `.svg`, `.png`, `.webp` | [Logos Guide](./logos/README.md) |
 | [**`app-icons/`**](./app-icons/README.md) | iOS 18+ (Dark, Light, Tinted), Android Adaptive (Foreground, Monochrome, Backgrounds), Favicons | `.svg`, `.png`, `.ico` | [App Icons Guide](./app-icons/README.md) |
-| [**`banners/`**](./banners/README.md) | Social OpenGraph cards (1280×640), GitHub Org Hero (1600×500), 4 Repo Pillar Banners (1280×420) | `.svg`, `.png` | [Banners Guide](./banners/README.md) |
+| [**`banners/`**](./banners/README.md) | Social OpenGraph cards (1280×640), GitHub Org Hero (1600×500), 4 Repo Pillar Banners (1600×500) | `.svg`, `.png` | [Banners Guide](./banners/README.md) |
 | [**`animations/`**](./animations/README.md) | Reveal & emergence motion: Animated SVGs, Lottie JSON, 60fps MP4/WebM videos (16:9, 9:16, 1:1) | `.svg`, `.lottie.json`, `.mp4`, `.webm` | [Animations Guide](./animations/README.md) |
 | [**`tokens/`**](./tokens/README.md) | Machine-readable color palettes, typography, motion curves, and generated CSS/TS/Dart bundles | `.json`, `.css`, `.ts`, `.dart` | [Tokens Guide](./tokens/README.md) |
 | [**`docs/`**](./docs/README.md) | Comprehensive identity manuals: Brand Guidelines, Typography, Color Systems, and Motion Specs | `.md`, `.pdf` | [Documentation](./docs/README.md) |
@@ -61,10 +61,10 @@ All repositories in the Mishkaah organization ([`core`](https://github.com/mishk
 | **Horizontal Lockup (Light)** | Vector SVG (1600×400) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/lockup-horizontal-light.svg` |
 | **GitHub Org Hero Banner** | Vector SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/github-hero-dark.svg` |
 | **Social OpenGraph Card** | Vector SVG (1280×640) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/social-og-dark.svg` |
-| **Repository Banner: Corpus** | Vector SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-corpus.svg` |
-| **Repository Banner: Core** | Vector SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-core.svg` |
-| **Repository Banner: SDK** | Vector SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-sdk.svg` |
-| **Repository Banner: App** | Vector SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-app.svg` |
+| **Repository Banner: Corpus** | Vector SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-corpus.svg` |
+| **Repository Banner: Core** | Vector SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-core.svg` |
+| **Repository Banner: SDK** | Vector SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-sdk.svg` |
+| **Repository Banner: App** | Vector SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-app.svg` |
 | **Mobile App Icon (iOS Dark)** | High-Res PNG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/app-icons/ios-dark.png` |
 | **Mobile App Icon (Android Foreground)** | Adaptive Vector SVG | `https://raw.githubusercontent.com/mishkaah/brand/main/app-icons/android-adaptive-foreground.svg` |
 | **Animated Reveal Logo** | Vector Animated SVG | `https://raw.githubusercontent.com/mishkaah/brand/main/animations/svg/mishkaah-reveal-dark.svg` |

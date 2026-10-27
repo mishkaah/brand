@@ -293,32 +293,32 @@ async function renderStaticRasters(browser: Browser, brandRoot: string): Promise
       svgPath: join(brandRoot, "banners", "repo-banner-corpus.svg"),
       pngPath: join(brandRoot, "banners", "repo-banner-corpus.png"),
       webpPath: join(brandRoot, "banners", "repo-banner-corpus.webp"),
-      width: 1280,
-      height: 420,
+      width: 1600,
+      height: 500,
       transparent: false,
     },
     {
       svgPath: join(brandRoot, "banners", "repo-banner-app.svg"),
       pngPath: join(brandRoot, "banners", "repo-banner-app.png"),
       webpPath: join(brandRoot, "banners", "repo-banner-app.webp"),
-      width: 1280,
-      height: 420,
+      width: 1600,
+      height: 500,
       transparent: false,
     },
     {
       svgPath: join(brandRoot, "banners", "repo-banner-core.svg"),
       pngPath: join(brandRoot, "banners", "repo-banner-core.png"),
       webpPath: join(brandRoot, "banners", "repo-banner-core.webp"),
-      width: 1280,
-      height: 420,
+      width: 1600,
+      height: 500,
       transparent: false,
     },
     {
       svgPath: join(brandRoot, "banners", "repo-banner-sdk.svg"),
       pngPath: join(brandRoot, "banners", "repo-banner-sdk.png"),
       webpPath: join(brandRoot, "banners", "repo-banner-sdk.webp"),
-      width: 1280,
-      height: 420,
+      width: 1600,
+      height: 500,
       transparent: false,
     },
     {
@@ -684,10 +684,10 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
                 ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#goldGrad)")}
               </g>
               <line x1="560" y1="90" x2="560" y2="390" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.35" />
-              <g transform="translate(630, 115)">
+              <g transform="translate(630, 110)">
                 <g transform="translate(0, 0)"><path d="${latinD}" fill="#F4F1EA" /></g>
-                <g transform="translate(0, 85)"><path d="${sloganArD}" fill="#C8A96A" /></g>
-                <g transform="translate(0, 175)"><path d="${sloganEnD}" fill="#A1A1AA" /></g>
+                <g transform="translate(0, 100)"><path d="${sloganArD}" fill="#C8A96A" /></g>
+                <g transform="translate(0, 205)"><path d="${sloganEnD}" fill="#8C7A5B" /></g>
               </g>
             </svg>
           </div>
@@ -1061,10 +1061,10 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
               ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#bentoGold)")}
             </g>
             <line x1="560" y1="90" x2="560" y2="390" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.35" />
-            <g transform="translate(630, 115)">
+            <g transform="translate(630, 110)">
               <g transform="translate(0, 0)"><path d="${latinD}" fill="#F4F1EA" /></g>
-              <g transform="translate(0, 85)"><path d="${sloganArD}" fill="#C8A96A" /></g>
-              <g transform="translate(0, 175)"><path d="${sloganEnD}" fill="#71717A" /></g>
+              <g transform="translate(0, 100)"><path d="${sloganArD}" fill="#C8A96A" /></g>
+              <g transform="translate(0, 205)"><path d="${sloganEnD}" fill="#8C7A5B" /></g>
             </g>
           </svg>
         </div>
@@ -1075,10 +1075,10 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
               ${renderMarkGroup(calligraphyRaw.primaryMark, "#705622")}
             </g>
             <line x1="560" y1="90" x2="560" y2="390" stroke="#705622" stroke-width="1.5" stroke-opacity="0.35" />
-            <g transform="translate(630, 115)">
+            <g transform="translate(630, 110)">
               <g transform="translate(0, 0)"><path d="${latinD}" fill="#18181B" /></g>
-              <g transform="translate(0, 85)"><path d="${sloganArD}" fill="#705622" /></g>
-              <g transform="translate(0, 175)"><path d="${sloganEnD}" fill="#7A756B" /></g>
+              <g transform="translate(0, 100)"><path d="${sloganArD}" fill="#705622" /></g>
+              <g transform="translate(0, 205)"><path d="${sloganEnD}" fill="#7A756B" /></g>
             </g>
           </svg>
         </div>

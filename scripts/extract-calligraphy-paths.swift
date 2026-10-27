@@ -567,32 +567,32 @@ let pillarsDef: [(key: String, titleAr: String, titleEn: String, sloganAr: Strin
 var pillarsMap: [String: PillarSloganJSON] = [:]
 
 for p in pillarsDef {
-    let tAr = outlineString(p.titleAr, fontName: "GeezaPro-Bold", fontSize: 46, tracking: 0.0)
-    let tEn = outlineString(p.titleEn, fontName: "HelveticaNeue-Bold", fontSize: 21, tracking: 5.5)
-    let sAr = outlineString(p.sloganAr, fontName: "GeezaPro", fontSize: 36, tracking: 0.0)
-    let sEn = outlineString(p.sloganEn, fontName: "HelveticaNeue-Medium", fontSize: 16, tracking: 4.5)
+    let tAr = outlineString(p.titleAr, fontName: "Damascus", fontSize: 44, tracking: 0.0)
+    let tEn = outlineString(p.titleEn, fontName: "TimesNewRomanPSMT", fontSize: 48, tracking: 12.0)
+    let sAr = outlineString(p.sloganAr, fontName: "Damascus", fontSize: 44, tracking: 0.0)
+    let sEn = outlineString(p.sloganEn, fontName: "HelveticaNeue-Medium", fontSize: 20, tracking: 5.5)
 
     pillarsMap[p.key] = PillarSloganJSON(
         titleAr: OutlinedTextJSON(
             text: p.titleAr,
-            fontName: "GeezaPro-Bold",
-            fontSize: 46,
+            fontName: "Damascus",
+            fontSize: 44,
             fullPath: cgPathToSVG(tAr.path),
             bounds: BoxJSON(from: tAr.bounds),
             length: round(tAr.length * 10) / 10
         ),
         titleEn: OutlinedTextJSON(
             text: p.titleEn,
-            fontName: "HelveticaNeue-Bold",
-            fontSize: 21,
+            fontName: "TimesNewRomanPSMT",
+            fontSize: 48,
             fullPath: cgPathToSVG(tEn.path),
             bounds: BoxJSON(from: tEn.bounds),
             length: round(tEn.length * 10) / 10
         ),
         sloganAr: OutlinedTextJSON(
             text: p.sloganAr,
-            fontName: "GeezaPro",
-            fontSize: 36,
+            fontName: "Damascus",
+            fontSize: 44,
             fullPath: cgPathToSVG(sAr.path),
             bounds: BoxJSON(from: sAr.bounds),
             length: round(sAr.length * 10) / 10
@@ -600,7 +600,7 @@ for p in pillarsDef {
         sloganEn: OutlinedTextJSON(
             text: p.sloganEn,
             fontName: "HelveticaNeue-Medium",
-            fontSize: 16,
+            fontSize: 20,
             fullPath: cgPathToSVG(sEn.path),
             bounds: BoxJSON(from: sEn.bounds),
             length: round(sEn.length * 10) / 10

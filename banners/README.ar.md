@@ -59,10 +59,10 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **لافتة المنظمة الرئيسية** | 1600×500 | [`.svg`](./github-hero-dark.svg)، [`.png`](./github-hero-dark.png) | صفحة منظمة GitHub العامة ([`mishkaah`](https://github.com/mishkaah)) | الشعار الخطي والمدار الفلكي والشعار اللفظي المعتمد باللغتين |
 | **بطاقة المشاركة الاجتماعية** | 1280×640 | [`.svg`](./social-og-dark.svg)، [`.png`](./social-og-dark.png) | بطاقات منصة إكس (Twitter)، لينكد إن، وفيسبوك وسلاك | نسبة أبعاد `2:1`، خلفية سبجية داكنة، خطوط ذهبية عالية التباين |
-| **لافتة مستودع المُدَوَّنة (Corpus)** | 1280×420 | [`.svg`](./repo-banner-corpus.svg)، [`.png`](./repo-banner-corpus.png) | [`mishkaah/corpus`](https://github.com/mishkaah/corpus) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
-| **لافتة مستودع النَّوَاة (Core)** | 1280×420 | [`.svg`](./repo-banner-core.svg)، [`.png`](./repo-banner-core.png) | [`mishkaah/core`](https://github.com/mishkaah/core) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
-| **لافتة مستودع الحَقِيبَة (SDK)** | 1280×420 | [`.svg`](./repo-banner-sdk.svg)، [`.png`](./repo-banner-sdk.png) | [`mishkaah/sdk`](https://github.com/mishkaah/sdk) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
-| **لافتة مستودع التَّطْبِيقَات (App)** | 1280×420 | [`.svg`](./repo-banner-app.svg)، [`.png`](./repo-banner-app.png) | [`mishkaah/app`](https://github.com/mishkaah/app) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
+| **لافتة مستودع المُدَوَّنة (Corpus)** | 1600×500 | [`.svg`](./repo-banner-corpus.svg)، [`.png`](./repo-banner-corpus.png) | [`mishkaah/corpus`](https://github.com/mishkaah/corpus) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
+| **لافتة مستودع النَّوَاة (Core)** | 1600×500 | [`.svg`](./repo-banner-core.svg)، [`.png`](./repo-banner-core.png) | [`mishkaah/core`](https://github.com/mishkaah/core) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
+| **لافتة مستودع الحَقِيبَة (SDK)** | 1600×500 | [`.svg`](./repo-banner-sdk.svg)، [`.png`](./repo-banner-sdk.png) | [`mishkaah/sdk`](https://github.com/mishkaah/sdk) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
+| **لافتة مستودع التَّطْبِيقَات (App)** | 1600×500 | [`.svg`](./repo-banner-app.svg)، [`.png`](./repo-banner-app.png) | [`mishkaah/app`](https://github.com/mishkaah/app) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
 | **اللافتة الاجتماعية الشاملة** | 1280×640 | [`.svg`](./mishkaah-social-banner.svg)، [`.png`](./mishkaah-social-banner.png) | الحزم الصحفية والمقالات الخارجية والمشاريع التابعة | الشعار الكامل مع اسم المنظومة باللغتين |
 
 ---
@@ -72,7 +72,7 @@
 1. **نسب الأبعاد المعتمدة**:
    - ترويسة ملف المنظمة: `16:5` (`1600×500`)
    - بطاقات المشاركة الاجتماعية: `2:1` (`1280×640`)
-   - ترويسات ملفات المستودعات التمهيدية: `32:10.5` (`1280×420`)
+   - ترويسات ملفات المستودعات التمهيدية: `16:5` (`1600×500`)
 2. **التسلسل الهرمي للخطوط**:
    - الشعار الخطي: خط *ديوان الثلث* الكلاسيكي.
    - الشعار اللفظي العربي للركن: خط *الأميري* أو *SF Arabic* بوزن بصري متوسط `500`.

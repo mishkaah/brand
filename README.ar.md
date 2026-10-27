@@ -1,6 +1,6 @@
 <div align="center">
 
-![شعار مشكاة](./banners/github-hero-dark.svg)
+![مشكاة](https://raw.githubusercontent.com/mishkaah/brand/main/animations/svg/mishkaah-hero-banner-animated.svg)
 
 [English](./README.md) · **العربية**
 
@@ -34,7 +34,7 @@
 | :--- | :--- | :--- | :--- |
 | [**`logos/`**](./logos/README.ar.md) | الشعارات الخطية الأساسية، والتراكيب الأفقية، ومونوغرام حرف الميم | `.svg`, `.png`, `.webp` | [دليل الشعارات](./logos/README.ar.md) |
 | [**`app-icons/`**](./app-icons/README.ar.md) | أيقونات iOS 18+ (الداكن والفاتح والمصبوغ)، ونظام Android التكيفي، وأيقونات المواقع | `.svg`, `.png`, `.ico` | [دليل الأيقونات](./app-icons/README.ar.md) |
-| [**`banners/`**](./banners/README.ar.md) | بطاقات المشاركة الاجتماعية (1280×640)، ولافتة المنظمة (1600×500)، ولافتات أركان المستودعات الأربعة (1280×420) | `.svg`, `.png` | [دليل اللافتات](./banners/README.ar.md) |
+| [**`banners/`**](./banners/README.ar.md) | بطاقات المشاركة الاجتماعية (1280×640)، ولافتة المنظمة (1600×500)، ولافتات أركان المستودعات الأربعة (1600×500) | `.svg`, `.png` | [دليل اللافتات](./banners/README.ar.md) |
 | [**`animations/`**](./animations/README.ar.md) | الرسوم المتحركة البصرية: ملفات SVG التفاعلية، وحزم Lottie JSON، ومقاطع الفيديو 60 إطاراً (16:9, 9:16, 1:1) | `.svg`, `.lottie.json`, `.mp4`, `.webm` | [دليل الرسوم المتحركة](./animations/README.ar.md) |
 | [**`tokens/`**](./tokens/README.ar.md) | لوحات الألوان، وموازين الخطوط، ومنحنيات الحركة، وحزم CSS وTypeScript وDart المجمعة | `.json`, `.css`, `.ts`, `.dart` | [دليل رموز التصميم](./tokens/README.ar.md) |
 | [**`docs/`**](./docs/README.ar.md) | الأدلة الإرشادية التفصيلية: دليل الهوية الشامل، وفنون الخط، ونظام الألوان، ومعايير الحركة | `.md`, `.pdf` | [وثائق الهوية](./docs/README.ar.md) |
@@ -61,10 +61,10 @@
 | **التركيب الأفقي (فاتح)** | رسم متجه SVG (1600×400) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/lockup-horizontal-light.svg` |
 | **لافتة المنظمة الرئيسية** | رسم متجه SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/github-hero-dark.svg` |
 | **بطاقة المشاركة الاجتماعية** | رسم متجه SVG (1280×640) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/social-og-dark.svg` |
-| **لافتة مستودع المُدَوَّنة (Corpus)** | رسم متجه SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-corpus.svg` |
-| **لافتة مستودع النَّوَاة (Core)** | رسم متجه SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-core.svg` |
-| **لافتة مستودع الحَقِيبَة (SDK)** | رسم متجه SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-sdk.svg` |
-| **لافتة مستودع التَّطْبِيقَات (App)** | رسم متجه SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-app.svg` |
+| **لافتة مستودع المُدَوَّنة (Corpus)** | رسم متجه SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-corpus.svg` |
+| **لافتة مستودع النَّوَاة (Core)** | رسم متجه SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-core.svg` |
+| **لافتة مستودع الحَقِيبَة (SDK)** | رسم متجه SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-sdk.svg` |
+| **لافتة مستودع التَّطْبِيقَات (App)** | رسم متجه SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-app.svg` |
 | **أيقونة التطبيق (iOS الداكن)** | صورة عالية الدقة PNG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/app-icons/ios-dark.png` |
 | **أيقونة التطبيق (Android التكيفية)** | رسم متجه أمامي متكيف SVG | `https://raw.githubusercontent.com/mishkaah/brand/main/app-icons/android-adaptive-foreground.svg` |
 | **شعار الظهور المتحرك** | رسم متجه متحرك SVG | `https://raw.githubusercontent.com/mishkaah/brand/main/animations/svg/mishkaah-reveal-dark.svg` |
