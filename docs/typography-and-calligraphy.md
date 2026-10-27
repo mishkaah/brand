@@ -4,8 +4,8 @@
 
 # Mishkaah Typography & Calligraphy Specification
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![Calligraphy](https://img.shields.io/badge/Script-Diwan%20Thuluth-C8A96A?style=flat-square)](../tokens/README.md)
 [![Quran Scripture](https://img.shields.io/badge/Scripture-KFGQPC%20Hafs%20Standard-09090B?style=flat-square)](../docs/README.md)

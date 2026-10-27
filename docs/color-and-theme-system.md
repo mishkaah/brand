@@ -4,8 +4,8 @@
 
 # Mishkaah Color & Theme System Specification
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![WCAG AAA Certified](https://img.shields.io/badge/Contrast-WCAG%202.1%20AAA%20(11.4%3A1)-10B981?style=flat-square)](../tokens/README.md)
 [![Color System](https://img.shields.io/badge/Themes-Obsidian%20%7C%20Alabaster-09090B?style=flat-square)](../docs/brand-guidelines.md)

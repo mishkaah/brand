@@ -182,6 +182,105 @@ if (fs.existsSync(pdfFullPath)) {
   }
 }
 
+// 8. Comprehensive Markdown Link & Image Validator
+function checkMarkdownLinksAndImages(dir: string): void {
+  if (!fs.existsSync(dir)) return;
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory() && entry.name !== ".git" && entry.name !== "node_modules") {
+      checkMarkdownLinksAndImages(fullPath);
+    } else if (entry.isFile() && entry.name.endsWith(".md")) {
+      const content = fs.readFileSync(fullPath, "utf-8");
+      const lines = content.split("\n");
+      const dirOfFile = path.dirname(fullPath);
+      let inCode = false;
+
+      for (let i = 0; i < lines.length; i++) {
+        const rawLine = lines[i] ?? "";
+        if (rawLine.trim().startsWith("```")) {
+          inCode = !inCode;
+          continue;
+        }
+        if (inCode) continue;
+
+        const lineWithoutCode = rawLine.replace(/`[^`]*`/g, "");
+        const linkTargets: string[] = [];
+
+        // Markdown links & images: [text](target) or ![alt](target)
+        const mdLinkRegex = /!?\[[^\]]*\]\(([^)]+)\)/g;
+        let match: RegExpExecArray | null = null;
+        while ((match = mdLinkRegex.exec(lineWithoutCode)) !== null) {
+          if (match[1]) linkTargets.push(match[1].trim());
+        }
+
+        // Outer targets of nested badge links: [![alt](inner)](outer)
+        const nestedBadgeRegex = /(?:\)|\])\]\(([^)]+)\)/g;
+        let bMatch: RegExpExecArray | null = null;
+        while ((bMatch = nestedBadgeRegex.exec(lineWithoutCode)) !== null) {
+          if (bMatch[1]) linkTargets.push(bMatch[1].trim());
+        }
+
+        // HTML img/a tags: <img src="target"> or <a href="target">
+        const htmlRegex = /<(?:img|a)\b[^>]*(?:src|href)=["']([^"']+)["'][^>]*>/gi;
+        let hMatch: RegExpExecArray | null = null;
+        while ((hMatch = htmlRegex.exec(lineWithoutCode)) !== null) {
+          if (hMatch[1]) linkTargets.push(hMatch[1].trim());
+        }
+
+        for (const rawTarget of linkTargets) {
+          const cleanTarget = rawTarget.split(/\s+["']/)[0]?.trim() ?? "";
+          if (!cleanTarget || cleanTarget.startsWith("#") || cleanTarget.startsWith("mailto:")) continue;
+
+          let resolvedPath: string | null = null;
+
+          // Check if GitHub raw/blob URL for mishkaah/brand
+          const brandGithubMatch = cleanTarget.match(
+            /^https:\/\/(?:raw\.githubusercontent\.com\/mishkaah\/brand\/main|github\.com\/mishkaah\/brand\/(?:blob|tree|raw)\/main)\/([^#?]+)/
+          );
+          if (brandGithubMatch && brandGithubMatch[1]) {
+            resolvedPath = path.resolve(BRAND_ROOT, brandGithubMatch[1]);
+          } else if (cleanTarget.startsWith("http://") || cleanTarget.startsWith("https://")) {
+            // External URL (e.g. creativecommons.org, img.shields.io, bun.sh, other repos)
+            continue;
+          } else {
+            // Local relative path
+            const pathWithoutAnchor = cleanTarget.split("#")[0]?.trim() ?? "";
+            if (!pathWithoutAnchor) continue;
+            resolvedPath = path.resolve(dirOfFile, pathWithoutAnchor);
+          }
+
+          if (resolvedPath) {
+            if (!fs.existsSync(resolvedPath)) {
+              reportError(
+                `Broken link in ${path.relative(BRAND_ROOT, fullPath)}:${i + 1} -> "${cleanTarget}" (resolved to non-existent "${path.relative(BRAND_ROOT, resolvedPath)}")`
+              );
+            } else {
+              const stat = fs.statSync(resolvedPath);
+              if (stat.isFile()) {
+                if (stat.size === 0) {
+                  reportError(
+                    `Zero-byte target file in ${path.relative(BRAND_ROOT, fullPath)}:${i + 1} -> "${cleanTarget}"`
+                  );
+                } else if (
+                  /\.(mp4|webm|webp|png|pdf)$/i.test(resolvedPath) &&
+                  !resolvedPath.includes("favicon") &&
+                  stat.size < 4000
+                ) {
+                  reportError(
+                    `Suspiciously small binary file (${stat.size} bytes) in ${path.relative(BRAND_ROOT, fullPath)}:${i + 1} -> "${cleanTarget}"`
+                  );
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+checkMarkdownLinksAndImages(BRAND_ROOT);
+
 if (errorCount === 0) {
   console.log("✅ All brand integrity checks passed successfully (0 errors).");
   process.exit(0);

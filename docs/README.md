@@ -4,8 +4,8 @@
 
 # Mishkaah Brand & Identity Documentation
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![Documentation Status](https://img.shields.io/badge/Manuals-4%20Complete%20Specifications-C8A96A?style=flat-square)](./brand-guidelines.md)
 [![Design Philosophy](https://img.shields.io/badge/Philosophy-Ayat%20al--Nur%20Restraint-09090B?style=flat-square)](./typography-and-calligraphy.md)

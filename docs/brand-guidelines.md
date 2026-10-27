@@ -4,8 +4,8 @@
 
 # Mishkaah Brand Guidelines & Identity Manual
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![Specification Version](https://img.shields.io/badge/Version-2.2%20Canonical-C8A96A?style=flat-square)](../README.md)
 [![Design Philosophy](https://img.shields.io/badge/Inspiration-Surah%20Al--Nur%2024%3A35-09090B?style=flat-square)](../docs/README.md)
@@ -35,18 +35,17 @@ Within our open corpus ecosystem, Mishkaah serves as that digital and scholarly 
 The identity comprises two canonical marks, each serving a distinct functional tier:
 
 ### 2.1 Primary Calligraphic Mark (`مِشْكَاة`)
-The primary brandmark renders the complete name **مِشْكَاة** in master *Diwan Thuluth* calligraphy, encircled by a hairline celestial orbit:
+The primary brandmark renders the complete name **مِشْكَاة** in master *Diwan Thuluth* calligraphy:
 
 - **Canvas Dimensions**: `1024×1024` square coordinate space.
 - **Celestial Orbit Ring**: Centered at `(512, 512)` with radius `r = 360`, stroke width `1.5`, and stroke opacity `0.28`.
-- **Primary Use Cases**: Repository landing headers, formal publications, academic preprints, organization certificates, and desktop splash screens.
+- **Primary Use Cases**: Repository landing headers, mobile application launcher icons (where the mark is scaled to optical radius `R = 244.7px` within the Android `66dp` safe zone and the orbit ring is intentionally omitted to avoid squircle clipping), formal publications, academic preprints, organization certificates, and desktop splash screens.
 
 ### 2.2 Secondary Monogram (*Meem* `مـ`)
 The monogram abstracts the initial letterform **مـ** (*Meem*) in *Diwan Thuluth*, maintaining the organic calligraphic stroke width and subtle terminal slant:
 
-- **Optical Radius**: Engineered with an optical radius `R = 244.7px` centered on a `1024×1024` grid.
-- **Orbit Omission**: The hairline orbit is intentionally omitted on mobile icons and circular avatars to avoid collisions with OS masks.
-- **Primary Use Cases**: Mobile app launcher icons, browser favicons (`16×16px` to `32×32px`), compact toolbar buttons (`<= 48px`), and circular social media avatars.
+- **Optical Radius**: Scaled to compact grid coordinates for small-pixel rendering.
+- **Primary Use Cases**: Browser favicons (`16×16px` to `32×32px`), compact toolbar buttons (`<= 32px`), indeterminate loading spinners, and circular social media avatars.
 
 ---
 

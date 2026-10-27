@@ -129,7 +129,7 @@ export function renderMarkGroup(
 ): string {
   const attrs = extraAttrs ? ` ${extraAttrs}` : "";
   const contours = [...calligraphy.primaryMark.rasm, ...calligraphy.primaryMark.tashkeel];
-  return `<g fill="${fillExpr}" fill-rule="evenodd"${attrs}>\n` +
+  return `<g fill="${fillExpr}" fill-rule="nonzero"${attrs}>\n` +
     contours.map((p) => `    <path d="${p.d}" />`).join("\n") +
     `\n  </g>`;
 }
@@ -141,13 +141,13 @@ export function renderMarkGroup(
 const SVG_GRADIENTS = `
   <defs>
     <!-- Champagne Gold Gradient -->
-    <linearGradient id="champagneGold" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="champagneGold" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
       <stop offset="0%" stop-color="#E5CFA0" />
       <stop offset="100%" stop-color="#B89655" />
     </linearGradient>
 
     <!-- Umber Bronze Gradient -->
-    <linearGradient id="umberBronze" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="umberBronze" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
       <stop offset="0%" stop-color="#8A6B2F" />
       <stop offset="100%" stop-color="#553F16" />
     </linearGradient>
@@ -265,7 +265,7 @@ ${SVG_GRADIENTS}
   <!-- Hairline Celestial Orbit (r=360) -->
   <circle cx="512" cy="512" r="360" fill="none" stroke="${orbitStroke}" stroke-width="1.5" stroke-opacity="${orbitOpacity}" />
   <!-- Diwan Thuluth Initial Monogram: م (100% Outlined Bezier Path) -->
-  <path d="${calligraphy.monogram.fullPath}" fill="${markFill}" fill-rule="evenodd" />
+  <path d="${calligraphy.monogram.fullPath}" fill="${markFill}" fill-rule="nonzero" />
 </svg>
 `;
 }
@@ -283,8 +283,8 @@ function generateHorizontalLockupSVG(
   const sloganEnFill = isDark ? "#A1A1AA" : "#7A756B";
 
   // Canvas 1600x480
-  // Left: Mark and Orbit in 1024x1024 space scaled by 0.50, centered at X=280, Y=240
-  const markScale = 0.50;
+  // Left: Mark and Orbit in 1024x1024 space scaled by 0.52, centered at X=280, Y=240
+  const markScale = 0.52;
   const markTX = 280 - 512 * markScale;
   const markTY = 240 - 512 * markScale;
 
@@ -302,19 +302,19 @@ ${SVG_GRADIENTS}
   <line x1="560" y1="90" x2="560" y2="390" stroke="${dividerStroke}" stroke-width="1.5" stroke-opacity="0.35" />
 
   <!-- Right Typography Block (100% Outlined Bezier Paths) -->
-  <g transform="translate(620, 120)">
+  <g transform="translate(630, 115)">
     <!-- 1. MISHKAAH Latin Wordmark -->
-    <g transform="translate(0, 0) scale(1.35)">
+    <g transform="translate(0, 0)">
       <path d="${calligraphy.latinWordmark.fullPath}" fill="${titleFill}" />
     </g>
 
-    <!-- 2. Master Slogan Arabic: تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة -->
-    <g transform="translate(0, 85) scale(1.5)">
+    <!-- 2. Master Slogan Arabic: نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون -->
+    <g transform="translate(0, 85)">
       <path d="${calligraphy.masterSloganAr.fullPath}" fill="${sloganArFill}" />
     </g>
 
-    <!-- 3. Master Slogan English: VERIFIED ISLAMIC HERITAGE · CONNECTED KNOWLEDGE -->
-    <g transform="translate(0, 175) scale(1.15)">
+    <!-- 3. Master Slogan English: PRESERVED TEXT · TRUSTED KNOWLEDGE -->
+    <g transform="translate(0, 175)">
       <path d="${calligraphy.masterSloganEn.fullPath}" fill="${sloganEnFill}" />
     </g>
   </g>
@@ -327,14 +327,16 @@ function generateAppIconSVG(
   theme: "ios-dark" | "ios-light" | "ios-tinted" | "android-adaptive-foreground" | "android-adaptive-monochrome" | "favicon",
 ): string {
   // Mobile app icons strip the outer orbit circle to prevent collision with OS squircle or circle masks
-  // Safe zone radius: R = 244.7px < 312px (within 66dp Android safe zone)
+  // Safe zone radius: wrapped in translate(51.2, 51.2) scale(0.90) strictly within 66dp Android safe zone
 
   if (theme === "ios-dark") {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
 ${SVG_GRADIENTS}
   <rect width="1024" height="1024" fill="#09090B" />
   <circle cx="512" cy="512" r="380" fill="url(#obsidianAura)" />
-  ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
+  <g transform="translate(51.2, 51.2) scale(0.90)">
+    ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
+  </g>
 </svg>
 `;
   }
@@ -344,7 +346,9 @@ ${SVG_GRADIENTS}
 ${SVG_GRADIENTS}
   <rect width="1024" height="1024" fill="#F6F3EC" />
   <circle cx="512" cy="512" r="380" fill="url(#alabasterAura)" />
-  ${renderMarkGroup(calligraphy, "url(#umberBronze)")}
+  <g transform="translate(51.2, 51.2) scale(0.90)">
+    ${renderMarkGroup(calligraphy, "url(#umberBronze)")}
+  </g>
 </svg>
 `;
   }
@@ -352,7 +356,9 @@ ${SVG_GRADIENTS}
   if (theme === "ios-tinted" || theme === "android-adaptive-monochrome") {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
   <!-- Monochrome Silhouette on Transparent Canvas for OS Tinting -->
-  ${renderMarkGroup(calligraphy, "#FFFFFF")}
+  <g transform="translate(51.2, 51.2) scale(0.90)">
+    ${renderMarkGroup(calligraphy, "#FFFFFF")}
+  </g>
 </svg>
 `;
   }
@@ -361,7 +367,9 @@ ${SVG_GRADIENTS}
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
 ${SVG_GRADIENTS}
   <!-- Android 13-15+ Adaptive Foreground (Confined strictly inside 66dp Safe Zone) -->
-  ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
+  <g transform="translate(51.2, 51.2) scale(0.90)">
+    ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
+  </g>
 </svg>
 `;
   }
@@ -370,7 +378,7 @@ ${SVG_GRADIENTS}
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
 ${SVG_GRADIENTS}
   <rect width="512" height="512" rx="112" fill="#09090B" />
-  <g transform="translate(0, 0) scale(0.5)">
+  <g transform="translate(25.6, 25.6) scale(0.45)">
     ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
   </g>
 </svg>
@@ -391,28 +399,27 @@ function generateSocialOgBannerSVG(
 
   // Master OpenGraph Canvas: 1280x640
   // Centered composition:
-  // 1. Calligraphic Centerpiece مِشْكَاة: width ~ 489.5, height ~ 327.3, scale 0.65 -> 318x212, centered at X=640, Y=220
-  const markScale = 0.62;
+  // 1. Calligraphic Centerpiece مِشْكَاة: scale 0.60, centered at X=640, Y=200
+  const markScale = 0.60;
   const markTX = 640 - 512 * markScale;
-  const markTY = 210 - 512 * markScale;
+  const markTY = 200 - 512 * markScale;
 
-  // 2. Hairline Divider: X=580 to X=700 at Y=340
-  // 3. Latin Wordmark MISHKAAH: scale 0.95, centered at X=640 (offset = 640 - 347.5*0.95/2 = 475), Y=375
-  const wmWidth = calligraphy.latinWordmark.bounds.width * 0.95;
+  // 2. Latin Wordmark MISHKAAH: centered at X=640, Y=368
+  const wmWidth = calligraphy.latinWordmark.bounds.width;
   const wmTX = 640 - wmWidth / 2;
 
-  // 4. Master Slogan Arabic: scale 0.90, centered at X=640 (offset = 640 - 234.2*0.9/2 = 535), Y=430
-  const arWidth = calligraphy.masterSloganAr.bounds.width * 0.9;
+  // 3. Master Slogan Arabic: centered at X=640, Y=442
+  const arWidth = calligraphy.masterSloganAr.bounds.width;
   const arTX = 640 - arWidth / 2;
 
-  // 5. Master Slogan English: scale 0.72, centered at X=640 (offset = 640 - 543.9*0.72/2 = 444), Y=485
-  const enWidth = calligraphy.masterSloganEn.bounds.width * 0.72;
+  // 4. Master Slogan English: centered at X=640, Y=528
+  const enWidth = calligraphy.masterSloganEn.bounds.width;
   const enTX = 640 - enWidth / 2;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
 ${SVG_GRADIENTS}
   <rect width="1280" height="640" fill="${bg}" />
-  <circle cx="640" cy="210" r="320" fill="${isDark ? "url(#obsidianAura)" : "url(#alabasterAura)"}" />
+  <circle cx="640" cy="200" r="320" fill="${isDark ? "url(#obsidianAura)" : "url(#alabasterAura)"}" />
 
   <!-- 1. Master Calligraphic Centerpiece: مِشْكَاة -->
   <g transform="translate(${markTX.toFixed(2)}, ${markTY.toFixed(2)}) scale(${markScale})">
@@ -420,20 +427,20 @@ ${SVG_GRADIENTS}
   </g>
 
   <!-- 2. Minimal Hairline Divider (120px) -->
-  <line x1="580" y1="340" x2="700" y2="340" stroke="${dividerStroke}" stroke-width="1.2" stroke-opacity="0.45" />
+  <line x1="580" y1="335" x2="700" y2="335" stroke="${dividerStroke}" stroke-width="1.2" stroke-opacity="0.45" />
 
   <!-- 3. MISHKAAH Latin Wordmark -->
-  <g transform="translate(${wmTX.toFixed(2)}, 365) scale(0.95)">
+  <g transform="translate(${wmTX.toFixed(2)}, 368)">
     <path d="${calligraphy.latinWordmark.fullPath}" fill="${titleFill}" />
   </g>
 
-  <!-- 4. Master Slogan Arabic: تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة -->
-  <g transform="translate(${arTX.toFixed(2)}, 425) scale(0.90)">
+  <!-- 4. Master Slogan Arabic: نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون -->
+  <g transform="translate(${arTX.toFixed(2)}, 442)">
     <path d="${calligraphy.masterSloganAr.fullPath}" fill="${sloganArFill}" />
   </g>
 
-  <!-- 5. Master Slogan English: VERIFIED ISLAMIC HERITAGE · CONNECTED KNOWLEDGE -->
-  <g transform="translate(${enTX.toFixed(2)}, 485) scale(0.72)">
+  <!-- 5. Master Slogan English: PRESERVED TEXT · TRUSTED KNOWLEDGE -->
+  <g transform="translate(${enTX.toFixed(2)}, 528)">
     <path d="${calligraphy.masterSloganEn.fullPath}" fill="${sloganEnFill}" />
   </g>
 </svg>
@@ -453,7 +460,7 @@ function generateGithubHeroSVG(
   const sloganEnFill = isDark ? "#8C7A5B" : "#7A756B";
 
   // Wide 1600x500 Organization README Banner
-  const markScale = 0.52;
+  const markScale = 0.54;
   const markTX = 300 - 512 * markScale;
   const markTY = 250 - 512 * markScale;
 
@@ -471,20 +478,20 @@ ${SVG_GRADIENTS}
   <!-- Vertical Hairline Divider -->
   <line x1="590" y1="80" x2="590" y2="420" stroke="${dividerStroke}" stroke-width="1.5" stroke-opacity="0.35" />
 
-  <!-- Right Typography & Slogan Block -->
-  <g transform="translate(660, 115)">
+  <!-- Right Typography and Slogan Block -->
+  <g transform="translate(660, 120)">
     <!-- Latin Wordmark MISHKAAH -->
-    <g transform="translate(0, 0) scale(1.45)">
+    <g transform="translate(0, 0)">
       <path d="${calligraphy.latinWordmark.fullPath}" fill="${titleFill}" />
     </g>
 
     <!-- Master Arabic Slogan -->
-    <g transform="translate(0, 95) scale(1.55)">
+    <g transform="translate(0, 95)">
       <path d="${calligraphy.masterSloganAr.fullPath}" fill="${sloganArFill}" />
     </g>
 
     <!-- Master English Slogan -->
-    <g transform="translate(0, 195) scale(1.2)">
+    <g transform="translate(0, 190)">
       <path d="${calligraphy.masterSloganEn.fullPath}" fill="${sloganEnFill}" />
     </g>
   </g>
@@ -502,7 +509,7 @@ function generateRepoBannerSVG(
   const markFill = "url(#champagneGold)";
   const dividerStroke = "#C8A96A";
 
-  const markScale = 0.44;
+  const markScale = 0.45;
   const markTX = 220 - 512 * markScale;
   const markTY = 210 - 512 * markScale;
 
@@ -521,27 +528,27 @@ ${SVG_GRADIENTS}
   <line x1="440" y1="60" x2="440" y2="360" stroke="${dividerStroke}" stroke-width="1.2" stroke-opacity="0.35" />
 
   <!-- Right Pillar Information Block -->
-  <g transform="translate(500, 85)">
+  <g transform="translate(500, 68)">
     <!-- Pillar Arabic Title -->
-    <g transform="translate(0, 0) scale(1.55)">
+    <g transform="translate(0, 0)">
       <path d="${pillar.titleAr.fullPath}" fill="#F4F1EA" />
     </g>
 
     <!-- Pillar English Title -->
-    <g transform="translate(0, 85) scale(1.15)">
+    <g transform="translate(0, 68)">
       <path d="${pillar.titleEn.fullPath}" fill="#C8A96A" />
     </g>
 
     <!-- Hairline Separator -->
-    <line x1="0" y1="130" x2="240" y2="130" stroke="${dividerStroke}" stroke-width="1" stroke-opacity="0.30" />
+    <line x1="0" y1="112" x2="280" y2="112" stroke="${dividerStroke}" stroke-width="1" stroke-opacity="0.30" />
 
     <!-- Pillar Arabic Slogan -->
-    <g transform="translate(0, 160) scale(1.35)">
+    <g transform="translate(0, 136)">
       <path d="${pillar.sloganAr.fullPath}" fill="#E5CFA0" />
     </g>
 
     <!-- Pillar English Slogan -->
-    <g transform="translate(0, 225) scale(0.95)">
+    <g transform="translate(0, 198)">
       <path d="${pillar.sloganEn.fullPath}" fill="#8C7A5B" />
     </g>
   </g>
@@ -573,7 +580,7 @@ function generateAnimatedRevealSVG(
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
 ${SVG_GRADIENTS}
   <style>
-    /* 🏛️ Ceremonial Choreography: Stroke-Draw & Sequential Tashkeel Illumination */
+    /* Ceremonial Choreography: Stroke-Draw and Sequential Tashkeel Illumination */
     @keyframes orbitDraw {
       0% { stroke-dashoffset: 2262; opacity: 0; }
       20% { opacity: 0.35; }
@@ -640,12 +647,12 @@ ${SVG_GRADIENTS}
   <circle class="orbit-ring" cx="512" cy="512" r="360" fill="none" stroke="${orbitStroke}" stroke-width="1.5" />
 
   <!-- Rasm Contours (Connected Base Letters) -->
-  <g class="rasm-group" fill-rule="evenodd">
+  <g class="rasm-group" fill-rule="nonzero">
     ${rasmPaths.map((p: PathItem) => `<path id="${p.id}" class="rasm-stroke" d="${p.d}" />`).join("\n    ")}
   </g>
 
   <!-- Tashkeel Contours (Staggered Sequential Illumination RTL) -->
-  <g class="tashkeel-group" fill-rule="evenodd">
+  <g class="tashkeel-group" fill-rule="nonzero">
     ${tashkeelPaths
       .map(
         (p: PathItem, idx: number) =>
@@ -697,7 +704,7 @@ ${SVG_GRADIENTS}
 
 function generateAnimatedHeroBannerSVG(calligraphy: CalligraphyData): string {
   // 1600x500 Animated Wide Hero Banner
-  const markScale = 0.52;
+  const markScale = 0.54;
   const markTX = 300 - 512 * markScale;
   const markTY = 250 - 512 * markScale;
 
@@ -752,22 +759,30 @@ ${SVG_GRADIENTS}
   <!-- Left Calligraphic Seal with Hairline Orbit -->
   <g transform="translate(${markTX.toFixed(2)}, ${markTY.toFixed(2)}) scale(${markScale})">
     <circle class="hero-orbit" cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="2.5" />
-    ${renderMarkGroup(calligraphy, "url(#champagneGold)", 'class="hero-mark"')}
+    <g class="hero-mark">
+      ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
+    </g>
   </g>
 
   <!-- Vertical Hairline Divider -->
   <line x1="590" y1="80" x2="590" y2="420" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.35" />
 
   <!-- Right Typography Block with Staggered Fade-In -->
-  <g transform="translate(660, 115)">
-    <g class="hero-title" transform="translate(0, 0) scale(1.45)">
-      <path d="${calligraphy.latinWordmark.fullPath}" fill="#F4F1EA" />
+  <g transform="translate(660, 120)">
+    <g transform="translate(0, 0)">
+      <g class="hero-title">
+        <path d="${calligraphy.latinWordmark.fullPath}" fill="#F4F1EA" />
+      </g>
     </g>
-    <g class="hero-slogan-ar" transform="translate(0, 95) scale(1.55)">
-      <path d="${calligraphy.masterSloganAr.fullPath}" fill="#C8A96A" />
+    <g transform="translate(0, 95)">
+      <g class="hero-slogan-ar">
+        <path d="${calligraphy.masterSloganAr.fullPath}" fill="#C8A96A" />
+      </g>
     </g>
-    <g class="hero-slogan-en" transform="translate(0, 195) scale(1.2)">
-      <path d="${calligraphy.masterSloganEn.fullPath}" fill="#8C7A5B" />
+    <g transform="translate(0, 190)">
+      <g class="hero-slogan-en">
+        <path d="${calligraphy.masterSloganEn.fullPath}" fill="#8C7A5B" />
+      </g>
     </g>
   </g>
 </svg>
@@ -814,7 +829,7 @@ ${SVG_GRADIENTS}
   <rect width="1024" height="1024" fill="#09090B" />
   <circle cx="512" cy="512" r="420" fill="url(#obsidianAura)" />
   <circle class="mono-orbit" cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="1.5" />
-  <path class="mono-path" d="${calligraphy.monogram.fullPath}" fill-rule="evenodd" />
+  <path class="mono-path" d="${calligraphy.monogram.fullPath}" fill-rule="nonzero" />
 </svg>
 `;
 }
@@ -939,10 +954,13 @@ function parseSvgPathToLottieShapes(d: string): Array<{
   return shapes;
 }
 
+type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue };
+type JsonObject = { [key: string]: JsonValue };
+
 function generateLottieRevealJSON(
   calligraphy: CalligraphyData,
   theme: "dark" | "light",
-): Record<string, unknown> {
+): JsonObject {
   const isDark = theme === "dark";
   const bgRGB = isDark ? [0.035, 0.035, 0.043, 1] : [0.965, 0.953, 0.925, 1];
   const goldRGB = isDark ? [0.784, 0.663, 0.416, 1] : [0.541, 0.42, 0.184, 1];
@@ -974,7 +992,7 @@ function generateLottieRevealJSON(
           nm: "Fill",
           c: { a: 0, k: goldRGB },
           o: { a: 0, k: 100 },
-          r: 2, // Even-odd winding rule
+          r: 1, // Non-zero winding rule
         },
         {
           ty: "tr",
@@ -1113,7 +1131,7 @@ function generateLottieRevealJSON(
   };
 }
 
-function generateLottieMonogramLoaderJSON(calligraphy: CalligraphyData): Record<string, unknown> {
+function generateLottieMonogramLoaderJSON(calligraphy: CalligraphyData): JsonObject {
   const goldRGB = [0.784, 0.663, 0.416, 1];
   const monoSubpaths = parseSvgPathToLottieShapes(calligraphy.monogram.fullPath);
   const monoShapes = monoSubpaths.map((sp, idx) => ({
@@ -1173,7 +1191,7 @@ function generateLottieMonogramLoaderJSON(calligraphy: CalligraphyData): Record<
                 nm: "Fill",
                 c: { a: 0, k: goldRGB },
                 o: { a: 0, k: 100 },
-                r: 2,
+                r: 1,
               },
               {
                 ty: "tr",
@@ -1386,14 +1404,14 @@ ${SVG_GRADIENTS}
       <path d="${calligraphy.latinWordmark.fullPath}" fill="#F4F1EA" />
     </g>
     <!-- Hairline Divider -->
-    <line x1="-120" y1="52" x2="120" y2="52" stroke="#C8A96A" stroke-width="1.2" stroke-opacity="0.4" />
+    <line x1="-120" y1="66" x2="120" y2="66" stroke="#C8A96A" stroke-width="1.2" stroke-opacity="0.4" />
     <!-- Centered Subtitle -->
-    <g transform="translate(${-calligraphy.showcaseLabels.logoShowcaseSubtitle.bounds.width * 0.5}, 72)">
+    <g transform="translate(${-calligraphy.showcaseLabels.logoShowcaseSubtitle.bounds.width * 0.5}, 86)">
       <path d="${calligraphy.showcaseLabels.logoShowcaseSubtitle.fullPath}" fill="#8C7A5B" />
     </g>
   </g>
 
-  <!-- Section 1: 4 Primary Mark & Monogram Cards (x=100, 460, 820, 1180, width=320, height=320, y=240) -->
+  <!-- Section 1: 4 Primary Mark and Monogram Cards (x=100, 460, 820, 1180, width=320, height=320, y=240) -->
   <!-- Card 1: Primary Dark -->
   <g transform="translate(100, 240)">
     <rect width="320" height="320" rx="16" fill="#121215" stroke="#27272A" stroke-width="1.5" />
@@ -1430,7 +1448,7 @@ ${SVG_GRADIENTS}
     <g transform="translate(160, 150) scale(0.28)">
       <g transform="translate(-512, -512)">
         <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="2" stroke-opacity="0.3" />
-        <path d="${calligraphy.monogram.fullPath}" fill="url(#champagneGold)" fill-rule="evenodd" />
+        <path d="${calligraphy.monogram.fullPath}" fill="url(#champagneGold)" fill-rule="nonzero" />
       </g>
     </g>
     <rect x="0" y="270" width="320" height="50" rx="16" fill="#18181C" />
@@ -1445,7 +1463,7 @@ ${SVG_GRADIENTS}
     <g transform="translate(160, 150) scale(0.28)">
       <g transform="translate(-512, -512)">
         <circle cx="512" cy="512" r="360" fill="none" stroke="#705622" stroke-width="2" stroke-opacity="0.35" />
-        <path d="${calligraphy.monogram.fullPath}" fill="url(#umberBronze)" fill-rule="evenodd" />
+        <path d="${calligraphy.monogram.fullPath}" fill="url(#umberBronze)" fill-rule="nonzero" />
       </g>
     </g>
     <rect x="0" y="270" width="320" height="50" rx="16" fill="#DFDAD0" />
@@ -1454,20 +1472,20 @@ ${SVG_GRADIENTS}
     </g>
   </g>
 
-  <!-- Section 2: 2 Horizontal Lockup Cards (y=610, height=330, width=680, x=100 & 820) -->
+  <!-- Section 2: 2 Horizontal Lockup Cards (y=610, height=330, width=680, x=100 and 820) -->
   <!-- Lockup Dark -->
   <g transform="translate(100, 610)">
     <rect width="680" height="330" rx="16" fill="#121215" stroke="#27272A" stroke-width="1.5" />
     <g transform="translate(20, 20) scale(0.40)">
-      <g transform="translate(${280 - 512 * 0.50}, ${240 - 512 * 0.50}) scale(0.50)">
+      <g transform="translate(${280 - 512 * 0.52}, ${240 - 512 * 0.52}) scale(0.52)">
         <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="2.5" stroke-opacity="0.30" />
         ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
       </g>
       <line x1="560" y1="90" x2="560" y2="390" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.35" />
-      <g transform="translate(620, 120)">
-        <g transform="scale(1.35)"><path d="${calligraphy.latinWordmark.fullPath}" fill="#F4F1EA" /></g>
-        <g transform="translate(0, 85) scale(1.5)"><path d="${calligraphy.masterSloganAr.fullPath}" fill="#C8A96A" /></g>
-        <g transform="translate(0, 175) scale(1.15)"><path d="${calligraphy.masterSloganEn.fullPath}" fill="#A1A1AA" /></g>
+      <g transform="translate(630, 115)">
+        <g transform="translate(0, 0)"><path d="${calligraphy.latinWordmark.fullPath}" fill="#F4F1EA" /></g>
+        <g transform="translate(0, 85)"><path d="${calligraphy.masterSloganAr.fullPath}" fill="#C8A96A" /></g>
+        <g transform="translate(0, 175)"><path d="${calligraphy.masterSloganEn.fullPath}" fill="#A1A1AA" /></g>
       </g>
     </g>
     <rect x="0" y="280" width="680" height="50" rx="16" fill="#18181C" />
@@ -1480,15 +1498,15 @@ ${SVG_GRADIENTS}
   <g transform="translate(820, 610)">
     <rect width="680" height="330" rx="16" fill="#EDEAE1" stroke="#E4E0D6" stroke-width="1.5" />
     <g transform="translate(20, 20) scale(0.40)">
-      <g transform="translate(${280 - 512 * 0.50}, ${240 - 512 * 0.50}) scale(0.50)">
+      <g transform="translate(${280 - 512 * 0.52}, ${240 - 512 * 0.52}) scale(0.52)">
         <circle cx="512" cy="512" r="360" fill="none" stroke="#705622" stroke-width="2.5" stroke-opacity="0.35" />
         ${renderMarkGroup(calligraphy, "url(#umberBronze)")}
       </g>
       <line x1="560" y1="90" x2="560" y2="390" stroke="#705622" stroke-width="1.5" stroke-opacity="0.35" />
-      <g transform="translate(620, 120)">
-        <g transform="scale(1.35)"><path d="${calligraphy.latinWordmark.fullPath}" fill="#18181B" /></g>
-        <g transform="translate(0, 85) scale(1.5)"><path d="${calligraphy.masterSloganAr.fullPath}" fill="#705622" /></g>
-        <g transform="translate(0, 175) scale(1.15)"><path d="${calligraphy.masterSloganEn.fullPath}" fill="#7A756B" /></g>
+      <g transform="translate(630, 115)">
+        <g transform="translate(0, 0)"><path d="${calligraphy.latinWordmark.fullPath}" fill="#18181B" /></g>
+        <g transform="translate(0, 85)"><path d="${calligraphy.masterSloganAr.fullPath}" fill="#705622" /></g>
+        <g transform="translate(0, 175)"><path d="${calligraphy.masterSloganEn.fullPath}" fill="#7A756B" /></g>
       </g>
     </g>
     <rect x="0" y="280" width="680" height="50" rx="16" fill="#DFDAD0" />
@@ -1523,9 +1541,9 @@ ${SVG_GRADIENTS}
       <path d="${calligraphy.latinWordmark.fullPath}" fill="#F4F1EA" />
     </g>
     <!-- Hairline Divider -->
-    <line x1="-120" y1="52" x2="120" y2="52" stroke="#C8A96A" stroke-width="1.2" stroke-opacity="0.4" />
+    <line x1="-120" y1="66" x2="120" y2="66" stroke="#C8A96A" stroke-width="1.2" stroke-opacity="0.4" />
     <!-- Centered Subtitle -->
-    <g transform="translate(${-calligraphy.showcaseLabels.appIconSubtitle.bounds.width * 0.5}, 72)">
+    <g transform="translate(${-calligraphy.showcaseLabels.appIconSubtitle.bounds.width * 0.5}, 86)">
       <path d="${calligraphy.showcaseLabels.appIconSubtitle.fullPath}" fill="#8C7A5B" />
     </g>
   </g>
@@ -1534,7 +1552,9 @@ ${SVG_GRADIENTS}
   <g clip-path="url(#squircle1)">
     <rect x="140" y="320" width="220" height="220" fill="#09090B" />
     <g transform="translate(140, 320) scale(0.2148)">
-      ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
+      <g transform="translate(51.2, 51.2) scale(0.90)">
+        ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
+      </g>
     </g>
   </g>
   <rect x="140" y="320" width="220" height="220" rx="50" ry="50" fill="none" stroke="#27272A" stroke-width="1.5" />
@@ -1546,7 +1566,9 @@ ${SVG_GRADIENTS}
   <g clip-path="url(#squircle2)">
     <rect x="480" y="320" width="220" height="220" fill="#F6F3EC" />
     <g transform="translate(480, 320) scale(0.2148)">
-      ${renderMarkGroup(calligraphy, "url(#umberBronze)")}
+      <g transform="translate(51.2, 51.2) scale(0.90)">
+        ${renderMarkGroup(calligraphy, "url(#umberBronze)")}
+      </g>
     </g>
   </g>
   <rect x="480" y="320" width="220" height="220" rx="50" ry="50" fill="none" stroke="#E4E0D6" stroke-width="1.5" />
@@ -1558,7 +1580,9 @@ ${SVG_GRADIENTS}
   <g clip-path="url(#squircle3)">
     <rect x="820" y="320" width="220" height="220" fill="url(#tintedBg)" />
     <g transform="translate(820, 320) scale(0.2148)">
-      ${renderMarkGroup(calligraphy, "#70A8FF")}
+      <g transform="translate(51.2, 51.2) scale(0.90)">
+        ${renderMarkGroup(calligraphy, "#70A8FF")}
+      </g>
     </g>
   </g>
   <rect x="820" y="320" width="220" height="220" rx="50" ry="50" fill="none" stroke="#2C374A" stroke-width="1.5" />
@@ -1570,12 +1594,14 @@ ${SVG_GRADIENTS}
   <g clip-path="url(#androidCircle)">
     <rect x="1160" y="320" width="220" height="220" fill="#09090B" />
     <g transform="translate(1160, 320) scale(0.2148)">
-      ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
+      <g transform="translate(51.2, 51.2) scale(0.90)">
+        ${renderMarkGroup(calligraphy, "url(#champagneGold)")}
+      </g>
     </g>
   </g>
   <circle cx="1270" cy="430" r="110" fill="none" stroke="#27272A" stroke-width="1.5" />
-  <!-- 66dp Circular Safe Zone Guide Ring (r=67px in 220px icon) -->
-  <circle cx="1270" cy="430" r="67" fill="none" stroke="#C8A96A" stroke-width="1" stroke-dasharray="4,4" stroke-opacity="0.6" />
+  <!-- 66dp Circular Safe Zone Guide Ring (r=78px in 220px icon) -->
+  <circle cx="1270" cy="430" r="78" fill="none" stroke="#C8A96A" stroke-width="1" stroke-dasharray="4,4" stroke-opacity="0.6" />
   <g transform="translate(${1270 - calligraphy.showcaseLabels.cardAndroid.bounds.width * 0.5}, 570)"><path d="${calligraphy.showcaseLabels.cardAndroid.fullPath}" fill="#F4F1EA" /></g>
   <g transform="translate(${1270 - calligraphy.showcaseLabels.subAndroid1.bounds.width * 0.5}, 596)"><path d="${calligraphy.showcaseLabels.subAndroid1.fullPath}" fill="#71717A" /></g>
   <g transform="translate(${1270 - calligraphy.showcaseLabels.subAndroid2.bounds.width * 0.5}, 616)"><path d="${calligraphy.showcaseLabels.subAndroid2.fullPath}" fill="#C8A96A" /></g>
@@ -1678,6 +1704,30 @@ function generateAllVectors(): void {
   writeFileSync(
     join(lottieDir, "mishkaah-splash-reveal-dark.lottie.json"),
     JSON.stringify(generateLottieRevealJSON(calligraphy, "dark"), null, 2),
+  );
+  writeFileSync(
+    join(lottieDir, "mishkaah-splash-reveal-light.lottie.json"),
+    JSON.stringify(generateLottieRevealJSON(calligraphy, "light"), null, 2),
+  );
+  writeFileSync(
+    join(lottieDir, "mishkaah-splash-emerge-dark.lottie.json"),
+    JSON.stringify(generateLottieRevealJSON(calligraphy, "dark"), null, 2),
+  );
+  writeFileSync(
+    join(lottieDir, "mishkaah-splash-emerge-light.lottie.json"),
+    JSON.stringify(generateLottieRevealJSON(calligraphy, "light"), null, 2),
+  );
+  writeFileSync(
+    join(lottieDir, "mishkaah-reveal-dark.lottie.json"),
+    JSON.stringify(generateLottieRevealJSON(calligraphy, "dark"), null, 2),
+  );
+  writeFileSync(
+    join(lottieDir, "mishkaah-reveal-light.lottie.json"),
+    JSON.stringify(generateLottieRevealJSON(calligraphy, "light"), null, 2),
+  );
+  writeFileSync(
+    join(lottieDir, "mishkaah-monogram-loader.lottie.json"),
+    JSON.stringify(generateLottieMonogramLoaderJSON(calligraphy), null, 2),
   );
   writeFileSync(
     join(lottieDir, "mishkaah-splash-reveal-light.lottie.json"),

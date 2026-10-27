@@ -4,8 +4,8 @@
 
 # لافتات المستودعات والشبكات الاجتماعية لمِشْكَاة
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![حالة اللافتات](https://img.shields.io/badge/اللافتات-4%20أركان%20%2B%20لافتة%20المنظمة-C8A96A?style=flat-square)](../tokens/README.ar.md)
 [![جودة المتجهات](https://img.shields.io/badge/الجودة-متجهات%20SVG%20%2B%20صور%20عالية%20الدقة-09090B?style=flat-square)](../docs/brand-guidelines.ar.md)
@@ -34,20 +34,20 @@
 ```
 +---------------------------------------------------------------------------------------+
 |                                    مُدَوَّنَةُ مِشْكَاة                                    |
-|                      مُتُونٌ مُوثَّقَة.. وَرَوَابِطُ مُحَرَّرَة                               |
-|                      Authenticated Texts. Precisely Linked.                           |
+|                            نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون                               |
+|                         Preserved Text. Trusted Knowledge.                            |
 +---------------------------------------------------------------------------------------+
 |                                     نَوَاةُ مِشْكَاة                                     |
-|                       تَدْقِيقٌ صَارِمٌ لِصَوْنِ النُّصُوص                                |
-|                      Strict Verification for Sacred Texts.                            |
+|                            نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون                               |
+|                         Preserved Text. Trusted Knowledge.                            |
 +---------------------------------------------------------------------------------------+
 |                                      حُزْمَةُ مِشْكَاة                                     |
-|                   أَدَوَاتٌ بَرْمَجِيَّةٌ لِلْمُدَوَّنَةِ الإِسْلَامِيَّة                     |
-|                      Typed SDK for Verified Islamic Texts.                            |
+|                            نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون                               |
+|                         Preserved Text. Trusted Knowledge.                            |
 +---------------------------------------------------------------------------------------+
 |                                    تَطْبِيقَاتُ مِشْكَاة                                    |
-|                           قِرَاءَةٌ خَاشِعَة.. وَفَهْمٌ عَمِيق                                |
-|                         Calm Reading. Deep Understanding.                             |
+|                            نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون                               |
+|                         Preserved Text. Trusted Knowledge.                            |
 +---------------------------------------------------------------------------------------+
 ```
 
@@ -59,10 +59,10 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **لافتة المنظمة الرئيسية** | 1600×500 | [`.svg`](./github-hero-dark.svg)، [`.png`](./github-hero-dark.png) | صفحة منظمة GitHub العامة ([`mishkaah`](https://github.com/mishkaah)) | الشعار الخطي والمدار الفلكي والشعار اللفظي المعتمد باللغتين |
 | **بطاقة المشاركة الاجتماعية** | 1280×640 | [`.svg`](./social-og-dark.svg)، [`.png`](./social-og-dark.png) | بطاقات منصة إكس (Twitter)، لينكد إن، وفيسبوك وسلاك | نسبة أبعاد `2:1`، خلفية سبجية داكنة، خطوط ذهبية عالية التباين |
-| **لافتة مستودع المُدَوَّنة (Corpus)** | 1280×420 | [`.svg`](./repo-banner-corpus.svg) | [`mishkaah/corpus`](https://github.com/mishkaah/corpus) | *مُتُونٌ مُوثَّقَة.. وَرَوَابِطُ مُحَرَّرَة* |
-| **لافتة مستودع النَّوَاة (Core)** | 1280×420 | [`.svg`](./repo-banner-core.svg) | [`mishkaah/core`](https://github.com/mishkaah/core) | *تَدْقِيقٌ صَارِمٌ لِصَوْنِ النُّصُوص* |
-| **لافتة مستودع الحَقِيبَة (SDK)** | 1280×420 | [`.svg`](./repo-banner-sdk.svg) | [`mishkaah/sdk`](https://github.com/mishkaah/sdk) | *أَدَوَاتٌ بَرْمَجِيَّةٌ لِلْمُدَوَّنَةِ الإِسْلَامِيَّة* |
-| **لافتة مستودع التَّطْبِيقَات (App)** | 1280×420 | [`.svg`](./repo-banner-app.svg) | [`mishkaah/app`](https://github.com/mishkaah/app) | *قِرَاءَةٌ خَاشِعَة.. وَفَهْمٌ عَمِيق* |
+| **لافتة مستودع المُدَوَّنة (Corpus)** | 1280×420 | [`.svg`](./repo-banner-corpus.svg)، [`.png`](./repo-banner-corpus.png) | [`mishkaah/corpus`](https://github.com/mishkaah/corpus) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
+| **لافتة مستودع النَّوَاة (Core)** | 1280×420 | [`.svg`](./repo-banner-core.svg)، [`.png`](./repo-banner-core.png) | [`mishkaah/core`](https://github.com/mishkaah/core) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
+| **لافتة مستودع الحَقِيبَة (SDK)** | 1280×420 | [`.svg`](./repo-banner-sdk.svg)، [`.png`](./repo-banner-sdk.png) | [`mishkaah/sdk`](https://github.com/mishkaah/sdk) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
+| **لافتة مستودع التَّطْبِيقَات (App)** | 1280×420 | [`.svg`](./repo-banner-app.svg)، [`.png`](./repo-banner-app.png) | [`mishkaah/app`](https://github.com/mishkaah/app) | *نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون* |
 | **اللافتة الاجتماعية الشاملة** | 1280×640 | [`.svg`](./mishkaah-social-banner.svg)، [`.png`](./mishkaah-social-banner.png) | الحزم الصحفية والمقالات الخارجية والمشاريع التابعة | الشعار الكامل مع اسم المنظومة باللغتين |
 
 ---

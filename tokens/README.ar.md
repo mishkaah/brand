@@ -4,8 +4,8 @@
 
 # متغيرات التصميم والرموز القياسية لمِشْكَاة
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![معيار الرموز](https://img.shields.io/badge/الرموز-مسودة%20W3C%20القياسية-C8A96A?style=flat-square)](../docs/color-and-theme-system.ar.md)
 [![المنصات المدعومة](https://img.shields.io/badge/المنصات-CSS%20%7C%20TypeScript%20%7C%20Dart-09090B?style=flat-square)](./dist/tokens.ts)
@@ -83,7 +83,7 @@ tokens/
 import { MISHKAAH_COLORS, MISHKAAH_SLOGANS } from "./dist/tokens.ts";
 
 console.log(MISHKAAH_SLOGANS.master.ar);
-// "تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة"
+// "نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون"
 ```
 
 ### تطبيقات الهواتف الذكية في Flutter (`dist/mishkaah_tokens.dart`)

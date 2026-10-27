@@ -4,8 +4,8 @@
 
 # الشعارات والعلامات الخطية المتجهة لمِشْكَاة
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![جودة المتجهات](https://img.shields.io/badge/المتجهات-منحنيات%20بيزييه%20التكعيبية-C8A96A?style=flat-square)](../tokens/README.ar.md)
 [![مساحة العمل](https://img.shields.io/badge/القياس-1024%C3%971024-09090B?style=flat-square)](../docs/brand-guidelines.ar.md)

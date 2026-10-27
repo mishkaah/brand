@@ -6,8 +6,8 @@
 
 # Mishkaah Brand & Design System
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![Brand Status](https://img.shields.io/badge/Brand-System%20v2.2-C8A96A?style=flat-square)](./docs/brand-guidelines.md)
 [![Design Tokens](https://img.shields.io/badge/Tokens-CSS%20%7C%20TS%20%7C%20Dart-09090B?style=flat-square)](./tokens/README.md)
@@ -52,23 +52,23 @@ All repositories in the Mishkaah organization ([`core`](https://github.com/mishk
 
 | Asset Description | Variant / Format | Permanent Raw GitHub URL |
 | :--- | :--- | :--- |
-| **Primary Mark (Dark)** | Vector SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/mark-dark.svg` |
-| **Primary Mark (Gold Transparent)** | Vector SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/mark-gold-transparent.svg` |
-| **Primary Mark (Light)** | Vector SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/mark-light.svg` |
-| **Monogram *Meem* (Dark)** | Vector SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/monogram-dark.svg` |
-| **Monogram *Meem* (Gold Transparent)** | Vector SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/monogram-gold-transparent.svg` |
-| **Horizontal Lockup (Dark)** | Vector SVG (1600×400) | `https://github.com/mishkaah/brand/raw/main/logos/lockup-horizontal-dark.svg` |
-| **Horizontal Lockup (Light)** | Vector SVG (1600×400) | `https://github.com/mishkaah/brand/raw/main/logos/lockup-horizontal-light.svg` |
-| **GitHub Org Hero Banner** | Vector SVG (1600×500) | `https://github.com/mishkaah/brand/raw/main/banners/github-hero-dark.svg` |
-| **Social OpenGraph Card** | Vector SVG (1280×640) | `https://github.com/mishkaah/brand/raw/main/banners/social-og-dark.svg` |
-| **Repository Banner: Corpus** | Vector SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-corpus.svg` |
-| **Repository Banner: Core** | Vector SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-core.svg` |
-| **Repository Banner: SDK** | Vector SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-sdk.svg` |
-| **Repository Banner: App** | Vector SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-app.svg` |
-| **Mobile App Icon (iOS Dark)** | High-Res PNG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/app-icons/ios-dark.png` |
-| **Mobile App Icon (Android Foreground)** | Adaptive Vector SVG | `https://github.com/mishkaah/brand/raw/main/app-icons/android-adaptive-foreground.svg` |
-| **Animated Reveal Logo** | Vector Animated SVG | `https://github.com/mishkaah/brand/raw/main/animations/svg/mishkaah-reveal-dark.svg` |
-| **Lottie Animation Bundle** | Mobile Lottie JSON | `https://github.com/mishkaah/brand/raw/main/animations/lottie/mishkaah-reveal-dark.lottie.json` |
+| **Primary Mark (Dark)** | Vector SVG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/mark-dark.svg` |
+| **Primary Mark (Gold Transparent)** | Vector SVG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/mark-gold-transparent.svg` |
+| **Primary Mark (Light)** | Vector SVG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/mark-light.svg` |
+| **Monogram *Meem* (Dark)** | Vector SVG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/monogram-dark.svg` |
+| **Monogram *Meem* (Gold Transparent)** | Vector SVG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/monogram-gold-transparent.svg` |
+| **Horizontal Lockup (Dark)** | Vector SVG (1600×400) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/lockup-horizontal-dark.svg` |
+| **Horizontal Lockup (Light)** | Vector SVG (1600×400) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/lockup-horizontal-light.svg` |
+| **GitHub Org Hero Banner** | Vector SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/github-hero-dark.svg` |
+| **Social OpenGraph Card** | Vector SVG (1280×640) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/social-og-dark.svg` |
+| **Repository Banner: Corpus** | Vector SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-corpus.svg` |
+| **Repository Banner: Core** | Vector SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-core.svg` |
+| **Repository Banner: SDK** | Vector SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-sdk.svg` |
+| **Repository Banner: App** | Vector SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-app.svg` |
+| **Mobile App Icon (iOS Dark)** | High-Res PNG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/app-icons/ios-dark.png` |
+| **Mobile App Icon (Android Foreground)** | Adaptive Vector SVG | `https://raw.githubusercontent.com/mishkaah/brand/main/app-icons/android-adaptive-foreground.svg` |
+| **Animated Reveal Logo** | Vector Animated SVG | `https://raw.githubusercontent.com/mishkaah/brand/main/animations/svg/mishkaah-reveal-dark.svg` |
+| **Lottie Animation Bundle** | Mobile Lottie JSON | `https://raw.githubusercontent.com/mishkaah/brand/main/animations/lottie/mishkaah-splash-reveal-dark.lottie.json` |
 
 ---
 

@@ -4,8 +4,8 @@
 
 # وثائق وأدلة الهوية البصرية لمِشْكَاة
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![حالة التوثيق](https://img.shields.io/badge/الأدلة-4%20أدلة%20معيارية%20شاملة-C8A96A?style=flat-square)](./brand-guidelines.ar.md)
 [![فلسفة التصميم](https://img.shields.io/badge/الفلسفة-وقار%20مستلهم%20من%20آية%20النور-09090B?style=flat-square)](./typography-and-calligraphy.ar.md)

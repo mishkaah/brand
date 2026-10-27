@@ -1,5 +1,5 @@
 import { execSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { chromium, type Browser } from "playwright";
 
@@ -402,7 +402,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
   function renderMarkGroup(primaryMark: { rasm: Array<{ d: string }>; tashkeel: Array<{ d: string }> }, fillExpr: string, extraAttrs = ""): string {
     const attrs = extraAttrs ? ` ${extraAttrs}` : "";
     const contours = [...primaryMark.rasm, ...primaryMark.tashkeel];
-    return `<g fill="${fillExpr}" fill-rule="evenodd"${attrs}>\n` +
+    return `<g fill="${fillExpr}" fill-rule="nonzero"${attrs}>\n` +
       contours.map((p) => `    <path d="${p.d}" />`).join("\n") +
       `\n  </g>`;
   }
@@ -548,9 +548,13 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
           <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.28" />
           ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#goldGrad)")}
           <defs>
-            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id="goldGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
               <stop offset="0%" stop-color="#E5CFA0" />
               <stop offset="100%" stop-color="#B89655" />
+            </linearGradient>
+            <linearGradient id="umberGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+              <stop offset="0%" stop-color="#8A6B2F" />
+              <stop offset="100%" stop-color="#553F16" />
             </linearGradient>
           </defs>
         </svg>
@@ -656,7 +660,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
         <div class="card" style="align-items:center; text-align:center;">
           <svg viewBox="0 0 1024 1024" width="260" height="260">
             <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.30" />
-            <path d="${monoD}" fill="url(#goldGrad)" fill-rule="evenodd" />
+            <path d="${monoD}" fill="url(#goldGrad)" fill-rule="nonzero" />
           </svg>
           <h3 style="margin-top:16px;">مُونُوغْرَامُ الْمِيمِ السِّيَادِيّ</h3>
           <p>مخصص لأيقونات التحميل، وأختام التوثيق، والمساحات المصغرة.</p>
@@ -665,14 +669,25 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
           <h3>التَّرْكِيبُ الأُفُقِيُّ الْمُوَحَّد</h3>
           <div style="background:#09090B; border:1px solid #27272A; border-radius:12px; padding:20px; margin-bottom:16px;">
             <svg viewBox="0 0 1600 480" width="100%">
-              <g transform="translate(${280 - 512 * 0.50}, ${240 - 512 * 0.50}) scale(0.50)">
+              <defs>
+                <linearGradient id="goldGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+                  <stop offset="0%" stop-color="#E5CFA0" />
+                  <stop offset="100%" stop-color="#B89655" />
+                </linearGradient>
+                <linearGradient id="umberGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+                  <stop offset="0%" stop-color="#8A6B2F" />
+                  <stop offset="100%" stop-color="#553F16" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(${280 - 512 * 0.52}, ${240 - 512 * 0.52}) scale(0.52)">
                 <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="2.5" stroke-opacity="0.30" />
                 ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#goldGrad)")}
               </g>
               <line x1="560" y1="90" x2="560" y2="390" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.35" />
-              <g transform="translate(620, 120)">
-                <g transform="scale(1.35)"><path d="${latinD}" fill="#F4F1EA" /></g>
-                <g transform="translate(0, 85) scale(1.5)"><path d="${sloganArD}" fill="#C8A96A" /></g>
+              <g transform="translate(630, 115)">
+                <g transform="translate(0, 0)"><path d="${latinD}" fill="#F4F1EA" /></g>
+                <g transform="translate(0, 85)"><path d="${sloganArD}" fill="#C8A96A" /></g>
+                <g transform="translate(0, 175)"><path d="${sloganEnD}" fill="#A1A1AA" /></g>
               </g>
             </svg>
           </div>
@@ -696,23 +711,23 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
       <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 24px; width:100%;">
         <div class="card">
           <h3>١. الشِّعَارُ السِّيَادِيُّ الأُمّ</h3>
-          <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة»</p>
-          <p style="letter-spacing:1px; color:#C8A96A;">Verified Islamic Heritage. Connected Knowledge.</p>
+          <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون»</p>
+          <p style="letter-spacing:1px; color:#C8A96A;">Preserved Text. Trusted Knowledge.</p>
         </div>
         <div class="card">
           <h3>٢. رُكْنُ الْمُدَوَّنَة (Corpus)</h3>
-          <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«مُتُونٌ مُوثَّقَة.. وَرَوَابِطُ مُحَرَّرَة»</p>
-          <p style="letter-spacing:1px; color:#C8A96A;">Authenticated Texts. Precisely Linked.</p>
+          <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون»</p>
+          <p style="letter-spacing:1px; color:#C8A96A;">Preserved Text. Trusted Knowledge.</p>
         </div>
         <div class="card">
           <h3>٣. رُكْنُ التَّطْبِيق (Reader App)</h3>
-          <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«قِرَاءَةٌ خَاشِعَة.. وَفَهْمٌ عَمِيق»</p>
-          <p style="letter-spacing:1px; color:#C8A96A;">Calm Reading. Deep Understanding.</p>
+          <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون»</p>
+          <p style="letter-spacing:1px; color:#C8A96A;">Preserved Text. Trusted Knowledge.</p>
         </div>
         <div class="card">
           <h3>٤. رُكْنُ النَّوَاة وَالْحَقِيبَة (Core &amp; SDK)</h3>
-          <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«تَدْقِيقٌ صَارِمٌ لِصَوْنِ النُّصُوص»</p>
-          <p style="letter-spacing:1px; color:#C8A96A;">Strict Verification for Sacred Texts.</p>
+          <p style="font-size:18px; color:#F4F1EA; margin-bottom:6px;">«نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون»</p>
+          <p style="letter-spacing:1px; color:#C8A96A;">Preserved Text. Trusted Knowledge.</p>
         </div>
       </div>
     </div>
@@ -857,7 +872,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
       </div>
     </div>
     <div class="slide-footer">
-      <span>مِشْكَاة: مَعْرِفَةٌ مُتَرَابِطَة · تُرَاثٌ مُحَقَّق</span>
+      <span>مِشْكَاة: نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون</span>
       <span>SLIDE 8 / 8</span>
     </div>
   </div>
@@ -958,7 +973,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
   <header>
     <div>
       <h1>مِشْكَاة · لَوْحَةُ الْهُوِيَّةِ الْبَصَرِيَّةِ السِّيَادِيَّة</h1>
-      <p style="font-size:16px; color:#A1A1AA; margin-top:6px;">تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة</p>
+      <p style="font-size:16px; color:#A1A1AA; margin-top:6px;">نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون</p>
     </div>
     <div style="text-align:left;">
       <div class="header-sub">MISHKAAH EXECUTIVE BRAND IDENTITY BOARD</div>
@@ -974,9 +989,13 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
         <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="2" stroke-opacity="0.30" />
         ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#bentoGold)")}
         <defs>
-          <linearGradient id="bentoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="bentoGold" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
             <stop offset="0%" stop-color="#E5CFA0" />
             <stop offset="100%" stop-color="#B89655" />
+          </linearGradient>
+          <linearGradient id="umberGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+            <stop offset="0%" stop-color="#8A6B2F" />
+            <stop offset="100%" stop-color="#553F16" />
           </linearGradient>
         </defs>
       </svg>
@@ -1000,7 +1019,7 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
         <div style="display:flex; justify-content:center; margin:16px 0;">
           <svg viewBox="0 0 1024 1024" width="220" height="220">
             <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="2" stroke-opacity="0.30" />
-            <path d="${monoD}" fill="url(#bentoGold)" fill-rule="evenodd" />
+            <path d="${monoD}" fill="url(#bentoGold)" fill-rule="nonzero" />
           </svg>
         </div>
       </div>
@@ -1027,29 +1046,39 @@ async function renderBrandBookAndSheet(browser: Browser, brandRoot: string): Pro
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; align-items:center;">
         <div style="background:#09090B; border:1px solid #27272A; border-radius:16px; padding:24px;">
           <svg viewBox="0 0 1600 480" width="100%">
-            <g transform="translate(${280 - 512 * 0.50}, ${240 - 512 * 0.50}) scale(0.50)">
+            <defs>
+              <linearGradient id="bentoGold" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+                <stop offset="0%" stop-color="#E5CFA0" />
+                <stop offset="100%" stop-color="#B89655" />
+              </linearGradient>
+              <linearGradient id="umberGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+                <stop offset="0%" stop-color="#8A6B2F" />
+                <stop offset="100%" stop-color="#553F16" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(${280 - 512 * 0.52}, ${240 - 512 * 0.52}) scale(0.52)">
               <circle cx="512" cy="512" r="360" fill="none" stroke="#C8A96A" stroke-width="2.5" stroke-opacity="0.30" />
               ${renderMarkGroup(calligraphyRaw.primaryMark, "url(#bentoGold)")}
             </g>
             <line x1="560" y1="90" x2="560" y2="390" stroke="#C8A96A" stroke-width="1.5" stroke-opacity="0.35" />
-            <g transform="translate(620, 120)">
-              <g transform="scale(1.35)"><path d="${latinD}" fill="#F4F1EA" /></g>
-              <g transform="translate(0, 85) scale(1.5)"><path d="${sloganArD}" fill="#C8A96A" /></g>
-              <g transform="translate(0, 175) scale(1.15)"><path d="${sloganEnD}" fill="#71717A" /></g>
+            <g transform="translate(630, 115)">
+              <g transform="translate(0, 0)"><path d="${latinD}" fill="#F4F1EA" /></g>
+              <g transform="translate(0, 85)"><path d="${sloganArD}" fill="#C8A96A" /></g>
+              <g transform="translate(0, 175)"><path d="${sloganEnD}" fill="#71717A" /></g>
             </g>
           </svg>
         </div>
         <div style="background:#F6F3EC; border:1px solid #E4E0D6; border-radius:16px; padding:24px;">
           <svg viewBox="0 0 1600 480" width="100%">
-            <g transform="translate(${280 - 512 * 0.50}, ${240 - 512 * 0.50}) scale(0.50)">
+            <g transform="translate(${280 - 512 * 0.52}, ${240 - 512 * 0.52}) scale(0.52)">
               <circle cx="512" cy="512" r="360" fill="none" stroke="#705622" stroke-width="2.5" stroke-opacity="0.35" />
               ${renderMarkGroup(calligraphyRaw.primaryMark, "#705622")}
             </g>
             <line x1="560" y1="90" x2="560" y2="390" stroke="#705622" stroke-width="1.5" stroke-opacity="0.35" />
-            <g transform="translate(620, 120)">
-              <g transform="scale(1.35)"><path d="${latinD}" fill="#18181B" /></g>
-              <g transform="translate(0, 85) scale(1.5)"><path d="${sloganArD}" fill="#705622" /></g>
-              <g transform="translate(0, 175) scale(1.15)"><path d="${sloganEnD}" fill="#7A756B" /></g>
+            <g transform="translate(630, 115)">
+              <g transform="translate(0, 0)"><path d="${latinD}" fill="#18181B" /></g>
+              <g transform="translate(0, 85)"><path d="${sloganArD}" fill="#705622" /></g>
+              <g transform="translate(0, 175)"><path d="${sloganEnD}" fill="#7A756B" /></g>
             </g>
           </svg>
         </div>
@@ -1103,8 +1132,18 @@ async function renderMotionVideos(browser: Browser, brandRoot: string): Promise<
     mkdirSync(videoDir, { recursive: true });
   }
 
-  // Helper: Step an animation frame-by-frame and encode to MP4 / WebM / WebP
-  async function renderAnimationSequence(options: {
+  // Delete stale / empty video files
+  const existingFiles = readdirSync(videoDir);
+  for (const f of existingFiles) {
+    const fullPath = join(videoDir, f);
+    if ((f.endsWith(".mp4") || f.endsWith(".webm") || f.endsWith(".webp")) && existsSync(fullPath)) {
+      if (statSync(fullPath).size === 0) {
+        rmSync(fullPath, { force: true });
+      }
+    }
+  }
+
+  interface RenderSeqOptions {
     name: string;
     width: number;
     height: number;
@@ -1114,9 +1153,31 @@ async function renderMotionVideos(browser: Browser, brandRoot: string): Promise<
     aspectRatio: "16x9" | "9x16" | "1x1";
     markContours: Array<{ d: string }>;
     latinD: string;
+    latinBounds: { width: number; height: number };
     sloganArD: string;
-  }): Promise<void> {
-    const { name, width, height, totalFrames, fps, theme, markContours, latinD, sloganArD } = options;
+    sloganArBounds: { width: number; height: number };
+    sloganEnD: string;
+    sloganEnBounds: { width: number; height: number };
+  }
+
+  // Helper: Step an animation frame-by-frame and encode to MP4 / WebM / WebP
+  async function renderAnimationSequence(options: RenderSeqOptions): Promise<void> {
+    const {
+      name,
+      width,
+      height,
+      totalFrames,
+      fps,
+      theme,
+      aspectRatio,
+      markContours,
+      latinD,
+      latinBounds,
+      sloganArD,
+      sloganArBounds,
+      sloganEnD,
+      sloganEnBounds,
+    } = options;
     console.log(`  Rendering ${name} (${width}×${height}, ${totalFrames} frames at ${fps}fps)...`);
 
     if (existsSync(tempFramesDir)) {
@@ -1126,15 +1187,131 @@ async function renderMotionVideos(browser: Browser, brandRoot: string): Promise<
 
     const isDark = theme === "dark";
     const bg = isDark ? "#09090B" : "#F6F3EC";
-    const goldFill = isDark ? "url(#goldGrad)" : "#705622";
+    const goldFill = isDark ? "url(#goldGrad)" : "url(#umberGrad)";
     const strokeCol = isDark ? "#E5CFA0" : "#8A6B2F";
+    const titleFill = isDark ? "#F4F1EA" : "#18181B";
+    const sloganArFill = isDark ? "#C8A96A" : "#705622";
+    const sloganEnFill = isDark ? "#8C7A5B" : "#7A756B";
 
     const page = await browser.newPage({
       viewport: { width, height },
       deviceScaleFactor: 1,
     });
 
-    // Load template with frame-control function
+    let svgBody = "";
+
+    if (aspectRatio === "16x9") {
+      // 1920x1080 Widescreen Intro (left mark & orbit + divider + right wordmark and bilingual slogan)
+      svgBody = `
+  <svg id="stage" viewBox="0 0 1920 1080" width="1920" height="1080">
+    <defs>
+      <linearGradient id="goldGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+        <stop offset="0%" stop-color="#E5CFA0" />
+        <stop offset="100%" stop-color="#B89655" />
+      </linearGradient>
+      <linearGradient id="umberGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+        <stop offset="0%" stop-color="#8A6B2F" />
+        <stop offset="100%" stop-color="#553F16" />
+      </linearGradient>
+      <radialGradient id="auraGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="${isDark ? "#C8A96A" : "#705622"}" stop-opacity="0.10" />
+        <stop offset="65%" stop-color="${isDark ? "#C8A96A" : "#705622"}" stop-opacity="0.03" />
+        <stop offset="100%" stop-color="${isDark ? "#C8A96A" : "#705622"}" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <!-- Left Seal & Orbit -->
+    <circle id="aura" cx="480" cy="540" r="400" fill="url(#auraGrad)" opacity="0" />
+    <circle id="orbit" cx="480" cy="540" r="320" fill="none" stroke="${strokeCol}" stroke-width="2" stroke-dasharray="2011" stroke-dashoffset="2011" />
+    <g id="mark" fill="${goldFill}" fill-opacity="0" stroke="${strokeCol}" stroke-width="1.2" stroke-dasharray="1600" stroke-dashoffset="1600" fill-rule="nonzero" transform="translate(121.6, 181.6) scale(0.70)">
+${markContours.map((p) => `      <path d="${p.d}" />`).join("\n")}
+    </g>
+    <!-- Vertical Hairline Divider -->
+    <line id="divider" x1="900" y1="240" x2="900" y2="840" stroke="${strokeCol}" stroke-width="1.5" stroke-opacity="0" />
+    <!-- Right Typography Block -->
+    <g transform="translate(990, 420)">
+      <g id="title-g" opacity="0">
+        <path d="${latinD}" fill="${titleFill}" />
+      </g>
+      <g id="slogan-ar-g" transform="translate(0, 100)" opacity="0">
+        <path d="${sloganArD}" fill="${sloganArFill}" />
+      </g>
+      <g id="slogan-en-g" transform="translate(0, 195)" opacity="0">
+        <path d="${sloganEnD}" fill="${sloganEnFill}" />
+      </g>
+    </g>
+  </svg>`;
+    } else if (aspectRatio === "9x16") {
+      // 1080x1920 Vertical Mobile Splash (centered mark & orbit at 540, 800 + wordmark and Arabic slogan below at y=1220 and y=1310)
+      const wmTX = 540 - latinBounds.width * 0.5;
+      const arTX = 540 - sloganArBounds.width * 0.5;
+      const enTX = 540 - sloganEnBounds.width * 0.5;
+
+      svgBody = `
+  <svg id="stage" viewBox="0 0 1080 1920" width="1080" height="1920">
+    <defs>
+      <linearGradient id="goldGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+        <stop offset="0%" stop-color="#E5CFA0" />
+        <stop offset="100%" stop-color="#B89655" />
+      </linearGradient>
+      <linearGradient id="umberGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+        <stop offset="0%" stop-color="#8A6B2F" />
+        <stop offset="100%" stop-color="#553F16" />
+      </linearGradient>
+      <radialGradient id="auraGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="${isDark ? "#C8A96A" : "#705622"}" stop-opacity="0.10" />
+        <stop offset="65%" stop-color="${isDark ? "#C8A96A" : "#705622"}" stop-opacity="0.03" />
+        <stop offset="100%" stop-color="${isDark ? "#C8A96A" : "#705622"}" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <!-- Centered Seal & Orbit -->
+    <circle id="aura" cx="540" cy="800" r="380" fill="url(#auraGrad)" opacity="0" />
+    <circle id="orbit" cx="540" cy="800" r="300" fill="none" stroke="${strokeCol}" stroke-width="2" stroke-dasharray="1885" stroke-dashoffset="1885" />
+    <g id="mark" fill="${goldFill}" fill-opacity="0" stroke="${strokeCol}" stroke-width="1.2" stroke-dasharray="1600" stroke-dashoffset="1600" fill-rule="nonzero" transform="translate(181.6, 441.6) scale(0.70)">
+${markContours.map((p) => `      <path d="${p.d}" />`).join("\n")}
+    </g>
+    <!-- Horizontal Hairline Divider -->
+    <line id="divider" x1="440" y1="1150" x2="640" y2="1150" stroke="${strokeCol}" stroke-width="1.2" stroke-opacity="0" />
+    <!-- Typography Stack Below -->
+    <g id="title-g" transform="translate(${wmTX.toFixed(2)}, 1220)" opacity="0">
+      <path d="${latinD}" fill="${titleFill}" />
+    </g>
+    <g id="slogan-ar-g" transform="translate(${arTX.toFixed(2)}, 1310)" opacity="0">
+      <path d="${sloganArD}" fill="${sloganArFill}" />
+    </g>
+    <g id="slogan-en-g" transform="translate(${enTX.toFixed(2)}, 1400)" opacity="0">
+      <path d="${sloganEnD}" fill="${sloganEnFill}" />
+    </g>
+  </svg>`;
+    } else {
+      // 1x1 Square (1080x1080)
+      const isEmerge = name.includes("emerge");
+      svgBody = `
+  <svg id="stage" viewBox="0 0 1080 1080" width="1080" height="1080">
+    <defs>
+      <linearGradient id="goldGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+        <stop offset="0%" stop-color="#E5CFA0" />
+        <stop offset="100%" stop-color="#B89655" />
+      </linearGradient>
+      <linearGradient id="umberGrad" gradientUnits="userSpaceOnUse" x1="260" y1="340" x2="760" y2="680">
+        <stop offset="0%" stop-color="#8A6B2F" />
+        <stop offset="100%" stop-color="#553F16" />
+      </linearGradient>
+      <radialGradient id="auraGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="${isDark ? "#C8A96A" : "#705622"}" stop-opacity="0.10" />
+        <stop offset="65%" stop-color="${isDark ? "#C8A96A" : "#705622"}" stop-opacity="0.03" />
+        <stop offset="100%" stop-color="${isDark ? "#C8A96A" : "#705622"}" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <g id="stage-group" transform="translate(0, 0)">
+      <circle id="aura" cx="540" cy="540" r="420" fill="url(#auraGrad)" opacity="0" />
+      <circle id="orbit" cx="540" cy="540" r="340" fill="none" stroke="${strokeCol}" stroke-width="2" stroke-dasharray="2136" stroke-dashoffset="${isEmerge ? "0" : "2136"}" stroke-opacity="${isEmerge ? "0.28" : "0"}" />
+      <g id="mark" fill="${goldFill}" fill-opacity="${isEmerge ? "1" : "0"}" stroke="${strokeCol}" stroke-width="${isEmerge ? "0" : "1.2"}" stroke-dasharray="1600" stroke-dashoffset="${isEmerge ? "0" : "1600"}" fill-rule="nonzero" transform="translate(156, 156) scale(0.75)">
+${markContours.map((p) => `        <path d="${p.d}" />`).join("\n")}
+      </g>
+    </g>
+  </svg>`;
+    }
+
     const html = `<!DOCTYPE html>
 <html>
 <head>
@@ -1153,45 +1330,84 @@ async function renderMotionVideos(browser: Browser, brandRoot: string): Promise<
   </style>
 </head>
 <body>
-  <svg id="stage" viewBox="0 0 1024 1024" width="${Math.min(width, height) * 0.75}" height="${Math.min(width, height) * 0.75}">
-    <defs>
-      <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#E5CFA0" />
-        <stop offset="100%" stop-color="#B89655" />
-      </linearGradient>
-    </defs>
-    <circle id="aura" cx="512" cy="512" r="420" fill="#C8A96A" opacity="0" />
-    <circle id="orbit" cx="512" cy="512" r="360" fill="none" stroke="${isDark ? "#C8A96A" : "#705622"}" stroke-width="1.5" stroke-dasharray="2262" stroke-dashoffset="2262" />
-    <g id="mark" fill="${goldFill}" fill-opacity="0" stroke="${strokeCol}" stroke-width="1.2" stroke-dasharray="1600" stroke-dashoffset="1600" fill-rule="evenodd">
-${markContours.map((p) => `      <path d="${p.d}" />`).join("\n")}
-    </g>
-  </svg>
-
+  ${svgBody}
   <script>
     function cubicBezier(t, p1x, p1y, p2x, p2y) {
-      // Approximate cubic bezier easing
       const u = 1 - t;
       return 3 * u * u * t * p1y + 3 * u * t * t * p2y + t * t * t;
     }
 
     window.setFrame = function(frameIndex, totalFrames) {
       const p = Math.max(0, Math.min(1, frameIndex / (totalFrames - 1)));
-      const eased = cubicBezier(p, 0.22, 1, 0.36, 1);
+      const isEmerge = ${name.includes("emerge")};
 
-      // Orbit: draws from frame 0 to 50%
-      const orbitP = Math.min(1, p * 2.0);
+      if (isEmerge) {
+        const eased = cubicBezier(p, 0.16, 1, 0.3, 1);
+        const scale = 0.94 + 0.06 * eased;
+        const stageGroup = document.getElementById('stage-group');
+        if (stageGroup) {
+          stageGroup.setAttribute('transform', 'translate(' + (540 * (1 - scale)).toFixed(2) + ', ' + (540 * (1 - scale)).toFixed(2) + ') scale(' + scale.toFixed(4) + ')');
+          stageGroup.setAttribute('opacity', eased.toFixed(3));
+        }
+        document.getElementById('orbit').setAttribute('stroke-opacity', (0.28 * eased).toFixed(2));
+        document.getElementById('aura').setAttribute('opacity', eased.toFixed(3));
+        return;
+      }
+
+      // Orbit: 0 to 45%
+      const orbitP = Math.min(1, p / 0.45);
       const orbitEased = cubicBezier(orbitP, 0.22, 1, 0.36, 1);
-      document.getElementById('orbit').setAttribute('stroke-dashoffset', (2262 * (1 - orbitEased)).toFixed(2));
+      const circ = ${aspectRatio === "16x9" ? 2011 : aspectRatio === "9x16" ? 1885 : 2136};
+      document.getElementById('orbit').setAttribute('stroke-dashoffset', (circ * (1 - orbitEased)).toFixed(2));
       document.getElementById('orbit').setAttribute('stroke-opacity', (0.28 * orbitEased).toFixed(2));
 
-      // Mark: draws from frame 20% to 80%
-      const markP = Math.max(0, Math.min(1, (p - 0.2) / 0.6));
+      // Mark: 15% to 75%
+      const markP = Math.max(0, Math.min(1, (p - 0.15) / 0.60));
       const markEased = cubicBezier(markP, 0.22, 1, 0.36, 1);
       document.getElementById('mark').setAttribute('stroke-dashoffset', (1600 * (1 - markEased)).toFixed(2));
-      document.getElementById('mark').setAttribute('fill-opacity', (markP > 0.4 ? (markP - 0.4) / 0.6 : 0).toFixed(2));
+      const fillAlpha = markP > 0.4 ? Math.min(1, (markP - 0.4) / 0.5) : 0;
+      document.getElementById('mark').setAttribute('fill-opacity', fillAlpha.toFixed(2));
+      if (fillAlpha >= 1) {
+        document.getElementById('mark').setAttribute('stroke-width', '0');
+      } else {
+        document.getElementById('mark').setAttribute('stroke-width', '1.2');
+      }
 
       // Aura
-      document.getElementById('aura').setAttribute('opacity', (0.05 * eased).toFixed(3));
+      const auraP = Math.max(0, Math.min(1, (p - 0.20) / 0.60));
+      document.getElementById('aura').setAttribute('opacity', cubicBezier(auraP, 0.16, 1, 0.3, 1).toFixed(3));
+
+      // Divider: 35% to 70%
+      const divEl = document.getElementById('divider');
+      if (divEl) {
+        const divP = Math.max(0, Math.min(1, (p - 0.35) / 0.35));
+        const divEased = cubicBezier(divP, 0.16, 1, 0.3, 1);
+        divEl.setAttribute('stroke-opacity', (0.35 * divEased).toFixed(3));
+      }
+
+      // Title: 45% to 80%
+      const titleEl = document.getElementById('title-g');
+      if (titleEl) {
+        const titleP = Math.max(0, Math.min(1, (p - 0.45) / 0.35));
+        const titleEased = cubicBezier(titleP, 0.16, 1, 0.3, 1);
+        titleEl.setAttribute('opacity', titleEased.toFixed(3));
+      }
+
+      // Arabic Slogan: 55% to 88%
+      const arEl = document.getElementById('slogan-ar-g');
+      if (arEl) {
+        const arP = Math.max(0, Math.min(1, (p - 0.55) / 0.33));
+        const arEased = cubicBezier(arP, 0.16, 1, 0.3, 1);
+        arEl.setAttribute('opacity', arEased.toFixed(3));
+      }
+
+      // English Slogan: 65% to 95%
+      const enEl = document.getElementById('slogan-en-g');
+      if (enEl) {
+        const enP = Math.max(0, Math.min(1, (p - 0.65) / 0.30));
+        const enEased = cubicBezier(enP, 0.16, 1, 0.3, 1);
+        enEl.setAttribute('opacity', enEased.toFixed(3));
+      }
     };
   </script>
 </body>
@@ -1244,7 +1460,11 @@ ${markContours.map((p) => `      <path d="${p.d}" />`).join("\n")}
     ...calligraphyRaw.primaryMark.tashkeel,
   ];
   const latinD = calligraphyRaw.latinWordmark.fullPath;
+  const latinBounds = calligraphyRaw.latinWordmark.bounds;
   const sloganArD = calligraphyRaw.masterSloganAr.fullPath;
+  const sloganArBounds = calligraphyRaw.masterSloganAr.bounds;
+  const sloganEnD = calligraphyRaw.masterSloganEn.fullPath;
+  const sloganEnBounds = calligraphyRaw.masterSloganEn.bounds;
 
   // 1. mishkaah-intro-16x9-dark
   await renderAnimationSequence({
@@ -1257,7 +1477,11 @@ ${markContours.map((p) => `      <path d="${p.d}" />`).join("\n")}
     aspectRatio: "16x9",
     markContours,
     latinD,
+    latinBounds,
     sloganArD,
+    sloganArBounds,
+    sloganEnD,
+    sloganEnBounds,
   });
 
   // 2. mishkaah-intro-16x9-light
@@ -1271,7 +1495,11 @@ ${markContours.map((p) => `      <path d="${p.d}" />`).join("\n")}
     aspectRatio: "16x9",
     markContours,
     latinD,
+    latinBounds,
     sloganArD,
+    sloganArBounds,
+    sloganEnD,
+    sloganEnBounds,
   });
 
   // 3. mishkaah-splash-9x16-dark
@@ -1279,13 +1507,17 @@ ${markContours.map((p) => `      <path d="${p.d}" />`).join("\n")}
     name: "mishkaah-splash-9x16-dark",
     width: 1080,
     height: 1920,
-    totalFrames: 90, // 1.5s
+    totalFrames: 120,
     fps: 60,
     theme: "dark",
     aspectRatio: "9x16",
     markContours,
     latinD,
+    latinBounds,
     sloganArD,
+    sloganArBounds,
+    sloganEnD,
+    sloganEnBounds,
   });
 
   // 4. mishkaah-splash-9x16-light
@@ -1293,13 +1525,17 @@ ${markContours.map((p) => `      <path d="${p.d}" />`).join("\n")}
     name: "mishkaah-splash-9x16-light",
     width: 1080,
     height: 1920,
-    totalFrames: 90,
+    totalFrames: 120,
     fps: 60,
     theme: "light",
     aspectRatio: "9x16",
     markContours,
     latinD,
+    latinBounds,
     sloganArD,
+    sloganArBounds,
+    sloganEnD,
+    sloganEnBounds,
   });
 
   // 5. mishkaah-reveal-1x1-dark
@@ -1307,13 +1543,17 @@ ${markContours.map((p) => `      <path d="${p.d}" />`).join("\n")}
     name: "mishkaah-reveal-1x1-dark",
     width: 1080,
     height: 1080,
-    totalFrames: 90,
+    totalFrames: 120,
     fps: 60,
     theme: "dark",
     aspectRatio: "1x1",
     markContours,
     latinD,
+    latinBounds,
     sloganArD,
+    sloganArBounds,
+    sloganEnD,
+    sloganEnBounds,
   });
 
   // 6. mishkaah-emerge-1x1-dark
@@ -1321,14 +1561,55 @@ ${markContours.map((p) => `      <path d="${p.d}" />`).join("\n")}
     name: "mishkaah-emerge-1x1-dark",
     width: 1080,
     height: 1080,
-    totalFrames: 90,
+    totalFrames: 120,
     fps: 60,
     theme: "dark",
     aspectRatio: "1x1",
     markContours,
     latinD,
+    latinBounds,
     sloganArD,
+    sloganArBounds,
+    sloganEnD,
+    sloganEnBounds,
   });
+
+  // Copy rendered videos to alias files
+  console.log("  Writing video aliases (real files, zero symlinks)...");
+  const aliasCopies = [
+    { src: "mishkaah-intro-16x9-dark.mp4", dest: "mishkaah-reveal-16x9.mp4" },
+    { src: "mishkaah-intro-16x9-dark.webm", dest: "mishkaah-reveal-16x9.webm" },
+    { src: "mishkaah-splash-9x16-dark.mp4", dest: "mishkaah-reveal-9x16.mp4" },
+    { src: "mishkaah-reveal-1x1-dark.mp4", dest: "mishkaah-reveal-1x1.mp4" },
+  ];
+  for (const ac of aliasCopies) {
+    const srcPath = join(videoDir, ac.src);
+    const destPath = join(videoDir, ac.dest);
+    if (existsSync(srcPath)) {
+      copyFileSync(srcPath, destPath);
+      console.log(`    ✓ Copied alias ${ac.dest}`);
+    }
+  }
+
+  // Verification frame captures
+  console.log("📸 Capturing Verification Frames and Screenshots...");
+  runCmd(`ffmpeg -y -ss 00:00:01.800 -i "${join(videoDir, "mishkaah-intro-16x9-dark.mp4")}" -vframes 1 /tmp/verify-video-16x9.png`);
+  runCmd(`ffmpeg -y -ss 00:00:01.800 -i "${join(videoDir, "mishkaah-splash-9x16-dark.mp4")}" -vframes 1 /tmp/verify-video-9x16.png`);
+
+  const heroSvgPath = join(brandRoot, "animations", "svg", "mishkaah-hero-banner-animated.svg");
+  const heroPage = await browser.newPage({ viewport: { width: 1600, height: 500 } });
+  await heroPage.goto(`file://${heroSvgPath}`);
+  await heroPage.waitForTimeout(2200);
+  await heroPage.screenshot({ path: "/tmp/verify-hero-animated.png" });
+  await heroPage.close();
+
+  const revealSvgPath = join(brandRoot, "animations", "svg", "mishkaah-reveal-dark.svg");
+  const revealPage = await browser.newPage({ viewport: { width: 1024, height: 1024 } });
+  await revealPage.goto(`file://${revealSvgPath}`);
+  await revealPage.waitForTimeout(2200);
+  await revealPage.screenshot({ path: "/tmp/verify-reveal-animated.png" });
+  await revealPage.close();
+  console.log("  ✓ Verification screenshots captured in /tmp/verify-*.png");
 
   console.log("✨ Successfully rendered all motion videos and animated loops!");
 }

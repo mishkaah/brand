@@ -4,8 +4,8 @@
 
 # معايير فيزياء الحركة وتصميم الرسوم لمِشْكَاة
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![معدل الإطارات](https://img.shields.io/badge/معدل%20الإطارات-60%20إطار%20ثابت-09090B?style=flat-square)](../animations/README.ar.md)
 [![نموذج التوقيت](https://img.shields.io/badge/المشهد-الظهور%20المهيب%20(4%20مراحل)-C8A96A?style=flat-square)](../tokens/motion.json)

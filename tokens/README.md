@@ -4,8 +4,8 @@
 
 # Mishkaah Design Tokens
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![Tokens Spec](https://img.shields.io/badge/Tokens-Design%20Tokens%20W3C%20Draft-C8A96A?style=flat-square)](../docs/color-and-theme-system.md)
 [![Platforms](https://img.shields.io/badge/Platforms-CSS%20%7C%20TypeScript%20%7C%20Dart-09090B?style=flat-square)](./dist/tokens.ts)
@@ -83,7 +83,7 @@ tokens/
 import { MISHKAAH_COLORS, MISHKAAH_SLOGANS } from "./dist/tokens.ts";
 
 console.log(MISHKAAH_SLOGANS.master.en);
-// "Verified Islamic Heritage. Connected Knowledge."
+// "Preserved Text. Trusted Knowledge."
 ```
 
 ### Flutter / Dart (`dist/mishkaah_tokens.dart`)

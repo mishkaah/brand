@@ -499,11 +499,11 @@ let monogramJSON = MonogramJSON(
 print("  ✓ Monogram extracted: bounds=\(monogramJSON.bounds.width)×\(monogramJSON.bounds.height).")
 
 // 3. Extract Latin Wordmark: "MISHKAAH" (TimesNewRomanPSMT / Cormorant-style tracked serif)
-let latinWordmarkData = outlineString("MISHKAAH", fontName: "TimesNewRomanPSMT", fontSize: 44, tracking: 16.0)
+let latinWordmarkData = outlineString("MISHKAAH", fontName: "TimesNewRomanPSMT", fontSize: 62, tracking: 18.0)
 let latinWordmarkJSON = OutlinedTextJSON(
     text: "MISHKAAH",
     fontName: "TimesNewRomanPSMT",
-    fontSize: 44,
+    fontSize: 62,
     fullPath: cgPathToSVG(latinWordmarkData.path),
     bounds: BoxJSON(from: latinWordmarkData.bounds),
     length: round(latinWordmarkData.length * 10) / 10
@@ -511,21 +511,21 @@ let latinWordmarkJSON = OutlinedTextJSON(
 print("  ✓ Latin wordmark outlined: bounds=\(latinWordmarkJSON.bounds.width)×\(latinWordmarkJSON.bounds.height).")
 
 // 4. Extract Master Slogans
-let masterArData = outlineString("تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة", fontName: "GeezaPro", fontSize: 24, tracking: 0.0)
+let masterArData = outlineString("نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون", fontName: "Damascus", fontSize: 44, tracking: 0.0)
 let masterArJSON = OutlinedTextJSON(
-    text: "تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة",
-    fontName: "GeezaPro",
-    fontSize: 24,
+    text: "نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون",
+    fontName: "Damascus",
+    fontSize: 44,
     fullPath: cgPathToSVG(masterArData.path),
     bounds: BoxJSON(from: masterArData.bounds),
     length: round(masterArData.length * 10) / 10
 )
 
-let masterEnData = outlineString("VERIFIED ISLAMIC HERITAGE · CONNECTED KNOWLEDGE", fontName: "HelveticaNeue-Medium", fontSize: 13, tracking: 4.0)
+let masterEnData = outlineString("PRESERVED TEXT · TRUSTED KNOWLEDGE", fontName: "HelveticaNeue-Medium", fontSize: 20, tracking: 5.5)
 let masterEnJSON = OutlinedTextJSON(
-    text: "VERIFIED ISLAMIC HERITAGE · CONNECTED KNOWLEDGE",
+    text: "PRESERVED TEXT · TRUSTED KNOWLEDGE",
     fontName: "HelveticaNeue-Medium",
-    fontSize: 13,
+    fontSize: 20,
     fullPath: cgPathToSVG(masterEnData.path),
     bounds: BoxJSON(from: masterEnData.bounds),
     length: round(masterEnData.length * 10) / 10
@@ -538,45 +538,45 @@ let pillarsDef: [(key: String, titleAr: String, titleEn: String, sloganAr: Strin
         key: "corpus",
         titleAr: "مُدَوَّنَةُ مِشْكَاة",
         titleEn: "MISHKAAH CORPUS",
-        sloganAr: "مُتُونٌ مُوثَّقَة.. وَرَوَابِطُ مُحَرَّرَة",
-        sloganEn: "AUTHENTICATED TEXTS · PRECISELY LINKED"
+        sloganAr: "نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون",
+        sloganEn: "PRESERVED TEXT · TRUSTED KNOWLEDGE"
     ),
     (
         key: "app",
         titleAr: "تَطْبِيقَاتُ مِشْكَاة",
         titleEn: "MISHKAAH READER",
-        sloganAr: "قِرَاءَةٌ خَاشِعَة.. وَفَهْمٌ عَمِيق",
-        sloganEn: "CALM READING · DEEP UNDERSTANDING"
+        sloganAr: "نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون",
+        sloganEn: "PRESERVED TEXT · TRUSTED KNOWLEDGE"
     ),
     (
         key: "core",
         titleAr: "نَوَاةُ مِشْكَاة",
         titleEn: "MISHKAAH CORE",
-        sloganAr: "تَدْقِيقٌ صَارِمٌ لِصَوْنِ النُّصُوص",
-        sloganEn: "STRICT VERIFICATION FOR SACRED TEXTS"
+        sloganAr: "نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون",
+        sloganEn: "PRESERVED TEXT · TRUSTED KNOWLEDGE"
     ),
     (
         key: "sdk",
         titleAr: "حُزْمَةُ مِشْكَاة",
         titleEn: "MISHKAAH SDK",
-        sloganAr: "أَدَوَاتٌ بَرْمَجِيَّةٌ لِلْمُدَوَّنَةِ الإِسْلَامِيَّة",
-        sloganEn: "TYPED SDK FOR VERIFIED ISLAMIC TEXTS"
+        sloganAr: "نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون",
+        sloganEn: "PRESERVED TEXT · TRUSTED KNOWLEDGE"
     )
 ]
 
 var pillarsMap: [String: PillarSloganJSON] = [:]
 
 for p in pillarsDef {
-    let tAr = outlineString(p.titleAr, fontName: "GeezaPro-Bold", fontSize: 28, tracking: 0.0)
-    let tEn = outlineString(p.titleEn, fontName: "HelveticaNeue-Bold", fontSize: 16, tracking: 5.0)
-    let sAr = outlineString(p.sloganAr, fontName: "GeezaPro", fontSize: 20, tracking: 0.0)
-    let sEn = outlineString(p.sloganEn, fontName: "HelveticaNeue", fontSize: 12, tracking: 3.5)
+    let tAr = outlineString(p.titleAr, fontName: "GeezaPro-Bold", fontSize: 46, tracking: 0.0)
+    let tEn = outlineString(p.titleEn, fontName: "HelveticaNeue-Bold", fontSize: 21, tracking: 5.5)
+    let sAr = outlineString(p.sloganAr, fontName: "GeezaPro", fontSize: 36, tracking: 0.0)
+    let sEn = outlineString(p.sloganEn, fontName: "HelveticaNeue-Medium", fontSize: 16, tracking: 4.5)
 
     pillarsMap[p.key] = PillarSloganJSON(
         titleAr: OutlinedTextJSON(
             text: p.titleAr,
             fontName: "GeezaPro-Bold",
-            fontSize: 28,
+            fontSize: 46,
             fullPath: cgPathToSVG(tAr.path),
             bounds: BoxJSON(from: tAr.bounds),
             length: round(tAr.length * 10) / 10
@@ -584,7 +584,7 @@ for p in pillarsDef {
         titleEn: OutlinedTextJSON(
             text: p.titleEn,
             fontName: "HelveticaNeue-Bold",
-            fontSize: 16,
+            fontSize: 21,
             fullPath: cgPathToSVG(tEn.path),
             bounds: BoxJSON(from: tEn.bounds),
             length: round(tEn.length * 10) / 10
@@ -592,15 +592,15 @@ for p in pillarsDef {
         sloganAr: OutlinedTextJSON(
             text: p.sloganAr,
             fontName: "GeezaPro",
-            fontSize: 20,
+            fontSize: 36,
             fullPath: cgPathToSVG(sAr.path),
             bounds: BoxJSON(from: sAr.bounds),
             length: round(sAr.length * 10) / 10
         ),
         sloganEn: OutlinedTextJSON(
             text: p.sloganEn,
-            fontName: "HelveticaNeue",
-            fontSize: 12,
+            fontName: "HelveticaNeue-Medium",
+            fontSize: 16,
             fullPath: cgPathToSVG(sEn.path),
             bounds: BoxJSON(from: sEn.bounds),
             length: round(sEn.length * 10) / 10

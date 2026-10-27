@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "bun run scripts/build-all.ts",
+    "rebuild-all": "bun run scripts/build-all.ts",
     "verify": "bun run scripts/verify-brand-integrity.ts",
     "extract-paths": "swift scripts/extract-calligraphy-paths.swift",
     "generate-tokens": "bun run scripts/generate-tokens-dist.ts",

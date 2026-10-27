@@ -4,8 +4,8 @@
 
 # Mishkaah Motion & Animation Specification
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![Framerate](https://img.shields.io/badge/Framerate-60%20FPS%20Constant-09090B?style=flat-square)](../animations/README.md)
 [![Timing Model](https://img.shields.io/badge/Choreography-4--Phase%20Sacred%20Reveal-C8A96A?style=flat-square)](../tokens/motion.json)

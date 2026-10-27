@@ -3,33 +3,33 @@
   "name": "Mishkaah Design Tokens - Slogans",
   "version": "1.0.0",
   "master": {
-    "ar": "تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة",
-    "en": "Verified Islamic Heritage. Connected Knowledge."
+    "ar": "نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون",
+    "en": "Preserved Text. Trusted Knowledge."
   },
   "pillars": {
     "corpus": {
       "titleAr": "مُدَوَّنَةُ مِشْكَاة",
       "titleEn": "MISHKAAH CORPUS",
-      "ar": "مُتُونٌ مُوثَّقَة.. وَرَوَابِطُ مُحَرَّرَة",
-      "en": "Authenticated Texts. Precisely Linked."
+      "ar": "نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون",
+      "en": "Preserved Text. Trusted Knowledge."
     },
     "app": {
       "titleAr": "تَطْبِيقَاتُ مِشْكَاة",
       "titleEn": "MISHKAAH READER",
-      "ar": "قِرَاءَةٌ خَاشِعَة.. وَفَهْمٌ عَمِيق",
-      "en": "Calm Reading. Deep Understanding."
+      "ar": "نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون",
+      "en": "Preserved Text. Trusted Knowledge."
     },
     "core": {
       "titleAr": "نَوَاةُ مِشْكَاة",
       "titleEn": "MISHKAAH CORE",
-      "ar": "تَدْقِيقٌ صَارِمٌ لِصَوْنِ النُّصُوص",
-      "en": "Strict Verification for Sacred Texts."
+      "ar": "نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون",
+      "en": "Preserved Text. Trusted Knowledge."
     },
     "sdk": {
       "titleAr": "حُزْمَةُ مِشْكَاة",
       "titleEn": "MISHKAAH SDK",
-      "ar": "أَدَوَاتٌ بَرْمَجِيَّةٌ لِلْمُدَوَّنَةِ الإِسْلَامِيَّة",
-      "en": "Typed SDK for Verified Islamic Texts."
+      "ar": "نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون",
+      "en": "Preserved Text. Trusted Knowledge."
     }
   }
 }

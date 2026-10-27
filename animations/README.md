@@ -4,8 +4,8 @@
 
 # Mishkaah Motion & Animation Suite
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![Motion Specification](https://img.shields.io/badge/Motion-Choreographed%20Bezier-C8A96A?style=flat-square)](../tokens/README.md)
 [![Framerate](https://img.shields.io/badge/Framerate-60%20FPS-09090B?style=flat-square)](../docs/motion-and-animation-spec.md)
@@ -55,11 +55,13 @@ A lighter, ambient entrance tailored for app launch screens and modal transition
 | :--- | :--- | :--- | :--- |
 | [`svg/mishkaah-reveal-dark.svg`](./svg/mishkaah-reveal-dark.svg) | Animated SVG | 1024×1024 | Web landing hero, GitHub profiles, documentation |
 | [`svg/mishkaah-emerge-dark.svg`](./svg/mishkaah-emerge-dark.svg) | Animated SVG | 1024×1024 | Lightweight web transitions, low-power mode fallback |
-| [`lottie/mishkaah-reveal-dark.lottie.json`](./lottie/mishkaah-reveal-dark.lottie.json) | Lottie JSON | Scalable | iOS and Android native splash screens, Flutter reader app |
-| [`video/mishkaah-reveal-16x9.mp4`](./video/mishkaah-reveal-16x9.mp4) | H.264 MP4 | 1920×1080 (16:9) | Keynote presentations, YouTube intro bumpers, event projections |
-| [`video/mishkaah-reveal-9x16.mp4`](./video/mishkaah-reveal-9x16.mp4) | H.264 MP4 | 1080×1920 (9:16) | Mobile video feeds, vertical media showcases |
-| [`video/mishkaah-reveal-1x1.mp4`](./video/mishkaah-reveal-1x1.mp4) | H.264 MP4 | 1080×1080 (1:1) | Square social media cards, Instagram/LinkedIn posts |
-| [`video/mishkaah-reveal-16x9.webm`](./video/mishkaah-reveal-16x9.webm) | VP9 WebM | 1920×1080 (16:9) | Modern web browsers requiring transparent video support |
+| [`svg/mishkaah-hero-banner-animated.svg`](./svg/mishkaah-hero-banner-animated.svg) | Animated SVG | 1600×500 | Organization hero banner with active shimmer |
+| [`lottie/mishkaah-splash-reveal-dark.lottie.json`](./lottie/mishkaah-splash-reveal-dark.lottie.json) | Lottie JSON | Scalable | iOS and Android native splash screens, Flutter reader app |
+| [`video/mishkaah-intro-16x9-dark.mp4`](./video/mishkaah-intro-16x9-dark.mp4) | H.264 MP4 | 1920×1080 (16:9) | Keynote presentations, YouTube intro bumpers, event projections |
+| [`video/mishkaah-splash-9x16-dark.mp4`](./video/mishkaah-splash-9x16-dark.mp4) | H.264 MP4 | 1080×1920 (9:16) | Mobile video feeds, vertical media showcases |
+| [`video/mishkaah-reveal-1x1-dark.mp4`](./video/mishkaah-reveal-1x1-dark.mp4) | H.264 MP4 | 1080×1080 (1:1) | Square social media cards, Instagram/LinkedIn posts |
+| [`video/mishkaah-intro-16x9-dark.webm`](./video/mishkaah-intro-16x9-dark.webm) | VP9 WebM | 1920×1080 (16:9) | Modern web browsers requiring transparent video support |
+| [`video/mishkaah-reveal-1x1-dark.webp`](./video/mishkaah-reveal-1x1-dark.webp) | Animated WebP | 1080×1080 (1:1) | High-efficiency animated image format for web embeds |
 | [`web-player/preview.html`](./web-player/preview.html) | HTML/JS | Responsive | Interactive in-browser player for testing framerate and curves |
 
 ---

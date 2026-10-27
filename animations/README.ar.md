@@ -4,8 +4,8 @@
 
 # حزمة الحركة والرسوم المتحركة لمِشْكَاة
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![مواصفات الحركة](https://img.shields.io/badge/الحركة-منحنيات%20بيزييه%20منضبطة-C8A96A?style=flat-square)](../tokens/README.ar.md)
 [![معدل الإطارات](https://img.shields.io/badge/معدل%20الإطارات-60%20إطار%20بالثانية-09090B?style=flat-square)](../docs/motion-and-animation-spec.ar.md)
@@ -55,11 +55,13 @@
 | :--- | :--- | :--- | :--- |
 | [`svg/mishkaah-reveal-dark.svg`](./svg/mishkaah-reveal-dark.svg) | رسم SVG متحرك | 1024×1024 | الواجهات الرئيسية للمواقع، ترويسات GitHub، صفحات التوثيق |
 | [`svg/mishkaah-emerge-dark.svg`](./svg/mishkaah-emerge-dark.svg) | رسم SVG متحرك | 1024×1024 | الانتقالات السريعة في الويب، نمط توفير الطاقة في المتصفحات |
-| [`lottie/mishkaah-reveal-dark.lottie.json`](./lottie/mishkaah-reveal-dark.lottie.json) | ملف Lottie JSON | قياس متكيف | شاشات البداية الأصلية لتطبيقات iOS وAndroid وقارئ مِشْكَاة في Flutter |
-| [`video/mishkaah-reveal-16x9.mp4`](./video/mishkaah-reveal-16x9.mp4) | فيديو H.264 MP4 | 1920×1080 (16:9) | العروض التقديمية الرسمية، فواصل الفيديو التمهيدية، شاشات المؤتمرات |
-| [`video/mishkaah-reveal-9x16.mp4`](./video/mishkaah-reveal-9x16.mp4) | فيديو H.264 MP4 | 1080×1920 (9:16) | منصات الفيديو الرأسية وشاشات الهواتف المحمولة |
-| [`video/mishkaah-reveal-1x1.mp4`](./video/mishkaah-reveal-1x1.mp4) | فيديو H.264 MP4 | 1080×1080 (1:1) | بطاقات وشبكات التواصل المربعة (LinkedIn / Instagram) |
-| [`video/mishkaah-reveal-16x9.webm`](./video/mishkaah-reveal-16x9.webm) | فيديو VP9 WebM | 1920×1080 (16:9) | المتصفحات الحديثة التي تدعم الفيديو المتجه بشفافية كاملة |
+| [`svg/mishkaah-hero-banner-animated.svg`](./svg/mishkaah-hero-banner-animated.svg) | رسم SVG متحرك | 1600×500 | لافتة المنظمة الرئيسية مع وميض ذهبي متحرك |
+| [`lottie/mishkaah-splash-reveal-dark.lottie.json`](./lottie/mishkaah-splash-reveal-dark.lottie.json) | ملف Lottie JSON | قياس متكيف | شاشات البداية الأصلية لتطبيقات iOS وAndroid وقارئ مِشْكَاة في Flutter |
+| [`video/mishkaah-intro-16x9-dark.mp4`](./video/mishkaah-intro-16x9-dark.mp4) | فيديو H.264 MP4 | 1920×1080 (16:9) | العروض التقديمية الرسمية، فواصل الفيديو التمهيدية، شاشات المؤتمرات |
+| [`video/mishkaah-splash-9x16-dark.mp4`](./video/mishkaah-splash-9x16-dark.mp4) | فيديو H.264 MP4 | 1080×1920 (9:16) | منصات الفيديو الرأسية وشاشات الهواتف المحمولة |
+| [`video/mishkaah-reveal-1x1-dark.mp4`](./video/mishkaah-reveal-1x1-dark.mp4) | فيديو H.264 MP4 | 1080×1080 (1:1) | بطاقات وشبكات التواصل المربعة (LinkedIn / Instagram) |
+| [`video/mishkaah-intro-16x9-dark.webm`](./video/mishkaah-intro-16x9-dark.webm) | فيديو VP9 WebM | 1920×1080 (16:9) | المتصفحات الحديثة التي تدعم الفيديو المتجه بشفافية كاملة |
+| [`video/mishkaah-reveal-1x1-dark.webp`](./video/mishkaah-reveal-1x1-dark.webp) | صورة WebP متحركة | 1080×1080 (1:1) | وسائط الويب المتحركة فائقة الخفة والكفاءة |
 | [`web-player/preview.html`](./web-player/preview.html) | صفحة HTML/JS | متجاوبة | مشغل تفاعلي للمعاينة واختبار سلاسة الإطارات ودقة المنحنيات |
 
 ---

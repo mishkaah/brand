@@ -6,8 +6,8 @@
 
 # منظومة الهوية والتصميم لمشروع مِشْكَاة
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![حالة الهوية](https://img.shields.io/badge/الهوية-الإصدار%202.2-C8A96A?style=flat-square)](./docs/brand-guidelines.ar.md)
 [![رموز التصميم](https://img.shields.io/badge/رموز%20التصميم-CSS%20%7C%20TS%20%7C%20Dart-09090B?style=flat-square)](./tokens/README.ar.md)
@@ -52,23 +52,23 @@
 
 | وصف الأصل البصري | النمط / الصيغة | الرابط الثابت المباشر (Raw GitHub URL) |
 | :--- | :--- | :--- |
-| **الشعار الأساسي (داكن)** | رسم متجه SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/mark-dark.svg` |
-| **الشعار الأساسي (ذهبي شفاف)** | رسم متجه SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/mark-gold-transparent.svg` |
-| **الشعار الأساسي (فاتح)** | رسم متجه SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/mark-light.svg` |
-| **مونوغرام الميم (داكن)** | رسم متجه SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/monogram-dark.svg` |
-| **مونوغرام الميم (ذهبي شفاف)** | رسم متجه SVG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/logos/monogram-gold-transparent.svg` |
-| **التركيب الأفقي (داكن)** | رسم متجه SVG (1600×400) | `https://github.com/mishkaah/brand/raw/main/logos/lockup-horizontal-dark.svg` |
-| **التركيب الأفقي (فاتح)** | رسم متجه SVG (1600×400) | `https://github.com/mishkaah/brand/raw/main/logos/lockup-horizontal-light.svg` |
-| **لافتة المنظمة الرئيسية** | رسم متجه SVG (1600×500) | `https://github.com/mishkaah/brand/raw/main/banners/github-hero-dark.svg` |
-| **بطاقة المشاركة الاجتماعية** | رسم متجه SVG (1280×640) | `https://github.com/mishkaah/brand/raw/main/banners/social-og-dark.svg` |
-| **لافتة مستودع المُدَوَّنة (Corpus)** | رسم متجه SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-corpus.svg` |
-| **لافتة مستودع النَّوَاة (Core)** | رسم متجه SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-core.svg` |
-| **لافتة مستودع الحَقِيبَة (SDK)** | رسم متجه SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-sdk.svg` |
-| **لافتة مستودع التَّطْبِيقَات (App)** | رسم متجه SVG (1280×420) | `https://github.com/mishkaah/brand/raw/main/banners/repo-banner-app.svg` |
-| **أيقونة التطبيق (iOS الداكن)** | صورة عالية الدقة PNG (1024×1024) | `https://github.com/mishkaah/brand/raw/main/app-icons/ios-dark.png` |
-| **أيقونة التطبيق (Android التكيفية)** | رسم متجه أمامي متكيف SVG | `https://github.com/mishkaah/brand/raw/main/app-icons/android-adaptive-foreground.svg` |
-| **شعار الظهور المتحرك** | رسم متجه متحرك SVG | `https://github.com/mishkaah/brand/raw/main/animations/svg/mishkaah-reveal-dark.svg` |
-| **حزمة الرسوم للهواتف (Lottie)** | ملف Lottie JSON للهواتف | `https://github.com/mishkaah/brand/raw/main/animations/lottie/mishkaah-reveal-dark.lottie.json` |
+| **الشعار الأساسي (داكن)** | رسم متجه SVG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/mark-dark.svg` |
+| **الشعار الأساسي (ذهبي شفاف)** | رسم متجه SVG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/mark-gold-transparent.svg` |
+| **الشعار الأساسي (فاتح)** | رسم متجه SVG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/mark-light.svg` |
+| **مونوغرام الميم (داكن)** | رسم متجه SVG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/monogram-dark.svg` |
+| **مونوغرام الميم (ذهبي شفاف)** | رسم متجه SVG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/monogram-gold-transparent.svg` |
+| **التركيب الأفقي (داكن)** | رسم متجه SVG (1600×400) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/lockup-horizontal-dark.svg` |
+| **التركيب الأفقي (فاتح)** | رسم متجه SVG (1600×400) | `https://raw.githubusercontent.com/mishkaah/brand/main/logos/lockup-horizontal-light.svg` |
+| **لافتة المنظمة الرئيسية** | رسم متجه SVG (1600×500) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/github-hero-dark.svg` |
+| **بطاقة المشاركة الاجتماعية** | رسم متجه SVG (1280×640) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/social-og-dark.svg` |
+| **لافتة مستودع المُدَوَّنة (Corpus)** | رسم متجه SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-corpus.svg` |
+| **لافتة مستودع النَّوَاة (Core)** | رسم متجه SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-core.svg` |
+| **لافتة مستودع الحَقِيبَة (SDK)** | رسم متجه SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-sdk.svg` |
+| **لافتة مستودع التَّطْبِيقَات (App)** | رسم متجه SVG (1280×420) | `https://raw.githubusercontent.com/mishkaah/brand/main/banners/repo-banner-app.svg` |
+| **أيقونة التطبيق (iOS الداكن)** | صورة عالية الدقة PNG (1024×1024) | `https://raw.githubusercontent.com/mishkaah/brand/main/app-icons/ios-dark.png` |
+| **أيقونة التطبيق (Android التكيفية)** | رسم متجه أمامي متكيف SVG | `https://raw.githubusercontent.com/mishkaah/brand/main/app-icons/android-adaptive-foreground.svg` |
+| **شعار الظهور المتحرك** | رسم متجه متحرك SVG | `https://raw.githubusercontent.com/mishkaah/brand/main/animations/svg/mishkaah-reveal-dark.svg` |
+| **حزمة الرسوم للهواتف (Lottie)** | ملف Lottie JSON للهواتف | `https://raw.githubusercontent.com/mishkaah/brand/main/animations/lottie/mishkaah-splash-reveal-dark.lottie.json` |
 
 ---
 

@@ -4,8 +4,8 @@
 
 # معايير الخط العربي والطباعة لمِشْكَاة
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![الخط العربي](https://img.shields.io/badge/الخط-ديوان%20الثلث-C8A96A?style=flat-square)](../tokens/README.ar.md)
 [![رسم المصحف](https://img.shields.io/badge/النص%20القرآني-مصحف%20المدينة%20النبوية-09090B?style=flat-square)](../docs/README.ar.md)

@@ -4,8 +4,8 @@
 
 # منظومة الألوان والسمات البصرية لمِشْكَاة
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![مطابق لمعيار WCAG AAA](https://img.shields.io/badge/التباين-WCAG%202.1%20AAA%20(11.4%3A1)-10B981?style=flat-square)](../tokens/README.ar.md)
 [![منظومة الألوان](https://img.shields.io/badge/الأنماط-الأسود%20السبجي%20%7C%20الأبيض%20المرمري-09090B?style=flat-square)](../docs/brand-guidelines.ar.md)

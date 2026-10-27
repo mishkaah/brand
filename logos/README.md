@@ -4,8 +4,8 @@
 
 # Mishkaah Vector Logos & Marks
 
-### **تُرَاثٌ مُحَقَّق.. وَمَعْرِفَةٌ مُتَرَابِطَة**
-### **Verified Islamic Heritage. Connected Knowledge.**
+### **نَصٌّ مَصُون.. وَعِلْمٌ مَأْمُون**
+### **Preserved Text. Trusted Knowledge.**
 
 [![Vector Quality](https://img.shields.io/badge/Vector-Cubic%20Bezier%20Paths-C8A96A?style=flat-square)](../tokens/README.md)
 [![Canvas](https://img.shields.io/badge/Canvas-1024%C3%971024-09090B?style=flat-square)](../docs/brand-guidelines.md)
